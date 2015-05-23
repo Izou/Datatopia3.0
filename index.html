@@ -3,18 +3,39 @@
 <head>
 <title>Datatopia 3.0</title>
 <link rel="stylesheet" type="text/css" href="style.css">
+
 </head>
 <body>
 	<header>
 		<canvas id="canvas"></canvas>
+		<nav>
+			<ul>
+				<li><a href="#video">Vidéo</a></li>
+			</ul>
+		</nav>
 	</header>
+		<div class="container-fluid">
+                  <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4"><div class="text-center">
+                        	<p>3457874662147890054886287516841645612348854512313477464313155168878920221515484687/669431223848789541313</p>
+                        </div></div>
+                  </div>
 
-	<section>
-		
-		<!-- <iframe src="http://player.vimeo.com/video/88739879?byline=0&amp;portrait=0&amp;color=3333ff" width="600" height="338" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> -->
+                  <div class="row">
+                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><div class="text-center">
+                         	<iframe id="video" src="http://player.vimeo.com/video/88739879?byline=0&amp;portrait=0&amp;color=3333ff" width="600" height="338" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                         </div></div>
+                  </div>
+       
+                  <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4"><div class="text-center">
+                        	<p>3457874662147890054886287516841645612348854512313477464313155168878920221515484687/669431223848789541313</p>
+                        </div></div>
+                        <div class="col-xs-12 col-sm-7 col-md-8 col-lg-8"><div class="text-center"></div></div>
+                  </div>
+        </div>
 
-	</section>
-
+<!-- Script Glitch Datatopia -->
 <script>
 var canvas = document.getElementById('canvas')
   , context = canvas.getContext('2d')
@@ -62,6 +83,23 @@ var randInt = function(a, b) {
 	return ~~(Math.random() * (b - a) + a);
 };
 </script>
+<!-- Fin Script Glitch -->
+
+<!-- Début Script smooth scroll -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<script type="text/javascript">
+$('a[href^="#"]').click(function(){
+	var the_id = $(this).attr("href");
+
+	$('html, body').animate({
+		scrollTop:$(the_id).offset().top
+	}, 'slow');
+	return false;
+});
+</script>
+
+<!-- Fin script Smooth Scroll -->
 
 </body>
 

@@ -4,15 +4,42 @@
 }
 
 body {
-  /*background: black;*/
+  background: black;
+  width: 20000px;
 }
 
 canvas {
   margin: 10em auto;  
-  display: block;
+  display: inline-block;
+  float: left;
+}
+
+nav{
+	float: left;
+	display: block;
 }
 
 /*.block{
 	background-color: black;
 	color: white;
 }*/
+iframe{
+	margin: 10em auto;
+	position:relative;
+	float: left;
+	display: block;
+
+}
+
+p{
+	margin-top: 2em;
+	font-size: 6em;
+	border: 1px solid black;
+	float: left;
+	display: inline-block;
+	color:white;
+}
+
+li a{
+	color:white;
+}
