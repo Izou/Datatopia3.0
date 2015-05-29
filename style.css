@@ -49,3 +49,8 @@ p{
 li a{
 	color:white;
 }
+
+#transition{
+	background-image: url(img/transition.jpg);
+	background-size: 60%;
+}
