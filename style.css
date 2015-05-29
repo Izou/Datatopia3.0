@@ -23,12 +23,18 @@ nav{
 	background-color: black;
 	color: white;
 }*/
-iframe{
-	margin: 10em auto;
+iframe, video, img{
+	margin: 0;
 	position:relative;
 	float: left;
 	display: block;
 
+}
+
+video{
+	width: 40em;
+	height: 40em;
+	border: 1px white solid;
 }
 
 p{
