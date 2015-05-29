@@ -15,30 +15,68 @@
    				<source src="son/bienvenue.mp3"></source>
 			</audio>
 
+			<script type="text/javascript">
+				var player = document.querySelector('#audioPlayer');
+				player.play();
+			</script>
+
 		<nav>
 			<ul>
-				<li><a class="scrollTo" href="#vid">Vidéo</a></li>
+				<li><a class="scrollTo" href="#videoPlayer">Vidéo</a></li>
 			</ul>
 		</nav>
 	</header>
 		<div class="container-fluid">
                   <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4"><div class="text-center">
-                        	<p>3457874662147890054886287516841645612348854512313477464313155168878920221515484687/669431223848789541313</p>
+                        	<!-- <canvas id="transition"></canvas> -->
+                        	<img src="img/transition.jpg">
                         </div></div>
                   </div>
 
                   <div class="row">
                          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                          	<div class="text-center">
-                         	<iframe id="vid" src="http://player.vimeo.com/video/88739879?byline=0&amp;portrait=0&amp;color=3333ff" width="600" height="338" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-                         	</div>
+                         	<video id="videoPlayer" > <!--videoHeight="338em" videoWidth="600" poster="img/transition.jpg"-->
+                         		<source src="son/video.mp4"></source>
+                         	</video>
+
+							<button class="control" onclick="play('videoPlayer', this)">Play</button>
+							<button class="control" onclick="resume('videoPlayer')">Stop</button>
+
+                         	<script type="text/javascript">
+								var player = document.querySelector('#videoPlayer');
+								player.play();
+
+								function play(idPlayer, control) {
+							    var player = document.querySelector('#' + idPlayer);
+							    
+							    if (player.paused) {
+							        player.play()
+							        control.textContent = 'Pause';
+							    } else {
+							        player.pause(); 
+							        control.textContent = 'Play';
+							    }
+							}
+
+							function resume(idPlayer) {
+							    var player = document.querySelector('#' + idPlayer);
+							    
+							    player.currentTime = 0;
+							    player.pause();
+							}
+							</script>
+
+
+                         	<!-- <iframe id="vid" src="http://player.vimeo.com/video/88739879?byline=0&amp;portrait=0&amp;color=3333ff" width="600" height="338" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                         	</div> -->
                          </div>
                   </div>
        
                   <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4"><div class="text-center">
-                        	<p>3457874662147890054886287516841645612348854512313477464313155168878920221515484687/669431223848789541313</p>
+                        	
                         </div></div>
                         <div class="col-xs-12 col-sm-7 col-md-8 col-lg-8"><div class="text-center"></div></div>
                   </div>
@@ -101,7 +139,7 @@ var randInt = function(a, b) {
 		$('.scrollTo').click( function() { // Au clic sur un élément
 			var page = $(this).attr('href'); // Page cible
 			var speed = 750; // Durée de l'animation (en ms)
-			$('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
+			$('html, body').animate( { scrollLeft: $(page).offset().left }, speed ); // Go
 			return false;
 		});
 	});
