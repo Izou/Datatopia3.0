@@ -27,7 +27,7 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 3372,
+				"buffer_size": 4668,
 				"line_ending": "Windows"
 			}
 		},
@@ -44,7 +44,7 @@
 			"file": "style.css",
 			"settings":
 			{
-				"buffer_size": 474,
+				"buffer_size": 626,
 				"line_ending": "Windows",
 				"name": "*{"
 			}
@@ -131,6 +131,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"audio",
+			"scrollTop",
+			"hype_home",
 			"localhost:8888",
 			"photo1b",
 			"required",
@@ -166,15 +169,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3372,
+						"buffer_size": 4668,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								876,
-								876
+								1801,
+								1801
 							]
 						],
 						"settings":
@@ -183,7 +186,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1366.0,
+						"translation.y": 405.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -226,15 +229,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 474,
+						"buffer_size": 626,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								42,
-								42
+								626,
+								626
 							]
 						],
 						"settings":
@@ -243,7 +246,7 @@
 							"syntax": "Packages/CSS/CSS.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 153.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
