@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>Datatopia 3.0</title>
+	<!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="../favicon.ico"> 
+	        <!-- <link rel="stylesheet" type="text/css" href="parallax/css/demo.css" /> -->
+	        <link rel="stylesheet" type="text/css" href="parallax/css/style.css" />
+			<script type="text/javascript" src="parallax/js/modernizr.custom.28468.js"></script>
+			<link href='http://fonts.googleapis.com/css?family=Economica:700,400italic' rel='stylesheet' type='text/css'>
+			<noscript>
+				<link rel="stylesheet" type="text/css" href="parallax/css/nojs.css" />
+			</noscript>
+	</head>
+
+	<body>
+		<header>
+			<!-- <h1>Parallax Content Slider <span>with CSS3 and jQuery</span></h1>
+			<h2>A content slider with delayed animations and background parallax effect</h2>
+			<p class="codrops-demos">
+				<a class="current-demo" href="index.html">Default</a>
+				<a href="index2.html">Autoplay</a>
+				<a href="index3.html">Parallax off</a> -->
+			</p>
+		</header>
+
+			<div id="da-slider" class="da-slider">
+				<div class="da-slide">
+					<div class="da-img">
+						<canvas id="canvas"></canvas>
+						<!-- Script Glitch Datatopia -->
+<script>
+var canvas = document.getElementById('canvas')
+  , context = canvas.getContext('2d')
+  , img = new Image()
+  , w
+  , h
+  , offset
+  , glitchInterval;
+
+img.src = 'img/datatopia.jpg';
+img.onload = function() {
+  init();
+	window.onresize = init;
+};
+
+var init = function() {
+	clearInterval(glitchInterval);
+	canvas.width = w = window.innerWidth;
+	offset = w * .1;
+	canvas.height = h = ~~(200 * ((w - (offset * 2)) / img.width));
+	glitchInterval = setInterval(function() {
+		clear();
+		context.drawImage(img, 0, 10, img.width, 275, offset, 0, w - (offset * 2), h);
+		setTimeout(glitchImg, randInt(250, 1000));
+	}, 500);
+};
+
+var clear = function() {
+	context.rect(0, 0, w, h);
+	context.fill();
+};
+    
+var glitchImg = function() {
+	for (var i = 0; i < randInt(1, 13); i++) {
+		var x = Math.random() * w;
+		var y = Math.random() * h;
+		var spliceWidth = w - x;
+		var spliceHeight = randInt(5, h / 3);
+		context.drawImage(canvas, 0, y, spliceWidth, spliceHeight, x, y, spliceWidth, spliceHeight);
+		context.drawImage(canvas, spliceWidth, y, x, spliceHeight, 0, y, x, spliceHeight);
+	}
+};
+
+var randInt = function(a, b) {
+	return ~~(Math.random() * (b - a) + a);
+};
+</script>
+<!-- Fin Script Glitch -->
+					</div>
+				</div>
+
+				<div class="da-slide">
+					<h2>Easy management</h2>
+					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+					<a href="#" class="da-link">Read more</a>
+					<div class="da-img"><img src="images/2.png" alt="image01" /></div>
+				</div>
+
+				<div class="da-slide">
+					<h2>Revolution</h2>
+					<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+					<a href="#" class="da-link">Read more</a>
+					<div class="da-img"><img src="images/3.png" alt="image01" /></div>
+				</div>
+
+				<div class="da-slide">
+					<h2>Quality Control</h2>
+					<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+					<a href="#" class="da-link">Read more</a>
+					<div class="da-img"><img src="images/4.png" alt="image01" /></div>
+				</div>
+
+				<nav class="da-arrows">
+					<span class="da-arrows-prev"></span>
+					<span class="da-arrows-next"></span>
+				</nav>
+
+				</div>
+
+	        </div>
+			<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+			<script type="text/javascript" src="parallax/js/jquery.cslider.js"></script>
+			<script type="text/javascript">
+				$(function() {
+				
+					$('#da-slider').cslider();
+					
+				});
+			</script>
+	</body>
+</html>
