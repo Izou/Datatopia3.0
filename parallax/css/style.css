@@ -1,14 +1,73 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*End Reset*/
+
+/*Starting own CSS*/
+canvas {
+  margin: 10em auto;
+  display: inline-block;
+  float: left;
+}
+/*Ending Own CSS*/
+
 .da-slider{
 	width: 100%;
-	min-width: 520px;
-	height: 400px;
+	/*min-width: 520px;*/
+	height: 50em;
 	position: relative;
-	margin: 30px auto;
+	margin: 0px auto;
 	overflow: hidden;
-	background: transparent url(../images/waves.gif) repeat 0% 0%;
-	border-top: 8px solid #efc34a;
-	border-bottom: 8px solid #efc34a;
-	box-shadow: 0px 1px 1px rgba(0,0,0,0.2), 0px -2px 1px #fff;
+	background: black repeat 0% 0%;
+	/*border-top: 8px solid #efc34a;
+	border-bottom: 8px solid #efc34a;*/
+	/*box-shadow: 0px 1px 1px rgba(0,0,0,0.2), 0px -2px 1px #fff;*/
 	-webkit-transition: background-position 1.4s ease-in-out 0.3s;
 	-moz-transition: background-position 1.4s ease-in-out 0.3s;
 	-o-transition: background-position 1.4s ease-in-out 0.3s;
@@ -28,7 +87,7 @@
 	z-index: 1000;
 }
 .da-slider-fb .da-slide{
-	left: 100%;
+	/*left: 100%;*/
 }
 .da-slider-fb  .da-slide.da-slide-current{
 	left: 0px;
@@ -39,7 +98,7 @@
 .da-slide .da-img{
 	position: absolute;
 	opacity: 0;
-	left: 110%;
+/*	left: 110%;*/
 }
 .da-slider-fb .da-slide h2,
 .da-slider-fb .da-slide p,
@@ -48,7 +107,7 @@
 	opacity: 1;
 }
 .da-slider-fb .da-slide .da-img{
-	left: 60%;
+	left: 0%;
 	opacity: 1;
 }
 .da-slide h2{
@@ -200,7 +259,7 @@
 	opacity: 1;
 }
 .da-slide-current .da-img{
-	left: 60%;
+	left: 0%;
 	opacity: 1;
 }
 /* Animation classes and animations */
