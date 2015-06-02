@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"text",
+				"text-align"
+			],
+			[
+				"bot",
+				"bottom"
+			],
+			[
+				"b",
+				"background"
+			],
+			[
 				"si",
 				"font-size"
 			],
@@ -36,26 +48,40 @@
 			}
 		},
 		{
+			"contents": "<!DOCTYPE html>\n<html>\n	<head>\n	<meta charset=\"UTF-8\">\n	<title>Datatopia 3.0</title>\n	<!-- <link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\"> -->\n	<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\">\n	<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n	<link rel=\"shortcut icon\" href=\"../favicon.ico\"> \n	<link href='http://fonts.googleapis.com/css?family=Orbitron:900' rel='stylesheet' type='text/css'>\n	        <!-- <link rel=\"stylesheet\" type=\"text/css\" href=\"parallax/css/demo.css\" /> -->\n	        <link rel=\"stylesheet\" type=\"text/css\" href=\"parallax/css/style.css\" />\n			<script type=\"text/javascript\" src=\"parallax/js/modernizr.custom.28468.js\"></script>\n			<link href='http://fonts.googleapis.com/css?family=Economica:700,400italic' rel='stylesheet' type='text/css'>\n			<noscript>\n				<link rel=\"stylesheet\" type=\"text/css\" href=\"parallax/css/nojs.css\" />\n			</noscript>\n	</head>\n\n	<body>\n		<header>\n\n		</header>\n\n			<div id=\"da-slider\" class=\"da-slider\">\n				<div class=\"da-slide\">\n					<div id=\"wrapper\">\n				      <canvas id=\"stage\"></canvas>\n				    </div>\n\n					<audio id=\"audioPlayer\">\n		   				<source src=\"son/bienvenue.ogg\"></source>\n		   				<source src=\"son/bienvenue.mp3\"></source>\n					</audio>\n\n					<script type=\"text/javascript\">\n						var player = document.querySelector('#audioPlayer');\n						player.play();\n					</script>\n					<p>Bienvenue sur Datatopia 3.0</p>\n				</div>\n\n				<div class=\"da-slide\">\n					<!-- <h2>Easy management</h2>\n					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>\n					<a href=\"#\" class=\"da-link\">Read more</a> -->\n					<div class=\"da-video\"><video src=\"son/video.mp4\" id=\"video\" controls></video></div>\n				</div>\n\n				<div class=\"da-slide\">\n					<p>\n						<audio id=\"audioPlayer2\">\n			   				<source src=\"son/bienvenue.ogg\"></source>\n			   				<source src=\"son/bienvenue.mp3\"></source>\n						</audio>\n						<script type=\"text/javascript\">\n						var player = document.querySelector('#audioPlayer2');\n						player.play();\n						</script>\n						Datatopia 3.0 est un projet de recherche alternatif traitant du détournement des capacités créatives de l’erreur et de l’aléa, deux processus de création souvent mal considérés car maintes fois associés aux limites et à ses fatalités.\n						Aussi, d’après l’Histoire et selon toutes conditions, nous restons toujours et invariablement liés aux limitations, qu’elles soient matérielles ou  humaines ; il est supposable que nous ne pouvons les éviter.\n						Mais à défaut de les surpasser, et afin de revendiquer de nouvelles formes tangibles (visuelles, formelles, architecturales ou même sociétales...), nous devons réfléchir à comment détourner, réutiliser et combiner les contraintes de l’existant et à les montrer comme des forces créatrices plutôt que des restrictions. Par conséquent, apporter une dose de risque, d’accident et de gravité en essayant volontairement de garder cette disposition à l’inattendu – à la surprise – recherchant et réutilisant l’imprévu pour mener à bien des œuvres novatrices car « inespérées.»\n						Datatopia 3.0 est ainsi le fruit d’un hasard actif ; il incarne la rencontre réfléchie de plusieurs séries causales indépendantes ayant le dessein de fabriquer de nouvelles relations logiques de données pour appréhender sans réserves les ressources créatives de l’existant.\n\n\n					</p>\n				</div>\n\n				<div class=\"da-slide\">\n					<h2>Quality Control</h2>\n					<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>\n					<a href=\"#\" class=\"da-link\">Read more</a>\n					<div class=\"da-img\"><img src=\"img/.png\" alt=\"image01\" /></div>\n				</div>\n\n				<nav class=\"da-arrows\">\n					<span class=\"da-arrows-prev\"></span>\n					<span class=\"da-arrows-next\"></span>\n				</nav>\n\n				</div>\n\n	        </div>\n			<script type=\"text/javascript\" src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js\"></script>\n			<script type=\"text/javascript\" src=\"parallax/js/jquery.cslider.js\"></script>\n			<script type=\"text/javascript\">\n				$(function() {\n				\n					$('#da-slider').cslider();\n					\n				});\n			</script>\n<!-- Glitch -->\n			<script type=\"text/javascript\" src=\"http://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5/dat.gui.min.js\"></script>\n			<script type=\"text/javascript\">\n				function (){\n				  \"use strict\";\n				  var textSize = 10;\n				  var glitcher = {\n\n				    init: function () {\n				      setTimeout((function () {\n				        this.canvas = document.getElementById('stage');\n				        this.context = this.canvas.getContext('2d');\n\n				        this.initOptions();\n				        this.resize();\n				        this.tick();\n				      }).bind(this), 100);\n				    },\n\n				    initOptions: function () {\n				      var gui = new dat.GUI(),\n				        current = gui.addFolder('Current'),\n				        controls = gui.addFolder('Controls');\n				      this.width = document.documentElement.offsetWidth;\n				      this.height = document.documentElement.offsetHeight;      \n				      \n				      this.textSize = Math.floor(this.width / 7);\n				      // sets text size based on window size\n				      if (this.textSize > this.height) {\n				        this.textSize = Math.floor(this.height/1.5); }\n				      // tries to make text fit if window is\n				      // very wide, but not very tall\n				      this.font = '900 ' + this.textSize + 'px \"Orbitron\"';\n				      this.context.font = this.font;\n				      this.text = \"RESIST\";\n				      this.textWidth = (this.context.measureText(this.text)).width;\n\n				      this.fps = 60;\n\n				      this.channel = 0; // 0 = red, 1 = green, 2 = blue\n				      this.compOp = 'lighter'; // CompositeOperation = lighter || darker || xor\n				      this.phase = 0.0;\n				      this.phaseStep = 0.05; //determines how often we will change channel and amplitude\n				      this.amplitude = 0.0;\n				      this.amplitudeBase = 2.0;\n				      this.amplitudeRange = 2.0;\n				      this.alphaMin = 0.8;\n\n				      this.glitchAmplitude = 20.0;\n				      this.glitchThreshold = 0.9;\n				      this.scanlineBase = 40;\n				      this.scanlineRange = 40;\n				      this.scanlineShift = 15;\n\n				      current.add(this, 'channel', 0, 2).listen();\n				      current.add(this, 'phase', 0, 1).listen();\n				      current.add(this, 'amplitude', 0, 5).listen();\n				      // comment out below to hide ability to change text string\n				      var text = controls.add(this, 'text');\n				      text.onChange((function (){\n				        this.textWidth = (this.context.measureText(this.text)).width;\n				      }).bind(this));\n				      // comment out above to hide ability to change text string\n				      controls.add(this, 'fps', 1, 60);\n				      controls.add(this, 'phaseStep', 0, 1);\n				      controls.add(this, 'alphaMin', 0, 1);\n				      controls.add(this, 'amplitudeBase', 0, 5);\n				      controls.add(this, 'amplitudeRange', 0, 5);\n				      controls.add(this, 'glitchAmplitude', 0, 100);\n				      controls.add(this, 'glitchThreshold', 0, 1);\n				      controls.open();\n				      gui.close(); // start the control panel cloased\n				    },\n\n				    tick: function () {\n				      setTimeout((function () {\n				        this.phase += this.phaseStep;\n\n				        if (this.phase > 1) {\n				          this.phase = 0.0;\n				          this.channel = (this.channel === 2) ? 0 : this.channel + 1;\n				          this.amplitude = this.amplitudeBase + (this.amplitudeRange * Math.random());\n				        }\n\n				        this.render();\n				        this.tick();\n\n				      }).bind(this), 1000 / this.fps);\n				    },\n\n				    render: function () {\n				      var x0 = this.amplitude * Math.sin((Math.PI * 2) * this.phase) >> 0,\n				        x1, x2, x3;\n\n				      if (Math.random() >= this.glitchThreshold) {\n				        x0 *= this.glitchAmplitude;\n				      }\n\n				      x1 = this.width - this.textWidth >> 1;\n				      x2 = x1 + x0;\n				      x3 = x1 - x0;\n\n\n				      this.context.clearRect(0, 0, this.width, this.height);\n				      this.context.globalAlpha = this.alphaMin + ((1 - this.alphaMin) * Math.random());\n\n				      switch (this.channel) {\n				        case 0:\n				          this.renderChannels(x1, x2, x3);\n				          break;\n				        case 1:\n				          this.renderChannels(x2, x3, x1);\n				          break;\n				        case 2:\n				          this.renderChannels(x3, x1, x2);\n				          break;\n				      }\n				        this.renderScanline();\n				        if (Math.floor(Math.random() * 2) > 1) {\n				          this.renderScanline();\n				          // renders a second scanline 50% of the time\n				        }\n				    },\n\n				    renderChannels: function (x1, x2, x3) {\n				      this.context.font = this.font;\n				      this.context.fillStyle = \"rgb(255,0,0)\";\n				      this.context.fillText(this.text, x1, this.height / 2);\n\n				      this.context.globalCompositeOperation = this.compOp;\n\n				      this.context.fillStyle = \"rgb(0,255,0)\";\n				      this.context.fillText(this.text, x2, this.height / 2);\n				      this.context.fillStyle = \"rgb(0,0,255)\";\n				      this.context.fillText(this.text, x3, this.height / 2);\n				    },\n\n				    renderScanline: function () {\n				      var y = this.height * Math.random() >> 0,\n				        o = this.context.getImageData(0, y, this.width, 1),\n				        d = o.data,\n				        i = d.length,\n				        s = this.scanlineBase + this.scanlineRange * Math.random() >> 0,\n				        x = -this.scanlineShift + this.scanlineShift * 2 * Math.random() >> 0;\n\n				      while (i-- > 0) {\n				        d[i] += s;\n				      }\n\n				      this.context.putImageData(o, x, y);\n				    },\n\n				    resize: function () {\n				      this.width = document.documentElement.offsetWidth;\n				      //this.height = window.innerHeight;\n				            this.height = document.documentElement.offsetHeight;\n				      if (this.canvas) {\n				        this.canvas.height = this.height;\n				        //document.documentElement.offsetHeight;\n				        this.canvas.width = this.width;\n				        //document.documentElement.offsetWidth;\n				        this.textSize = Math.floor(this.canvas.width / 7);\n				        // RE-sets text size based on window size\n				        if (this.textSize > this.height) {\n				          this.textSize = Math.floor(this.canvas.height/1.5); }\n				          // tries to make text fit if window is\n				          // very wide, but not very tall\n				        this.font = '900 ' + this.textSize + 'px \"Orbitron\"';\n				        this.context.font = this.font;\n				      }\n				    }\n				  };\n\n				  document.onload = glitcher.init();\n				  window.onresize = glitcher.resize();\n				  // return;\n				 // executes anonymous function onload\n				})();\n			</script>\n\n			\n	</body>\n</html>",
 			"file": "index2.html",
+			"file_size": 11275,
+			"file_write_time": 130777270820000000,
 			"settings":
 			{
-				"buffer_size": 3574,
+				"buffer_size": 10924,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "parallax/js/jquery.cslider.js",
+			"contents": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"UTF-8\">\n<title>Datatopia 3.0</title>\n<!-- <link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\"> -->\n<link rel=\"stylesheet\" type=\"text/css\" href=\"jInvertScroll/examples/css/example.css\">\n</head>\n<body>\n	<div class=\"horizon scroll\">\n	        <h2 class=\"glitch\" data-text=\"GLITCH\">GLITCH</h2>\n					<audio id=\"audioPlayer\">\n		   				<source src=\"son/bienvenue.ogg\"></source>\n		   				<source src=\"son/bienvenue.mp3\"></source>\n					</audio>\n					<script type=\"text/javascript\">\n						var player = document.querySelector('#audioPlayer');\n						player.play();\n					</script>\n			<p>Bienvenue sur Datatopia 3.0</p>\n	    </div>\n	    <div class=\"middle scroll\">\n	        <video src=\"son/video.mp4\" id=\"video\" controls></video>\n	    </div>\n	    <div class=\"front scroll\">\n	        <img src=\"images/front.png\" alt=\"\" />\n	    </div>\n	    \n	    <script type=\"text/javascript\" src=\"../libs/jquery.min.js\"></script>\n	    <script type=\"text/javascript\" src=\"../dist/js/jquery.jInvertScroll.js\"></script>\n	    <script type=\"text/javascript\">\n	    (function($) {\n	        $.jInvertScroll(['.scroll'],        // an array containing the selector(s) for the elements you want to animate\n	            {\n	            height: 6000,                   // optional: define the height the user can scroll, otherwise the overall length will be taken as scrollable height\n	            onScroll: function(percent) {   //optional: callback function that will be called when the user scrolls down, useful for animating other things on the page\n	                console.log(percent);\n	            }\n	        });\n	    }(jQuery));\n	    </script>\n</body>\n</html>\n</body>\n</html>",
+			"file": "index3.html",
+			"file_size": 1692,
+			"file_write_time": 130777223060000000,
 			"settings":
 			{
-				"buffer_size": 6841,
+				"buffer_size": 1687,
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "jInvertScroll/examples/css/example.css",
+			"settings":
+			{
+				"buffer_size": 870,
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "parallax/css/style.css",
 			"settings":
 			{
-				"buffer_size": 21387,
+				"buffer_size": 22267,
 				"line_ending": "Unix"
 			}
 		},
@@ -105,6 +131,8 @@
 	],
 	"file_history":
 	[
+		"/D/Github/Datatopia3.0/jInvertScroll/examples/index.htm",
+		"/D/Github/Datatopia3.0/parallax/js/jquery.cslider.js",
 		"/C/Users/Iz/Downloads/Minimal-jQuery-Animated-Text-Typing-Effect-Best-Typewriter/Minimal-jQuery-Animated-Text-Typing-Effect-Best-Typewriter/lib/typewriter.js",
 		"/C/Users/Iz/Downloads/Minimal-jQuery-Animated-Text-Typing-Effect-Best-Typewriter/Minimal-jQuery-Animated-Text-Typing-Effect-Best-Typewriter/example/index.html",
 		"/D/Github/Datatopia3.0/parallax/index.html",
@@ -156,6 +184,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"canvas",
 			"img",
 			"audio",
 			"scrollTop",
@@ -186,7 +215,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -202,8 +231,8 @@
 						"selection":
 						[
 							[
-								498,
-								498
+								733,
+								610
 							]
 						],
 						"settings":
@@ -215,7 +244,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -224,15 +253,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3574,
+						"buffer_size": 10924,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								859,
-								859
+								696,
+								696
 							]
 						],
 						"settings":
@@ -240,56 +269,85 @@
 							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1127.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "parallax/js/jquery.cslider.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6841,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": -0.0,
-						"translation.y": 420.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "parallax/css/style.css",
+					"buffer": 2,
+					"file": "index3.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 21387,
+						"buffer_size": 1687,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4127,
-								4127
+								1623,
+								1623
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "jInvertScroll/examples/css/example.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 870,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								269,
+								269
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "parallax/css/style.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 22267,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2117,
+								2117
 							]
 						],
 						"settings":
@@ -297,15 +355,15 @@
 							"syntax": "Packages/CSS/CSS.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
-						"translation.y": 3489.0,
+						"translation.x": -0.0,
+						"translation.y": 1296.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 5,
 					"file": "style.css",
 					"semi_transient": false,
 					"settings":
@@ -327,10 +385,10 @@
 							"syntax": "Packages/CSS/CSS.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1440.0,
+						"translation.y": 417.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -338,7 +396,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 30.0
+		"height": 26.0
 	},
 	"input":
 	{
@@ -375,7 +433,7 @@
 	"project": "datatopia.sublime-project",
 	"replace":
 	{
-		"height": 56.0
+		"height": 50.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -425,7 +483,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 382.0,
+	"side_bar_width": 63.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
