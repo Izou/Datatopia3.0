@@ -31,7 +31,7 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 4938,
+				"buffer_size": 4942,
 				"line_ending": "Windows"
 			}
 		},
@@ -39,75 +39,31 @@
 			"file": "index2.html",
 			"settings":
 			{
-				"buffer_size": 4286,
+				"buffer_size": 3574,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "parallax/index.html",
+			"file": "parallax/js/jquery.cslider.js",
 			"settings":
 			{
-				"buffer_size": 4360,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "Datatopia 3.0 est un projet de recherche alternatif traitant du détournement des capacités créatives de l’erreur et de l’aléa, deux processus de création souvent mal considérés car maintes fois associés aux limites et à ses fatalités.\nAussi, d’après l’Histoire et selon toutes conditions, nous restons toujours et invariablement liés aux limitations, qu’elles soient matérielles ou  humaines ; il est supposable que nous ne pouvons les éviter.\nMais à défaut de les surpasser, et afin de revendiquer de nouvelles formes tangibles (visuelles, formelles, architecturales ou même sociétales...), nous devons réfléchir à comment détourner, réutiliser et combiner les contraintes de l’existant et à les montrer comme des forces créatrices plutôt que des restrictions. Par conséquent, apporter une dose de risque, d’accident et de gravité en essayant volontairement de garder cette disposition à l’inattendu – à la surprise – recherchant et réutilisant l’imprévu pour mener à bien des œuvres novatrices car « inespérées.»\nDatatopia 3.0 est ainsi le fruit d’un hasard actif ; il incarne la rencontre réfléchie de plusieurs séries causales indépendantes ayant le dessein de fabriquer de nouvelles relations logiques de données pour appréhender sans réserves les ressources créatives de l’existant.",
-			"file": "son/subtiltes.srt",
-			"file_size": 1363,
-			"file_write_time": 130776338560000000,
-			"settings":
-			{
-				"buffer_size": 1288,
-				"line_ending": "Windows",
-				"name": "Datatopia 3.0 est un projet de recherche alternati"
-			}
-		},
-		{
-			"contents": "<!doctype html>\n<html lang=\"en\">\n<head>\n	<meta charset=\"UTF-8\">\n	<title>jQuery Best Typewriter Plugin Demo</title>\n    <link href=\"http://www.jqueryscript.net/css/jquerysctipttop.css\" rel=\"stylesheet\" type=\"text/css\">\n	<link href='http://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'>\n	<link rel=\"stylesheet\" href=\"css/style.css\">\n<body>\n<div id=\"jquery-script-menu\">\n<div class=\"jquery-script-center\">\n<ul>\n<li><a href=\"http://www.jqueryscript.net/text/Minimal-jQuery-Animated-Text-Typing-Effect-Best-Typewriter.html\">Download This Plugin</a></li>\n<li><a href=\"http://www.jqueryscript.net/\">Back To </a></li>\n</ul>\n<div class=\"jquery-script-ads\"><script type=\"text/javascript\"><!--\ngoogle_ad_client = \"ca-pub-2783044520727903\";\n/* jQuery_demo */\ngoogle_ad_slot = \"2780937993\";\ngoogle_ad_width = 728;\ngoogle_ad_height = 90;\n//-->\n</script>\n<script type=\"text/javascript\"\nsrc=\"http://pagead2.googlesyndication.com/pagead/show_ads.js\">\n</script></div>\n<div class=\"jquery-script-clear\"></div>\n</div>\n</div>\n<h1 style=\"margin:150px auto 50px auto\" align=\"center\">jQuery Best Typewriter Plugin Demo</h1>\n	<div class=\"computer\">\n		<span><span class=\"green\">myName</span>:<span class=\"purple\">~</span>$ </span>\n		<span class=\"typewriter\">\n			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, fuga, eius similique soluta esse error id amet quasi necessitatibus illo est non ipsa quam molestias blanditiis ea qui dignissimos perspiciatis!\n		</span>\n	</div>\n\n\n\n<script src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js\"></script>\n<script src=\"../lib/typewriter.js\"></script>\n	 <script>\n	\n\n	$(function() {\n    $(\".typewriter\").typewriter({'speed':100});\n  });\n  </script>\n  \n<script type=\"text/javascript\">\n\n  var _gaq = _gaq || [];\n  _gaq.push(['_setAccount', 'UA-36251023-1']);\n  _gaq.push(['_setDomainName', 'jqueryscript.net']);\n  _gaq.push(['_trackPageview']);\n\n  (function() {\n    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;\n    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';\n    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);\n  })();\n\n</script>\n\n</body>\n</html>",
-			"file": "/C/Users/Iz/Downloads/Minimal-jQuery-Animated-Text-Typing-Effect-Best-Typewriter/Minimal-jQuery-Animated-Text-Typing-Effect-Best-Typewriter/example/index.html",
-			"file_size": 2342,
-			"file_write_time": 130776327555755492,
-			"settings":
-			{
-				"buffer_size": 2277,
+				"buffer_size": 6841,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "// typewriter\n\n// 3215287\n// bertaec32@gmail.com\n(function($, w, d, undefined) {\n\n  function typewriter() {\n\n    // Globals \n    var self = this, speed;\n\n    function init(element, options) {\n            // Set Globals\n      var str;\n      var indice = 0;\n\n      self.options = $.extend( {}, $.fn.typewriter.options, options );\n      $currentElement = $(element);\n      elementStr = $currentElement.text().replace(/\\s+/g, ' ');\n      dataSpeed  = $currentElement.data(\"speed\") || self.options.speed;\n      console.log(dataSpeed)\n      $currentElement.empty();\n      var showText = setInterval(\n				function(){\n					if (indice++ < elementStr.length) {\n			      $currentElement.append(elementStr[indice]);\n			    }else{\n			    	clearInterval(showText);\n			    }\n				}, dataSpeed);\n      // self.animation = setInterval(function(){animate_calification()}, 20);\n    }\n\n    \n    \n    // Metodos publicos\n    return {\n      init: init\n    }\n  }\n\n  // Plugin jQuery\n  $.fn.typewriter = function(options) {\n    return this.each(function () {\n    	var writer =  new typewriter();\n      writer.init(this, options);\n      $.data( this, 'typewriter', writer);\n    });\n  };\n\n  $.fn.typewriter.options = {\n    'speed' : 300\n  };\n\n})(jQuery, window, document);",
-			"file": "/C/Users/Iz/Downloads/Minimal-jQuery-Animated-Text-Typing-Effect-Best-Typewriter/Minimal-jQuery-Animated-Text-Typing-Effect-Best-Typewriter/lib/typewriter.js",
-			"file_size": 1245,
-			"file_write_time": 130776327556155747,
+			"file": "parallax/css/style.css",
 			"settings":
 			{
-				"buffer_size": 1245,
+				"buffer_size": 21387,
 				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "jquery.srt.js",
-			"settings":
-			{
-				"buffer_size": 2529,
-				"line_ending": "Windows",
-				"name": "/*"
-			}
-		},
-		{
-			"file": "glitch.jquery.js",
-			"settings":
-			{
-				"buffer_size": 2244,
-				"line_ending": "Windows",
-				"name": "/*!"
 			}
 		},
 		{
 			"file": "style.css",
 			"settings":
 			{
-				"buffer_size": 631,
+				"buffer_size": 1707,
 				"line_ending": "Windows",
 				"name": "*{"
 			}
@@ -149,6 +105,12 @@
 	],
 	"file_history":
 	[
+		"/C/Users/Iz/Downloads/Minimal-jQuery-Animated-Text-Typing-Effect-Best-Typewriter/Minimal-jQuery-Animated-Text-Typing-Effect-Best-Typewriter/lib/typewriter.js",
+		"/C/Users/Iz/Downloads/Minimal-jQuery-Animated-Text-Typing-Effect-Best-Typewriter/Minimal-jQuery-Animated-Text-Typing-Effect-Best-Typewriter/example/index.html",
+		"/D/Github/Datatopia3.0/parallax/index.html",
+		"/D/Github/Datatopia3.0/glitch.jquery.js",
+		"/D/Github/Datatopia3.0/jquery.srt.js",
+		"/D/Github/Datatopia3.0/son/subtiltes.srt",
 		"/D/hubiC/Afip Exercices/STAGE DATATOPIA/images/simplicissimus-1897.jpg",
 		"/D/Github/lessai/wp-content/themes/awaken/header.php",
 		"/D/Github/lessai/lessai.sql",
@@ -180,7 +142,7 @@
 	],
 	"find":
 	{
-		"height": 30.0
+		"height": 43.0
 	},
 	"find_in_files":
 	{
@@ -194,6 +156,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"img",
 			"audio",
 			"scrollTop",
 			"hype_home",
@@ -223,7 +186,7 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -232,15 +195,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4938,
+						"buffer_size": 4942,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3198,
-								4432
+								498,
+								498
 							]
 						],
 						"settings":
@@ -249,10 +212,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2174.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -261,15 +224,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4286,
+						"buffer_size": 3574,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2567,
-								2567
+								859,
+								859
 							]
 						],
 						"settings":
@@ -277,204 +240,85 @@
 							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 736.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "parallax/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4360,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1878,
-								4339
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 794.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "son/subtiltes.srt",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1288,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1288,
-								1288
-							]
-						],
-						"settings":
-						{
-							"auto_name": "Datatopia 3.0 est un projet de recherche alternati",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "/C/Users/Iz/Downloads/Minimal-jQuery-Animated-Text-Typing-Effect-Best-Typewriter/Minimal-jQuery-Animated-Text-Typing-Effect-Best-Typewriter/example/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2277,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2260,
-								2260
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 373.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "/C/Users/Iz/Downloads/Minimal-jQuery-Animated-Text-Typing-Effect-Best-Typewriter/Minimal-jQuery-Animated-Text-Typing-Effect-Best-Typewriter/lib/typewriter.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1245,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								958,
-								958
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 506.0,
+						"translation.y": 1127.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "jquery.srt.js",
+					"buffer": 2,
+					"file": "parallax/js/jquery.cslider.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2529,
+						"buffer_size": 6841,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2529,
-								2529
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"auto_name": "/*",
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
-						"translation.y": 734.0,
+						"translation.x": -0.0,
+						"translation.y": 420.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "glitch.jquery.js",
+					"buffer": 3,
+					"file": "parallax/css/style.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2244,
+						"buffer_size": 21387,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3,
-								3
+								4127,
+								4127
 							]
 						],
 						"settings":
 						{
-							"auto_name": "/*!",
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 3489.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 4,
 					"file": "style.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 631,
+						"buffer_size": 1707,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								62,
-								44
+								1311,
+								1311
 							]
 						],
 						"settings":
@@ -483,10 +327,10 @@
 							"syntax": "Packages/CSS/CSS.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1440.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
