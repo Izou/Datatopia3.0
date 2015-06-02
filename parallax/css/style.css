@@ -50,11 +50,11 @@ table {
 /*End Reset*/
 
 /*Starting own CSS*/
-canvas {
+/*canvas {
   margin: 10em auto;
   display: inline-block;
   float: left;
-}
+}*/
 
 body{
   background:black;
@@ -80,7 +80,37 @@ body{
 }
 /*End Subtitles*/
 
-.glitch{
+/*Glitch Resist Test*/
+body {
+  background: black;
+  /*overflow: hidden; */
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+#wrapper {
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+
+img {
+ /* display: none;*/
+}
+
+canvas {
+  padding: 0 40px 0 0;
+  margin: 20px auto 0;
+  text-align: center;
+  max-width: 100%;
+  height: auto;
+}
+/*Glitch Resist Test*/
+
+/*.glitch{
   color:white;
   font-size:100px;
   position:relative;
@@ -127,7 +157,7 @@ body{
   overflow:hidden;
   clip:rect(0,900px,0,0); 
   animation:noise-anim-2 3s infinite linear alternate-reverse;
-}
+}*/
 /*Ending Own CSS*/
 
 .da-slider{
