@@ -78,6 +78,15 @@ body{
 	-ms-transition: opacity 0.4s ease-in-out 0.2s;
 	transition: opacity 0.4s ease-in-out 0.2s;
 }
+
+.srt{
+	color: white;
+	font-family: 'Avenir', Arial, sans-serif;
+	text-align: center;
+	width: 80%;
+	top: 14em;
+
+}
 /*End Subtitles*/
 
 /*Glitch Resist Test*/
