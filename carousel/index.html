@@ -157,10 +157,17 @@ video{
         <img src="http://placehold.it/1800x850/9BA452/FFF&text=&nbsp;" alt="">
       </div>
 			<div class="item">
-        <video width="1000" height="750" controls="controls" poster="video-hostellerie.jpg" onclick="this.play();">
-       <source src="../video/01.wikipedia.mp4" type="video/mp4" />
+    <video id="video" controls preload="metadata">
+   <source src="../video/01.wikipedia.mp4" type="video/mp4">
+   <source src="../video/01.wikipedia.webm" type="video/webm">
+   <track label="Sub" kind="subtitles" srclang="fr" src="../video/01.wikipedia.vtt" default>
+</video>
+
+
+    <!--     <video width="1000" height="750" controls="controls" poster="video-hostellerie.jpg" onclick="this.play();">
+       <source src="../video/01.wikipedia.mp4" type="video/mp4" /> -->
        <!-- <source src="video-hostellerie.webm" type="video/webm"  /> -->
-          <object type="application/x-shockwave-flash"
+          <!-- <object type="application/x-shockwave-flash"
          codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,79,0" 
          width="426" 
          height="240" 
@@ -170,11 +177,11 @@ video{
           <param name="allowscriptaccess" value="always" />
           <param name="allowfullscreen" value="true" />
           <param name="FlashVars" value="flv=video-hostellerie.mp4&startimage=video-hostellerie.jpg
-          &showstop=1&showvolume=1&showtime=1" />
-        <p>Vous n'arrivez pas à visionner la vidéo : vous pouvez la 
+          &showstop=1&showvolume=1&showtime=1" /> -->
+      <!--   <p>Vous n'arrivez pas à visionner la vidéo : vous pouvez la 
         <a href="video-hostellerie.mp4">télécharger</a>.</p>
-        </object>
-      </video>
+        </object> -->
+      <!-- </video> -->
         <!-- <video src="../video/01.wikipedia.mp4" id="vid" controls></video> -->
         <!-- <p class="title">Fourth</p> -->
         <!-- <img src="http://placehold.it/1800x850/472D38/FFF&text=&nbsp;" alt=""> -->
