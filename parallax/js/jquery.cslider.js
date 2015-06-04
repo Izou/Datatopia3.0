@@ -150,8 +150,8 @@
 					$current.removeClass( 'da-slide-current' ); 
 				});
 				
-			}
-			
+			}			
+
 			this._updatePage();
 			
 		},

@@ -10,7 +10,7 @@ body
 body
 {
   overflow-x: hidden;
-  background: url('../images/bg.jpg') repeat top left;
+/*  background: url('../images/bg.jpg') repeat top left;*/
   background: black;
 }
 
@@ -52,4 +52,8 @@ h1
 {
   z-index: 1000;
   width: 6000px;
+}
+
+canvas{
+
 }

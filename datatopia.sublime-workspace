@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"wid",
+				"width"
+			],
+			[
 				"fon",
 				"font-family"
 			],
@@ -56,17 +60,6 @@
 			}
 		},
 		{
-			"contents": "(function( $, undefined ) {\n		\n	/*\n	 * Slider object.\n	 */\n	$.Slider 				= function( options, element ) {\n	\n		this.$el	= $( element );\n		\n		this._init( options );\n		\n	};\n	\n	$.Slider.defaults 		= {\n		current		: 0, 	// index of current slide\n		bgincrement	: 50,	// increment the bg position (parallax effect) when sliding\n		autoplay	: false,// slideshow on / off\n		interval	: 4000  // time between transitions\n    };\n	\n	$.Slider.prototype 	= {\n		_init 				: function( options ) {\n			\n			this.options 		= $.extend( true, {}, $.Slider.defaults, options );\n			\n			this.$slides		= this.$el.children('div.da-slide');\n			this.slidesCount	= this.$slides.length;\n			\n			this.current		= this.options.current;\n			\n			if( this.current < 0 || this.current >= this.slidesCount ) {\n			\n				this.current	= 0;\n			\n			}\n			\n			this.$slides.eq( this.current ).addClass( 'da-slide-current' );\n			\n			var $navigation		= $( '<nav class=\"da-dots\"/>' );\n			for( var i = 0; i < this.slidesCount; ++i ) {\n			\n				$navigation.append( '<span/>' );\n			\n			}\n			$navigation.appendTo( this.$el );\n			\n			this.$pages			= this.$el.find('nav.da-dots > span');\n			this.$navNext		= this.$el.find('span.da-arrows-next');\n			this.$navPrev		= this.$el.find('span.da-arrows-prev');\n			\n			this.isAnimating	= false;\n			\n			this.bgpositer		= 0;\n			\n			this.cssAnimations	= Modernizr.cssanimations;\n			this.cssTransitions	= Modernizr.csstransitions;\n			\n			if( !this.cssAnimations || !this.cssAnimations ) {\n				\n				this.$el.addClass( 'da-slider-fb' );\n			\n			}\n			\n			this._updatePage();\n			\n			// load the events\n			this._loadEvents();\n			\n			// slideshow\n			if( this.options.autoplay ) {\n			\n				this._startSlideshow();\n			\n			}\n			\n		},\n		_navigate			: function( page, dir ) {\n			\n			var $current	= this.$slides.eq( this.current ), $next, _self = this;\n			\n			if( this.current === page || this.isAnimating ) return false;\n			\n			this.isAnimating	= true;\n			\n			// check dir\n			var classTo, classFrom, d;\n			\n			if( !dir ) {\n			\n				( page > this.current ) ? d = 'next' : d = 'prev';\n			\n			}\n			else {\n			\n				d = dir;\n			\n			}\n				\n			if( this.cssAnimations && this.cssAnimations ) {\n				\n				if( d === 'next' ) {\n				\n					classTo		= 'da-slide-toleft';\n					classFrom	= 'da-slide-fromright';\n					++this.bgpositer;\n				\n				}\n				else {\n				\n					classTo		= 'da-slide-toright';\n					classFrom	= 'da-slide-fromleft';\n					--this.bgpositer;\n				\n				}\n				\n				this.$el.css( 'background-position' , this.bgpositer * this.options.bgincrement + '% 0%' );\n			\n			}\n			\n			this.current	= page;\n			\n			$next			= this.$slides.eq( this.current );\n			\n			if( this.cssAnimations && this.cssAnimations ) {\n			\n				var rmClasses	= 'da-slide-toleft da-slide-toright da-slide-fromleft da-slide-fromright';\n				$current.removeClass( rmClasses );\n				$next.removeClass( rmClasses );\n				\n				$current.addClass( classTo );\n				$next.addClass( classFrom );\n				\n				$current.removeClass( 'da-slide-current' );\n				$next.addClass( 'da-slide-current' );\n				\n			}\n			\n			// fallback\n			if( !this.cssAnimations || !this.cssAnimations ) {\n				\n				$next.css( 'left', ( d === 'next' ) ? '100%' : '-100%' ).stop().animate( {\n					left : '0%'\n				}, 1000, function() { \n					_self.isAnimating = false; \n				});\n				\n				$current.stop().animate( {\n					left : ( d === 'next' ) ? '-100%' : '100%'\n				}, 1000, function() { \n					$current.removeClass( 'da-slide-current' ); \n				});\n				\n			}			\n\n			this._updatePage();\n			\n		},\n		_updatePage			: function() {\n		\n			this.$pages.removeClass( 'da-dots-current' );\n			this.$pages.eq( this.current ).addClass( 'da-dots-current' );\n		\n		},\n		_startSlideshow		: function() {\n		\n			var _self	= this;\n			\n			this.slideshow	= setTimeout( function() {\n				\n				var page = ( _self.current < _self.slidesCount - 1 ) ? page = _self.current + 1 : page = 0;\n				_self._navigate( page, 'next' );\n				\n				if( _self.options.autoplay ) {\n				\n					_self._startSlideshow();\n				\n				}\n			\n			}, this.options.interval );\n		\n		},\n		page				: function( idx ) {\n			\n			if( idx >= this.slidesCount || idx < 0 ) {\n			\n				return false;\n			\n			}\n			\n			if( this.options.autoplay ) {\n			\n				clearTimeout( this.slideshow );\n				this.options.autoplay	= false;\n			\n			}\n			\n			this._navigate( idx );\n			\n		},\n		_loadEvents			: function() {\n			\n			var _self = this;\n			\n			this.$pages.on( 'click.cslider', function( event ) {\n				\n				_self.page( $(this).index() );\n				return false;\n				\n			});\n			\n			this.$navNext.on( 'click.cslider', function( event ) {\n				\n				if( _self.options.autoplay ) {\n				\n					clearTimeout( _self.slideshow );\n					_self.options.autoplay	= false;\n				\n				}\n				\n				var page = ( _self.current < _self.slidesCount - 1 ) ? page = _self.current + 1 : page = 0;\n				_self._navigate( page, 'next' );\n				return false;\n				\n			});\n			\n			this.$navPrev.on( 'click.cslider', function( event ) {\n				\n				if( _self.options.autoplay ) {\n				\n					clearTimeout( _self.slideshow );\n					_self.options.autoplay	= false;\n				\n				}\n				\n				var page = ( _self.current > 0 ) ? page = _self.current - 1 : page = _self.slidesCount - 1;\n				_self._navigate( page, 'prev' );\n				return false;\n				\n			});\n			\n			if( this.cssTransitions ) {\n			\n				if( !this.options.bgincrement ) {\n					\n					this.$el.on( 'webkitAnimationEnd.cslider animationend.cslider OAnimationEnd.cslider', function( event ) {\n						\n						if( event.originalEvent.animationName === 'toRightAnim4' || event.originalEvent.animationName === 'toLeftAnim4' ) {\n							\n							_self.isAnimating	= false;\n						\n						}	\n						\n					});\n					\n				}\n				else {\n				\n					this.$el.on( 'webkitTransitionEnd.cslider transitionend.cslider OTransitionEnd.cslider', function( event ) {\n					\n						if( event.target.id === _self.$el.attr( 'id' ) )\n							_self.isAnimating	= false;\n						\n					});\n				\n				}\n			\n			}\n			\n		}\n	};\n	\n	var logError 			= function( message ) {\n		if ( this.console ) {\n			console.error( message );\n		}\n	};\n	\n	$.fn.cslider			= function( options ) {\n	\n		if ( typeof options === 'string' ) {\n			\n			var args = Array.prototype.slice.call( arguments, 1 );\n			\n			this.each(function() {\n			\n				var instance = $.data( this, 'cslider' );\n				\n				if ( !instance ) {\n					logError( \"cannot call methods on cslider prior to initialization; \" +\n					\"attempted to call method '\" + options + \"'\" );\n					return;\n				}\n				\n				if ( !$.isFunction( instance[options] ) || options.charAt(0) === \"_\" ) {\n					logError( \"no such method '\" + options + \"' for cslider instance\" );\n					return;\n				}\n				\n				instance[ options ].apply( instance, args );\n			\n			});\n		\n		} \n		else {\n		\n			this.each(function() {\n			\n				var instance = $.data( this, 'cslider' );\n				if ( !instance ) {\n					$.data( this, 'cslider', new $.Slider( options, this ) );\n				}\n			});\n		\n		}\n		\n		return this;\n		\n	};\n	\n})( jQuery );",
-			"file": "parallax/js/jquery.cslider.js",
-			"file_size": 7160,
-			"file_write_time": 130776346000000000,
-			"settings":
-			{
-				"buffer_size": 6841,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "style.css",
 			"settings":
 			{
@@ -80,6 +73,22 @@
 			"settings":
 			{
 				"buffer_size": 22593,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "carousel/index.html",
+			"settings":
+			{
+				"buffer_size": 11582,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "jInvertScroll/examples/css/example.css",
+			"settings":
+			{
+				"buffer_size": 886,
 				"line_ending": "Unix"
 			}
 		}
@@ -117,19 +126,23 @@
 	"expanded_folders":
 	[
 		"/D/Github/Datatopia3.0",
+		"/D/Github/Datatopia3.0/jInvertScroll",
+		"/D/Github/Datatopia3.0/jInvertScroll/__MACOSX",
+		"/D/Github/Datatopia3.0/jInvertScroll/examples",
+		"/D/Github/Datatopia3.0/jInvertScroll/examples/css",
 		"/D/Github/Datatopia3.0/parallax",
 		"/D/Github/Datatopia3.0/parallax/css",
 		"/D/Github/Datatopia3.0/parallax/js"
 	],
 	"file_history":
 	[
+		"/D/Github/Datatopia3.0/index3.html",
+		"/D/Github/Datatopia3.0/parallax/js/jquery.cslider.js",
 		"/D/Github/Datatopia3.0/video/01.wikipedia.srt",
 		"/D/Github/Datatopia3.0/parallax/css/style.css",
-		"/D/Github/Datatopia3.0/index3.html",
 		"/D/Github/Datatopia3.0/index.html",
 		"/D/Github/Datatopia3.0/jInvertScroll/examples/css/example.css",
 		"/D/Github/Datatopia3.0/jInvertScroll/examples/index.htm",
-		"/D/Github/Datatopia3.0/parallax/js/jquery.cslider.js",
 		"/C/Users/Iz/Downloads/Minimal-jQuery-Animated-Text-Typing-Effect-Best-Typewriter/Minimal-jQuery-Animated-Text-Typing-Effect-Best-Typewriter/lib/typewriter.js",
 		"/C/Users/Iz/Downloads/Minimal-jQuery-Animated-Text-Typing-Effect-Best-Typewriter/Minimal-jQuery-Animated-Text-Typing-Effect-Best-Typewriter/example/index.html",
 		"/D/Github/Datatopia3.0/parallax/index.html",
@@ -181,6 +194,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"<video src=\"../video/01.wikipedia.mp4\" id=\"vid\" controls></video>",
+			"-->\n",
 			"glitchThreshold",
 			"textWidth",
 			"canvas",
@@ -230,8 +245,8 @@
 						"selection":
 						[
 							[
-								3560,
-								3560
+								3474,
+								3563
 							]
 						],
 						"settings":
@@ -240,10 +255,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 988.0,
+						"translation.y": 1242.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -271,40 +286,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "parallax/js/jquery.cslider.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6841,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3453,
-								3453
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 2149.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
 					"file": "style.css",
 					"semi_transient": false,
 					"settings":
@@ -326,14 +312,14 @@
 							"syntax": "Packages/CSS/CSS.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1735.0,
+						"translation.y": 594.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 3,
 					"file": "parallax/css/style.css",
 					"semi_transient": false,
 					"settings":
@@ -345,8 +331,8 @@
 						"selection":
 						[
 							[
-								1825,
-								1825
+								2089,
+								2089
 							]
 						],
 						"settings":
@@ -354,11 +340,77 @@
 							"syntax": "Packages/CSS/CSS.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": -0.0,
-						"translation.y": 901.0,
+						"translation.x": 0.0,
+						"translation.y": 577.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 4,
+					"file": "carousel/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11582,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3607,
+								3607
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2484.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "jInvertScroll/examples/css/example.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 886,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								884,
+								884
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 432.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -381,11 +433,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.531683543781,
 			1.0
 		],
 		"rows":
@@ -445,7 +504,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},
@@ -453,7 +512,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 198.0,
+	"side_bar_width": 63.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
