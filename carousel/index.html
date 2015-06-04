@@ -131,6 +131,8 @@ video{
 
     
         <script src="js/prefixfree.min.js"></script>
+        <script src="Playr-master/playr.js"></script>
+        <link rel="stylesheet" type="text/css" href="Playr-master/playr.css">
 
     
   </head>
@@ -157,10 +159,10 @@ video{
         <img src="http://placehold.it/1800x850/9BA452/FFF&text=&nbsp;" alt="">
       </div>
 			<div class="item">
-    <video id="video" controls preload="metadata">
+    <video id="video" controls preload="metadata" class="playr_video">
    <source src="../video/01.wikipedia.mp4" type="video/mp4">
-   <source src="../video/01.wikipedia.webm" type="video/webm">
-   <track label="Sub" kind="subtitles" srclang="fr" src="../video/01.wikipedia.vtt" default>
+   <!-- <source src="../video/01.wikipedia.webm" type="video/webm"> -->
+   <track label="Sub" kind="subtitles" srclang="fr" data-rendering="playr" src="../video/01.wikipedia.vtt" default>
 </video>
 
 
@@ -198,8 +200,8 @@ video{
 		</div>
     
     <div class="carousel__nav">
-      <a href="#" class="nav nav--left">Previous</a>
-      <a href="#" class="nav nav--right">Next</a>
+      <a href="#" class="nav nav--left">Précédent</a>
+      <a href="#" class="nav nav--right">Suivant</a>
     </div>
     
 	</div>
@@ -210,7 +212,6 @@ video{
         <script src="js/index.js"></script>
 
     <!-- Glitch -->
-      <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5/dat.gui.min.js"></script>
       <script type="text/javascript">
         (function() {
           "use strict";
@@ -229,10 +230,6 @@ video{
           },
 
           initOptions: function () {
-            var gui = new dat.GUI(),
-            current = gui.addFolder('Current'),
-            controls = gui.addFolder('Controls');
-
             this.text = "Datatopia 3.0";
 
             this.fps = 60;
@@ -251,25 +248,6 @@ video{
             this.scanlineBase = 40;
             this.scanlineRange = 40;
             this.scanlineShift = 15;
-
-            current.add(this, 'channel', 0, 2).listen();
-            current.add(this, 'phase', 0, 1).listen();
-            current.add(this, 'amplitude', 0, 5).listen();
-            // comment out below to hide ability to change text string
-            var text = controls.add(this, 'text');
-            text.onChange((function (){
-            this.textWidth = (this.context.measureText(this.text)).width;
-            }).bind(this));
-            // comment out above to hide ability to change text string
-            controls.add(this, 'fps', 1, 60);
-            controls.add(this, 'phaseStep', 0, 1);
-            controls.add(this, 'alphaMin', 0, 1);
-            controls.add(this, 'amplitudeBase', 0, 5);
-            controls.add(this, 'amplitudeRange', 0, 5);
-            controls.add(this, 'glitchAmplitude', 0, 100);
-            controls.add(this, 'glitchThreshold', 0, 1);
-            controls.open();
-            gui.close(); // start the control panel cloased
           },
 
           tick: function () {
