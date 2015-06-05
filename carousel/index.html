@@ -53,12 +53,11 @@
 
         <source src="../video/explications.mp4" type="video/mp4">
         <track label="Sub" kind="subtitles" srclang="fr" data-rendering="playr" src="../video/explications2.vtt" id="Sub" default>
-        <button id="vidpause">Pause</button>
        </video>
 
         <!-- <video src="../video/explications.mp4" id="video2"></video> -->
         <script type="text/javascript">
-                var player = document.querySelector('#video2');
+                /*var player = document.querySelector('#video2');
                 player.play();
 
                 function play(idPlayer, control) {
@@ -78,7 +77,7 @@
                   
                   player.currentTime = 0;
                   player.pause();
-              }
+              }*/
               </script>
         <!-- <img src="http://placehold.it/1800x850/9BA452/FFF&text=&nbsp;" alt=""> -->
       </div>
@@ -89,17 +88,37 @@
         <li><a id="a1" href="#" class="active">1</a></li>
         <li><a id="a2" href="#">2</a></li>
         <li><a id="a3" href="#">3</a></li>
+        <li><a id="a" href="#">4</a></li>
+        <li><a id="a" href="#">5</a></li>
+        <li><a id="a" href="#">6</a></li>
+        <li><a id="a" href="#">7</a></li>
+        <li><a id="a" href="#">8</a></li>
+        <li><a id="a" href="#">9</a></li>
+        <li><a id="a" href="#">10</a></li>
+        <li><a id="a" href="#">11</a></li>
       </ul>
 
-      <div id="content"></div>
+      <div id="content">
+        <video autoplay>
+          <source id="changevid" src="../video/explications.mp4" type="video/mp4">
+        </video>
+      </div>
+    
+    <script>
+       
+    </script>
 
        <script type="text/javascript">
         ong1 = document.getElementById('a1');
         ong2 = document.getElementById('a2');
         ong3 = document.getElementById('a3');
-        contenu = document.getElementById('content');
+        var video = document.getElementById('changevid');
+        var src = video.src;
 
-        contenu.innerHTML = "article 1";
+        
+ /*       contenu = document.getElementById('content');
+
+        contenu.innerHTML = "article 1";*/
 
         function nonactive(){
           ong1.className = "";
@@ -113,17 +132,17 @@
         }
 
         ong1.addEventListener("click",function(){
-          contenu.innerHTML = "article 1";
+          video.src = '../video/wikipedia.mp4';
           active(this);
         })
 
         ong2.addEventListener("click",function(){
-          contenu.innerHTML = "article 2";
+          video.src = '../video/explications.mp4';
           active(this);
         })
 
         ong3.addEventListener("click",function(){
-          contenu.innerHTML = "article 3";
+          video.src = '../video/wikipedia.mp4';
           active(this);
         })
        </script>
