@@ -51,7 +51,7 @@
         <video autoplay id="bgvid" loop>
   <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
 
-        <source src="../video/explications.mp4" type="video/mp4">
+        <!-- <source src="../video/explications.mp4" type="video/mp4"> -->
         <track label="Sub" kind="subtitles" srclang="fr" data-rendering="playr" src="../video/explications2.vtt" id="Sub" default>
        </video>
 
@@ -99,9 +99,11 @@
       </ul>
 
       <div id="content">
-        <video autoplay>
-          <source id="changevid" src="../video/explications.mp4" type="video/mp4">
-        </video>
+        <!-- <video autoplay>
+          <source id="changevid" src="../video/01.wikipedia.mp4" type="video/mp4">
+
+        </video> -->
+        <video autoplay id="changevid" src="" id="video2"></video> 
       </div>
     
     <script>
@@ -113,7 +115,7 @@
         ong2 = document.getElementById('a2');
         ong3 = document.getElementById('a3');
         var video = document.getElementById('changevid');
-        var src = video.src;
+        var src = video.getAttribute('src');
 
         
  /*       contenu = document.getElementById('content');
@@ -132,17 +134,17 @@
         }
 
         ong1.addEventListener("click",function(){
-          video.src = '../video/wikipedia.mp4';
+          video.setAttribute('src', '../video/explications.mp4');
           active(this);
         })
 
         ong2.addEventListener("click",function(){
-          video.src = '../video/explications.mp4';
+          video.setAttribute('src', '../video/01.wikipedia.mp4');
           active(this);
         })
 
         ong3.addEventListener("click",function(){
-          video.src = '../video/wikipedia.mp4';
+          video.setAttribute('src', '../video/explications.mp4');
           active(this);
         })
        </script>
