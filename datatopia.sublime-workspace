@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"h",
+				"height"
+			],
+			[
+				"li",
+				"link	Tag"
+			],
+			[
 				"wid",
 				"width"
 			],
@@ -52,14 +60,6 @@
 			}
 		},
 		{
-			"file": "video/01.wikipedia.vtt",
-			"settings":
-			{
-				"buffer_size": 117,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "style.css",
 			"settings":
 			{
@@ -80,8 +80,24 @@
 			"file": "carousel/index.html",
 			"settings":
 			{
-				"buffer_size": 11906,
+				"buffer_size": 11955,
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 4942,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/hubiC/Afip Exercices/EXERCICES VIDEOS/New folder/01.wikipedia.xml",
+			"settings":
+			{
+				"buffer_size": 445,
+				"line_ending": "Windows"
 			}
 		},
 		{
@@ -129,13 +145,15 @@
 		"/D/Github/Datatopia3.0/jInvertScroll",
 		"/D/Github/Datatopia3.0/jInvertScroll/__MACOSX",
 		"/D/Github/Datatopia3.0/jInvertScroll/examples",
-		"/D/Github/Datatopia3.0/jInvertScroll/examples/css",
-		"/D/Github/Datatopia3.0/parallax",
-		"/D/Github/Datatopia3.0/parallax/css",
-		"/D/Github/Datatopia3.0/parallax/js"
+		"/D/Github/Datatopia3.0/jInvertScroll/examples/css"
 	],
 	"file_history":
 	[
+		"/D/hubiC/Afip Exercices/EXERCICES VIDEOS/New folder/explications.srt",
+		"/D/Github/Datatopia3.0/parallax/index.html",
+		"/D/hubiC/Afip Exercices/EXERCICES VIDEOS/New folder/03.gimages.srt",
+		"/D/hubiC/Afip Exercices/EXERCICES VIDEOS/New folder/02.thomasheine.srt",
+		"/D/hubiC/Afip Exercices/EXERCICES VIDEOS/New folder/01.wikipedia.srt",
 		"/D/Github/Datatopia3.0/video/01.wikipedia.xml",
 		"/D/Github/Datatopia3.0/index3.html",
 		"/D/Github/Datatopia3.0/parallax/js/jquery.cslider.js",
@@ -146,7 +164,6 @@
 		"/D/Github/Datatopia3.0/jInvertScroll/examples/index.htm",
 		"/C/Users/Iz/Downloads/Minimal-jQuery-Animated-Text-Typing-Effect-Best-Typewriter/Minimal-jQuery-Animated-Text-Typing-Effect-Best-Typewriter/lib/typewriter.js",
 		"/C/Users/Iz/Downloads/Minimal-jQuery-Animated-Text-Typing-Effect-Best-Typewriter/Minimal-jQuery-Animated-Text-Typing-Effect-Best-Typewriter/example/index.html",
-		"/D/Github/Datatopia3.0/parallax/index.html",
 		"/D/Github/Datatopia3.0/glitch.jquery.js",
 		"/D/Github/Datatopia3.0/jquery.srt.js",
 		"/D/Github/Datatopia3.0/son/subtiltes.srt",
@@ -195,6 +212,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"gui",
+			"channel",
+			"gui",
+			"dat",
 			"<video src=\"../video/01.wikipedia.mp4\" id=\"vid\" controls></video>",
 			"-->\n",
 			"glitchThreshold",
@@ -230,7 +251,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -246,8 +267,8 @@
 						"selection":
 						[
 							[
-								3474,
-								3563
+								4175,
+								4175
 							]
 						],
 						"settings":
@@ -256,7 +277,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1332.0,
+						"translation.y": 5520.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
@@ -264,34 +285,6 @@
 				},
 				{
 					"buffer": 1,
-					"file": "video/01.wikipedia.vtt",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 117,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								1
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "style.css",
 					"semi_transient": false,
 					"settings":
@@ -313,14 +306,14 @@
 							"syntax": "Packages/CSS/CSS.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 594.0,
+						"translation.y": 726.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 2,
 					"file": "parallax/css/style.css",
 					"semi_transient": false,
 					"settings":
@@ -342,33 +335,33 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 577.0,
+						"translation.y": 705.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 5,
 					"type": "text"
 				}
 			]
 		},
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
-					"buffer": 4,
+					"buffer": 3,
 					"file": "carousel/index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 11906,
+						"buffer_size": 11955,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3747,
-								3747
+								804,
+								804
 							]
 						],
 						"settings":
@@ -378,7 +371,35 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2214.0,
+						"translation.y": 2904.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4942,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2501,
+								1840
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1408.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -386,6 +407,34 @@
 				},
 				{
 					"buffer": 5,
+					"file": "/D/hubiC/Afip Exercices/EXERCICES VIDEOS/New folder/01.wikipedia.xml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 445,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
 					"file": "jInvertScroll/examples/css/example.css",
 					"semi_transient": false,
 					"settings":
@@ -408,10 +457,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 702.0,
+						"translation.y": 858.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -419,7 +468,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 26.0
+		"height": 30.0
 	},
 	"input":
 	{
@@ -445,7 +494,7 @@
 		"cols":
 		[
 			0.0,
-			0.448754087669,
+			0.366442257429,
 			1.0
 		],
 		"rows":
@@ -463,7 +512,7 @@
 	"project": "datatopia.sublime-project",
 	"replace":
 	{
-		"height": 50.0
+		"height": 56.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -513,7 +562,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 63.0,
+	"side_bar_width": 311.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

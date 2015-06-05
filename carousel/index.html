@@ -34,9 +34,15 @@ body, html {
 }
 
 video{
-/*  width: 100%;*/
+ width: 60%;
+ margin: 0 auto;
+ height: 50em;
 }
 
+/*#Sub{
+  height: 10em;
+}
+*/
 /**
  * Use this wrapper only for demo purposes
  * So you can show the items outside the wrapper
@@ -126,13 +132,10 @@ video{
   right: 0;
   border-radius: 3px 0px 0px 3px;
 }
-
     </style>
 
     
         <script src="js/prefixfree.min.js"></script>
-        <script src="Playr-master/playr.js"></script>
-        <link rel="stylesheet" type="text/css" href="Playr-master/playr.css">
 
     
   </head>
@@ -155,15 +158,45 @@ video{
         <!-- <img src="http://placehold.it/1800x850/EA4E23/FFF&text=&nbsp;" alt=""> -->
       </div>
 			<div class="item">
-        <p class="title">Third</p>
-        <img src="http://placehold.it/1800x850/9BA452/FFF&text=&nbsp;" alt="">
+        <!-- <p class="title">Third</p> -->
+        <video controls preload="metadata" id="video2">
+         <source src="../video/explications.mp4" type="video/mp4">
+         <track label="Sub" kind="subtitles" srclang="fr" data-rendering="playr" src="../video/explications2.vtt" id="Sub" default>
+        </video>
+
+        <!-- <video src="../video/explications.mp4" id="video2"></video> -->
+        <script type="text/javascript">
+                var player = document.querySelector('#video2');
+                player.play();
+
+                function play(idPlayer, control) {
+                  var player = document.querySelector('#' + idPlayer);
+                  
+                  if (player.paused) {
+                      player.play()
+                      control.textContent = 'Pause';
+                  } else {
+                      player.pause(); 
+                      control.textContent = 'Play';
+                  }
+              }
+
+              function resume(idPlayer) {
+                  var player = document.querySelector('#' + idPlayer);
+                  
+                  player.currentTime = 0;
+                  player.pause();
+              }
+              </script>
+        <!-- <img src="http://placehold.it/1800x850/9BA452/FFF&text=&nbsp;" alt=""> -->
       </div>
+
 			<div class="item">
-    <video id="video" controls preload="metadata" class="playr_video">
-   <source src="../video/01.wikipedia.mp4" type="video/mp4">
-   <!-- <source src="../video/01.wikipedia.webm" type="video/webm"> -->
-   <track label="Sub" kind="subtitles" srclang="fr" data-rendering="playr" src="../video/01.wikipedia.vtt" default>
-</video>
+    <video id="video" controls preload="metadata">
+     <source src="../video/01.wikipedia.mp4" type="video/mp4">
+     <!-- <source src="../video/01.wikipedia.webm" type="video/webm"> -->
+     <track label="Sub" kind="subtitles" srclang="fr" data-rendering="playr" src="../video/01.wikipedia.vtt" default>
+    </video>
 
 
     <!--     <video width="1000" height="750" controls="controls" poster="video-hostellerie.jpg" onclick="this.play();">
