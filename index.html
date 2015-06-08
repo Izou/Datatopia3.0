@@ -12,7 +12,7 @@
       <script type="text/javascript" src="http://use.typekit.net/kei2cfp.js"></script>
       <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   
-        <script src="js/prefixfree.min.js"></script>
+        <script src="carousel/js/prefixfree.min.js"></script>
 
     
   </head>
@@ -34,7 +34,7 @@
         <video autoplay id="bgvid" loop>
   <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
 
-        <source src="../son/video.mp4" type="video/mp4">
+        <source src="son/video.mp4" type="video/mp4">
        </video>
        
         <!-- <video utoplay loop poster="../img/transition.jpg" src="../son/video.mp4" id="bgvideo" controls></video> -->
@@ -51,8 +51,8 @@
         <video autoplay id="bgvid" loop>
   <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
 
-        <!-- <source src="../video/explications.mp4" type="video/mp4"> -->
-        <track label="Sub" kind="subtitles" srclang="fr" data-rendering="playr" src="../video/explications2.vtt" id="Sub" default>
+        <source src="video/explications.mp4" type="video/mp4">
+        <track label="Sub" kind="subtitles" srclang="fr" data-rendering="playr" src="video/explications2.vtt" id="Sub" default>
        </video>
 
         <!-- <video src="../video/explications.mp4" id="video2"></video> -->
@@ -103,7 +103,7 @@
           <source id="changevid" src="../video/01.wikipedia.mp4" type="video/mp4">
 
         </video> -->
-        <video autoplay id="changevid" src="../video/01.wikipedia.mp4" id="video2"></video> 
+        <video autoplay id="changevid" src="video/01.wikipedia.mp4"></video> 
       </div>
     
     <script>
@@ -134,17 +134,17 @@
         }
 
         ong1.addEventListener("click",function(){
-          video.setAttribute('src', '../video/01.wikipedia.mp4');
+          video.setAttribute('src', 'video/01.wikipedia.mp4');
           active(this);
         })
 
         ong2.addEventListener("click",function(){
-          video.setAttribute('src', '../video/explications.mp4');
+          video.setAttribute('src', 'video/explications.mp4');
           active(this);
         })
 
         ong3.addEventListener("click",function(){
-          video.setAttribute('src', '../video/explications.mp4');
+          video.setAttribute('src', 'video/explications.mp4');
           active(this);
         })
        </script>
@@ -199,7 +199,7 @@
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.9/jquery.transit.min.js'></script>
 
-        <script src="js/index.js"></script>
+        <script src="carousel/js/index.js"></script>
 
     <!-- Glitch -->
       <script type="text/javascript">
@@ -333,7 +333,7 @@
               this.textSize = Math.floor(this.canvas.height/1.5); }
               // tries to make text fit if window is
               // very wide, but not very tall
-            this.font = '900 ' + this.textSize + 'px "Orbitron"';
+            this.font = '900 ' + this.textSize + 'px "Avara"';
             this.context.font = this.font;
             this.textWidth = (this.context.measureText(this.text)).width;
             }
