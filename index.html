@@ -22,16 +22,16 @@
     <div class="wrapper wrapper--demo">
 	<div class="carousel">
 		<div class="carousel__content">
-			<div class="item">
+			<div class="item slide-0">
         <!-- <p class="title">First</p> -->
         <div class="wrapper">
             <canvas id="stage"></canvas>
       </div>
         <!-- <img src="http://placehold.it/1800x850/70AD96/FFF&text=&nbsp;" alt=""> -->
       </div>
-			<div class="item">
+			<div class="item slide-1">
         <button id="vidpause" class="title">Pause</button>
-        <video autoplay id="bgvid" loop>
+        <video id="video-slide-1" loop>
   <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
 
         <source src="son/video.mp4" type="video/mp4">
@@ -41,14 +41,14 @@
         <!-- <img src="http://placehold.it/1800x850/EA4E23/FFF&text=&nbsp;" alt=""> -->
       </div>
 
-			<div class="item">
+			<div class="item slide-2">
         <!-- <p class="title">Third</p> -->
         <!-- <video controls preload="metadata" id="video2">
          <source src="../video/explications.mp4" type="video/mp4">
          <track label="Sub" kind="subtitles" srclang="fr" data-rendering="playr" src="../video/explications2.vtt" id="Sub" default>
         </video> -->
         <button id="vidpause" class="title">Pause</button>
-        <video autoplay id="bgvid" loop>
+        <video id="video-slide-2" loop>
   <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
 
         <source src="video/explications.mp4" type="video/mp4">
@@ -99,11 +99,11 @@
       </ul>
 
       <div id="content">
-        <!-- <video autoplay>
+        <!-- <video>
           <source id="changevid" src="../video/01.wikipedia.mp4" type="video/mp4">
 
         </video> -->
-        <video autoplay id="changevid" src="video/01.wikipedia.mp4"></video> 
+        <video id="video-slide-3" src="video/01.wikipedia.mp4"></video> 
       </div>
     
     <script>
@@ -114,7 +114,7 @@
         ong1 = document.getElementById('a1');
         ong2 = document.getElementById('a2');
         ong3 = document.getElementById('a3');
-        var video = document.getElementById('changevid');
+        var video = document.getElementById('video-slide-3');
         var src = video.getAttribute('src');
 
         
@@ -351,7 +351,7 @@
 
       <!-- pause Video Full screen -->
       <script>
-      var vid = document.getElementById("bgvid");
+      var vid = document.getElementById("video-slide-1");
       var pauseButton = document.getElementById("vidpause");
       function vidFade() {
       vid.classList.add("stopfade");
@@ -375,5 +375,26 @@
       </script>
     <!-- pause Video Full screen -->
     
+    <script>
+      // Auto start videos
+      window.onSlideChange = function(index) {
+        console.log("SLIDING TO", index);
+        var videoSlide1 = document.getElementById("video-slide-1");
+        if (index == 1) {
+          videoSlide1.play();
+        }
+        else {
+          videoSlide1.pause();
+        }
+
+        var videoSlide2 = document.getElementById("video-slide-2");
+        if (index == 2) {
+          videoSlide2.play();
+        }
+        else {
+          videoSlide2.pause();
+        }
+      }
+    </script>
   </body>
 </html>

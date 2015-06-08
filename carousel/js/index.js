@@ -35,6 +35,7 @@
     }
     isAnimating = true;
     carouselIndex--;
+    window.onSlideChange(carouselIndex);
     if (carouselIndex === -1) {
       lastItem.prependTo(carouselContent);
       carouselContent.transition({
@@ -65,6 +66,8 @@
     }
     isAnimating = true;
     carouselIndex++;
+    window.onSlideChange(carouselIndex);
+    
     return carouselContent.transition({
       x: (carouselIndex * -itemWidth) + "%"
     }, 1000, "easeInOutExpo", function() {
