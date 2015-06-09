@@ -30,8 +30,8 @@
         <!-- <img src="http://placehold.it/1800x850/70AD96/FFF&text=&nbsp;" alt=""> -->
       </div>
 			<div class="item slide-1">
-        <button id="vidpause" class="title">Pause</button>
-        <video id="video-slide-1" loop>
+        <button class="title">Pause</button>
+        <video id="video-slide-1" class="vid" loop>
   <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
 
         <source src="son/video.mp4" type="video/mp4">
@@ -47,8 +47,8 @@
          <source src="../video/explications.mp4" type="video/mp4">
          <track label="Sub" kind="subtitles" srclang="fr" data-rendering="playr" src="../video/explications2.vtt" id="Sub" default>
         </video> -->
-        <button id="vidpause" class="title">Pause</button>
-        <video id="video-slide-2" loop>
+        <button class="title">Pause</button>
+        <video id="video-slide-2" class="vid">
   <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
 
         <source src="video/explications.mp4" type="video/mp4">
@@ -351,17 +351,74 @@
 
       <!-- pause Video Full screen -->
       <script>
-      var vid = document.getElementById("video-slide-1");
-      var pauseButton = document.getElementById("vidpause");
+      /*window.onSlideChange = function(index) {
+        console.log("SLIDING TO", index);
+        var video1 = document.getElementById("video-slide-1");
+        var video2 = document.getElementById('video-slide-2');
+        var video3 = document.getElementById('video-slide-3');
+        
+        pause1 = document.getElementById('p1');
+        pause2 = document.getElementById('p2');
+        pause3 = document.getElementById('p3');*/
+        
+ /*       contenu = document.getElementById('content');
+
+        contenu.innerHTML = "article 1";*/
+
+        /*function nonactive(){
+          pause1.className = "";
+          pause2.className = "";
+          pause3.className = "";
+        }
+
+        function active(moi){
+          nonactive(); // nettoyage
+          moi.className="active"; // je deviens active
+        }
+
+        if(index == 1){
+          var pause1 = moi.className="active2";
+          var video1 = moi.className="active3";
+        }else{
+          nonactive();
+        }
+
+        if(index == 2){
+          var pause2 = moi.className="active2";
+          var video2 = moi.className="active3";
+        }else{
+          nonactive();
+        }
+
+        if(index == 3){
+          var pause3 = moi.className="active2";
+          var video3 = moi.className="active3";
+        }else{
+          nonactive();
+        }
+      }*/
+
+        /*pause1.addEventListener("window",function(){
+          video.setAttribute('id', 'vid');
+          active(this);
+        })
+
+        pause2.addEventListener("window",function(){
+          video.setAttribute('id', 'vid');
+          active(this);
+        })
+
+        pause3.addEventListener("window",function(){
+          var vid = video.setAttribute('id', 'vid');
+          active(this);
+        })*/
+
+      var vid = document.getElementsByTagName("video")
+      var pauseButton = document.getElementsByTagName("button");
       function vidFade() {
       vid.classList.add("stopfade");
       }
-      vid.addEventListener('ended', function() {
-      // only functional if "loop" is removed
-      vid.pause();
-      // to capture IE10
-      vidFade();
-      });
+      
       pauseButton.addEventListener("click", function() {
       vid.classList.toggle("stopfade");
       if (vid.paused) {
@@ -372,6 +429,7 @@
       pauseButton.innerHTML = "Lecture";
       }
       })
+
       </script>
     <!-- pause Video Full screen -->
     
@@ -393,6 +451,14 @@
         }
         else {
           videoSlide2.pause();
+        }
+
+        var videoSlide3 = document.getElementById("video-slide-3");
+        if (index == 3) {
+          videoSlide3.play();
+        }
+        else {
+          videoSlide3.pause();
         }
       }
     </script>
