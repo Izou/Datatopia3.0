@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
 
 
-    <title>Responsive Infinite Carousel</title>
+    <title>Datatopia 3.0</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
 
       <link rel="stylesheet" type="text/css" href="design.css">
@@ -53,22 +53,21 @@
       </div>
 
 			<div class="item slide-3">
-    
-        <ul id="ul">
-          <li><a id="a1" href="#" class="active">1</a></li>
-          <li><a id="a2" href="#">2</a></li>
-          <li><a id="a3" href="#">3</a></li>
-          <li><a id="a" href="#">4</a></li>
-          <li><a id="a" href="#">5</a></li>
-          <li><a id="a" href="#">6</a></li>
-          <li><a id="a" href="#">7</a></li>
-          <li><a id="a" href="#">8</a></li>
-          <li><a id="a" href="#">9</a></li>
-          <li><a id="a" href="#">10</a></li>
-          <li><a id="a" href="#">11</a></li>
-        </ul>
 
         <div id="content">
+          <ul id="ul">
+            <li><a id="a1" href="#" class="active">1</a></li>
+            <li><a id="a2" href="#">2</a></li>
+            <li><a id="a3" href="#">3</a></li>
+            <li><a id="a" href="#">4</a></li>
+            <li><a id="a" href="#">5</a></li>
+            <li><a id="a" href="#">6</a></li>
+            <li><a id="a" href="#">7</a></li>
+            <li><a id="a" href="#">8</a></li>
+            <li><a id="a" href="#">9</a></li>
+            <li><a id="a" href="#">10</a></li>
+            <li><a id="a" href="#">11</a></li>
+          </ul>
           <video id="video-slide-3" class="video-pause" src="video/01.wikipedia.mp4"></video>
           <button class="title pause-button">Pause</button>
         </div>
@@ -123,7 +122,7 @@
 var nums = 0;
 
 //'http://www.gutenberg.org/cache/epub/449/pg449.txt';
-var sFiles = ["https://dl.dropboxusercontent.com/u/47345502/Phone.m4a"];
+var sFiles = [/*"https://dl.dropboxusercontent.com/u/47345502/Phone.m4a"*/];
 //var audio;
 audi();
 function audi() {
@@ -190,7 +189,7 @@ var glitcher = {
     },
   newstr: function () {
     this.compOp='darker';
-    document.body.style.background = 'white';
+    /*document.body.style.background = 'white';*/
     this.isNum=0;
     wordNum =(wordNum+1)%(textBook.length-20);
     this.text = textBook[wordNum];
@@ -217,7 +216,7 @@ var glitcher = {
          this.text= this.text.substring(0,i)+Math.floor(Math.random()*10)%10+this.text.substring(i+1,this.text.length);
           this.compOp='lighter';
           this.textWidth = (this.context.measureText(this.text)).width;
-          document.body.style.background = 'black';//this.text=this.text.replace(this.text.substring(i,i+1),Math.floor(Math.random()*10));
+          /*document.body.style.background = 'black';*///this.text=this.text.replace(this.text.substring(i,i+1),Math.floor(Math.random()*10));
           modVar-=.10;
           degVar -=.06;
         }
@@ -242,7 +241,7 @@ var glitcher = {
     this.text=this.text2;
       this.textWidth = (this.context.measureText(this.text)).width;
     this.compOp='darker';
-    document.body.style.background = 'white';
+    /*document.body.style.background = 'white';*/
     this.isNum=2;
       flashdeg=1;
     }
@@ -252,7 +251,7 @@ var glitcher = {
         this.text = this.text3;
         this.textWidth = (this.context.measureText(this.text)).width;
         this.compOp='lighter';
-        document.body.style.background = 'black';
+        /*document.body.style.background = 'black';*/
         this.isNum=0;
       }
     }
@@ -347,7 +346,7 @@ var glitcher = {
 };
 
 glitcher.init();
-var textBook = "Concerning prognosis she finds little detailed in the literature. The general opinion is that such cases arising from a background of degeneracy are incurable. One of her cases was free from attacks for two periods of three years each, and had been blameless in an honorable position as editor for seven years at the time of the publication of her monograph. She suggests that the profession he has chosen may be particularly suited to the talents of the pathological liar. She also ventures to state that where pathological lying is merely an accompaniment of puberty it may disappear. The fact that so many of the cases cited by Stemmermann were clearly abnormal and found places in insane asylums makes much citation of them by us, in turn, hardly worth while. However, a short summary of a couple of her more normal cases will show the problems and conditions as she found them. I. Annie J., 19 years old, father a tailor, had been employed in several places as a servant. Aside from the fact that it was stated she always had an inclination to lie, nothing more was known about her early life. She complained of headaches and fainting attacks, and mourned over the death of her fiance. She said he had gone to Berlin to learn tailoring and had died there of inflammation of the lungs. He left her 650 marks which her mother got hold of. On investigation it was found that this man was still alive and never had been engaged to her. She then accused her mother of taking 50 marks from her and said that a man, purporting to be her real father, came from another town and told her she had been brought up by foster parents. Through the quarreling which arose from these various stories Annie was taken before the police physician and pronounced mentally unsound. Then she told of another engagement with the brother of her departed fiance, who had discovered her real mother. The latter was going to leave her 30,000 marks. He had formed a plot with the foster mother to put Annie out of the way and to divide the money. He followed her on the street and threw a drugged cloth over her head. She fainted and was carried home. She said she brought action for attempt to murder. (Whether this fiance and the rich mother were real persons is not known.) Later in the same year, Annie being again at large, a new father, der Graf von Woldau, appeared and bought her beautiful clothes costing 100 marks. He wanted to take her away, but quickly disappeared and was not seen again. When Annie told this story she was employed by a woman who attempted to get traces of the count, but failed. Later this employer missed a sum of money equivalent to that spent for the clothes. Annies responsibility by this time was still more questioned and she was sent to an insane asylum. There she was found normally oriented, orderly, industrious, but suffered from periodical headaches. When questioned in the asylum concerning her tales she hesitated and would say, ``Now I believe them and now I dont. It is remarkable in this case that her different employers believed all her fabrications and took the girls part against the supposed offenders. For a year she engaged in a sort of orgy of pathological lying and then this phase of her career stopped. After a few months in the asylum she returned home and later married. The last report from her mother was that she was nervous and easily excited, but showed no further signs of insanity. II. This was a boy, Johann P., who was studied mentally first when he was 16 years old. A thoroughly good history was forthcoming. He was brought for examination on account of his extreme changeableness, his failure in several occupations, his tendencies to swindling and his extreme lying. As a young child his mother had to correct him much for prevarications. Soon after he was 9, when both his parents were already dead, he forged a school certificate and was felt to be a bad influence in the home of his guardian. About that time he also stole money from pockets on a number of occasions. In school he was regarded as an undesirable pupil on account of his underhanded behavior, and one teacher who had observed him for long wrote that he showed marked inclination towards lying. At the time he was 15, he was somewhat retarded in school life, but was told he had to decide upon an occupation. After a stormy period he announced he would become a gardener. After doing well for a month or so at his first place he began to tell compromising stories about the wife of his employer. He gave himself out to be the son of a general who was going to inherit a large sum of money. On the strength of this he managed to get hold of expensive articles he desired. A short time afterward he wrote to his guardian he was fitted for higher pursuits than that of gardening. Soon afterward he ran away to a large town. He now wrote that the word freedom sounded like the sweetest music in his ears. He acknowledged that he had started on a career of criminality, but decided to do better. At this time he attempted to make his way by offering his compositions at a newspaper office where they were declined either because his productions were immature or his authorship was doubted. One editor loaned him some money, but he got much more by representing himself to be a collaborator of this editor. He soon failed to make his way and attempted other things, including entrance into the merchant marine. He finally turned up again at his guardians house, and when his box was opened it was found to contain a very curious lot of material such as money accounts, business cards, letter heads, catalogues. It was at this time that he was placed for observation in an asylum and it was soon found that his alleged compositions were plagiarized. He claimed to suffer from headaches. Outside of that he was in fine physical condition. He frequently wrote sketches in proof of his ability. A general statement was finally made that he showed slight traces of hysteria, was a sufferer from headaches, and showed periodic tendencies to wandering and lying. No special defect in the ethical discriminations was present. He had good insight into his own tendencies. He was finally released to his guardian, and Stemmermann offered the prognosis that Johann might well develop into a typical pathological swindler. He came of a family of five brothers and sisters, one of whom was incarcerated for a year on account of stealing. One sister was noted for her tendency to prevarication. Several of them were remarkably unstable, at least early in life. All of them are said to have learned very unwillingly in school. One brother of the father was exceedingly nervous. Jorger presents a case of a boy of poor parents who was from childhood possessed of the idea of becoming a teacher. He was always a solitary child, endowed with great religious fervor. In spite of poverty he obtained an education, studied the classics, and did excellent work. He developed early religious eccentricities, became unsound on money matters, boasted of his fathers millions, spent freely as a benefactor, bought expensive books. Then developed an outspoken tendency to swindling. Finally he was adjudged insane and committed to an asylum. Commenting on this case, Jorger points out the marks of abnormality from childhood, such as solitariness and religious intensity. He was above normal in intellectual ability, but lacking in moral development. He did not love parents, brothers, sisters, or teachers; he was very egotistical. Jorger defines this as a case of constitutional psychosis. When older, pseudologia phantastica controlled him; it was like hypnotic influence, his dreams of wealth were like paranoia. His hypnotic condition grew to such an extent that there was an interruption of consciousness with following amnesia. Henneberg cites another case of a highly educated young man who told wonderful stories in childhood and later obtained money under false pretenses with elaborate deception. From an eccentric grandmother, and a mother who was very excitable and suffered from hysteria, he inherited a nervous system which was not calculated to bear the strain which his own overzealous efforts in pursuing his studies and his spiritual exaltation put upon it, hence the mental and moral breakdown. This is a very interesting case because it does not fit into the usual group of pathological liars. Wendt enlarges the field in which we may look for such cases. He finds pseudologia phantastica a symptom, not only of hysteria, alcoholism, paranoia, but also of sex repression, and neurasthenia. He takes a more philosophical view of the subject than previous authors. He understands by pseudologia phantastica not merely the bare habit of telling fantastic lies, and what they bring forth, but rather the yielding up of consciousness of reality in the presence of the morbidly fantastic wish in its widest consequences. Since the wish in order to exist is not permitted to lose entirely the conscious presentation of what it hopes for, so memory and recognition of reality emerge disconnected in consciousness, and a condition described as double consciousness arises. In this state of mind two forms of life run side by side, the actual and the desired, finally the latter becomes preponderant and decisive. Such a psychic make-up must lead unconditionally and necessarily to swindling and law breaking. A degenerative alteration furnishes the basis from which a wish or wish-complex arises, increasing in force until it becomes autosuggestion, hence it is pathological. Then follow the practical consequences, and we have developed, on the one side, pathological lying, and, on the other, swindling, i.e., criminality. Purely symptomatically pseudologia phantastica is characterized by the groundlessness of the fabrications, the heightened suggestibility of the patient, and in its wake arises double consciousness and inadequate powers of reproduction of reality.".split(" ");
+var textBook = "Datatopia 3.0 est un projet de recherche alternatif traitant du détournement des capacités créatives de l’erreur et de l’aléa, deux processus de création souvent mal considérés car maintes fois associés aux limites et à ses fatalités. Aussi, d’après l’Histoire et selon toutes conditions, nous restons toujours et invariablement liés aux limitations, qu’elles soient matérielles ou  humaines ; il est supposable que nous ne pouvons les éviter. Mais à défaut de les surpasser, et afin de revendiquer de nouvelles formes tangibles visuelles, formelles, architecturales ou même sociétales... nous devons réfléchir à comment détourner, réutiliser et combiner les contraintes de l’existant et à les montrer comme des forces créatrices plutôt que des restrictions. Par conséquent, apporter une dose de risque, d’accident et de gravité en essayant volontairement de garder cette disposition à l’inattendu à la surprise recherchant et réutilisant l’imprévu pour mener à bien des œuvres novatrices car inespérées. Datatopia 3.0 est ainsi le fruit d’un hasard actif il incarne la rencontre réfléchie de plusieurs séries causales indépendantes ayant le dessein de fabriquer de nouvelles relations logiques de données pour appréhender sans réserves les ressources créatives de l’existant.".split(" ");
 var wordNum = Math.floor(Math.random()*(textBook.length-20));
 window.onresize = glitcher.resize;
 
