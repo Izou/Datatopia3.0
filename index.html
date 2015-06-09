@@ -30,8 +30,8 @@
         <!-- <img src="http://placehold.it/1800x850/70AD96/FFF&text=&nbsp;" alt=""> -->
       </div>
 			<div class="item slide-1">
-        <button class="title">Pause</button>
-        <video id="video-slide-1" class="vid" loop>
+        <button class="title pause-button" id="pause1">Pause</button>
+        <video id="video-slide-1" class="video-pause">
   <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
 
         <source src="son/video.mp4" type="video/mp4">
@@ -47,8 +47,8 @@
          <source src="../video/explications.mp4" type="video/mp4">
          <track label="Sub" kind="subtitles" srclang="fr" data-rendering="playr" src="../video/explications2.vtt" id="Sub" default>
         </video> -->
-        <button class="title">Pause</button>
-        <video id="video-slide-2" class="vid">
+        <button class="title pause-button">Pause</button>
+        <video id="video-slide-2" class="video-pause">
   <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
 
         <source src="video/explications.mp4" type="video/mp4">
@@ -103,7 +103,7 @@
           <source id="changevid" src="../video/01.wikipedia.mp4" type="video/mp4">
 
         </video> -->
-        <video id="video-slide-3" src="video/01.wikipedia.mp4"></video> 
+        <video id="video-slide-3" class="video-pause" src="video/01.wikipedia.mp4"></video> 
       </div>
     
     <script>
@@ -413,12 +413,20 @@
           active(this);
         })*/
 
-      var vid = document.getElementsByTagName("video")
-      var pauseButton = document.getElementsByTagName("button");
+      // var vid = document.getElementById("video-slide-1")
+      // var pauseButton = document.getElementById("pause1");
+
+      var vid = document.getElementsByClassName("video-pause");
+      var pauseButton = document.getElementsByClassName("pause-button");
       function vidFade() {
       vid.classList.add("stopfade");
       }
-      
+      vid.addEventListener('ended', function() {
+      // only functional if "loop" is removed
+      vid.pause();
+      // to capture IE10
+      vidFade();
+      });
       pauseButton.addEventListener("click", function() {
       vid.classList.toggle("stopfade");
       if (vid.paused) {
