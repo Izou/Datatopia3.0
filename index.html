@@ -14,6 +14,9 @@
   
         <script src="carousel/js/prefixfree.min.js"></script>
 
+        <!-- Text Glitch -->
+        <script type='text/javascript' src='http://code.jquery.com/jquery-2.0.2.js'></script>
+
     
   </head>
 
@@ -22,13 +25,13 @@
     <div class="wrapper wrapper--demo">
 	<div class="carousel">
 		<div class="carousel__content">
-			<div class="item slide-0">
-        <!-- <p class="title">First</p> -->
+			
+      <div class="item slide-0">
         <div class="wrapper">
             <canvas id="stage"></canvas>
+        </div>
       </div>
-        <!-- <img src="http://placehold.it/1800x850/70AD96/FFF&text=&nbsp;" alt=""> -->
-      </div>
+
 			<div class="item slide-1">
         <button class="title pause-button" id="pause1">Pause</button>
         <video id="video-slide-1" class="video-pause">
@@ -42,73 +45,33 @@
       </div>
 
 			<div class="item slide-2">
-        <!-- <p class="title">Third</p> -->
-        <!-- <video controls preload="metadata" id="video2">
-         <source src="../video/explications.mp4" type="video/mp4">
-         <track label="Sub" kind="subtitles" srclang="fr" data-rendering="playr" src="../video/explications2.vtt" id="Sub" default>
-        </video> -->
         <button class="title pause-button">Pause</button>
         <video id="video-slide-2" class="video-pause">
-  <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
-
-        <source src="video/explications.mp4" type="video/mp4">
-        <track label="Sub" kind="subtitles" srclang="fr" data-rendering="playr" src="video/explications2.vtt" id="Sub" default>
+          <source src="video/explications.mp4" type="video/mp4">
+          <track label="Sub" kind="subtitles" srclang="fr" data-rendering="playr" src="video/explications2.vtt" id="Sub" default>
        </video>
-
-        <!-- <video src="../video/explications.mp4" id="video2"></video> -->
-        <script type="text/javascript">
-                /*var player = document.querySelector('#video2');
-                player.play();
-
-                function play(idPlayer, control) {
-                  var player = document.querySelector('#' + idPlayer);
-                  
-                  if (player.paused) {
-                      player.play()
-                      control.textContent = 'Pause';
-                  } else {
-                      player.pause(); 
-                      control.textContent = 'Play';
-                  }
-              }
-
-              function resume(idPlayer) {
-                  var player = document.querySelector('#' + idPlayer);
-                  
-                  player.currentTime = 0;
-                  player.pause();
-              }*/
-              </script>
-        <!-- <img src="http://placehold.it/1800x850/9BA452/FFF&text=&nbsp;" alt=""> -->
       </div>
 
-			<div class="item">
+			<div class="item slide-3">
     
-      <ul id="ul">
-        <li><a id="a1" href="#" class="active">1</a></li>
-        <li><a id="a2" href="#">2</a></li>
-        <li><a id="a3" href="#">3</a></li>
-        <li><a id="a" href="#">4</a></li>
-        <li><a id="a" href="#">5</a></li>
-        <li><a id="a" href="#">6</a></li>
-        <li><a id="a" href="#">7</a></li>
-        <li><a id="a" href="#">8</a></li>
-        <li><a id="a" href="#">9</a></li>
-        <li><a id="a" href="#">10</a></li>
-        <li><a id="a" href="#">11</a></li>
-      </ul>
+        <ul id="ul">
+          <li><a id="a1" href="#" class="active">1</a></li>
+          <li><a id="a2" href="#">2</a></li>
+          <li><a id="a3" href="#">3</a></li>
+          <li><a id="a" href="#">4</a></li>
+          <li><a id="a" href="#">5</a></li>
+          <li><a id="a" href="#">6</a></li>
+          <li><a id="a" href="#">7</a></li>
+          <li><a id="a" href="#">8</a></li>
+          <li><a id="a" href="#">9</a></li>
+          <li><a id="a" href="#">10</a></li>
+          <li><a id="a" href="#">11</a></li>
+        </ul>
 
-      <div id="content">
-        <!-- <video>
-          <source id="changevid" src="../video/01.wikipedia.mp4" type="video/mp4">
-
-        </video> -->
-        <video id="video-slide-3" class="video-pause" src="video/01.wikipedia.mp4"></video> 
-      </div>
-    
-    <script>
-       
-    </script>
+        <div id="content">
+          <video id="video-slide-3" class="video-pause" src="video/01.wikipedia.mp4"></video>
+          <button class="title pause-button">Pause</button>
+        </div>
 
        <script type="text/javascript">
         ong1 = document.getElementById('a1');
@@ -149,40 +112,249 @@
         })
        </script>
      
-    <!-- <video id="video" controls preload="metadata">
-     <source src="../video/01.wikipedia.mp4" type="video/mp4">
-     <source src="../video/01.wikipedia.webm" type="video/webm"> 
-     <track label="Sub" kind="subtitles" srclang="fr" data-rendering="playr" src="../video/01.wikipedia.vtt" default>
-    </video>- ->
-
-
-    <!--     <video width="1000" height="750" controls="controls" poster="video-hostellerie.jpg" onclick="this.play();">
-       <source src="../video/01.wikipedia.mp4" type="video/mp4" /> -->
-       <!-- <source src="video-hostellerie.webm" type="video/webm"  /> -->
-          <!-- <object type="application/x-shockwave-flash"
-         codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,79,0" 
-         width="426" 
-         height="240" 
-         data="player.swf"
-         id="FLVPlayer">
-          <param name="movie" value="player.swf" />
-          <param name="allowscriptaccess" value="always" />
-          <param name="allowfullscreen" value="true" />
-          <param name="FlashVars" value="flv=video-hostellerie.mp4&startimage=video-hostellerie.jpg
-          &showstop=1&showvolume=1&showtime=1" /> -->
-      <!--   <p>Vous n'arrivez pas à visionner la vidéo : vous pouvez la 
-        <a href="video-hostellerie.mp4">télécharger</a>.</p>
-        </object> -->
-      <!-- </video> -->
-        <!-- <video src="../video/01.wikipedia.mp4" id="vid" controls></video> -->
-        <!-- <p class="title">Fourth</p> -->
-        <!-- <img src="http://placehold.it/1800x850/472D38/FFF&text=&nbsp;" alt=""> -->
       </div>
-			<div class="item">
-        <p class="title">Fifth</p>
-        <img src="http://placehold.it/1800x850/F77C85/FFF&text=&nbsp;" alt="">
+
+      <div class="item slide-4">
+        <audio id="a1"  preload="auto" tabindex="0" controls="" style="visibility:hidden" type="audio/mpeg"></audio>
+        <canvas id="coucou"></canvas>
+
+        <script type="text/javascript">
+          var degVar= .96;
+var nums = 0;
+
+//'http://www.gutenberg.org/cache/epub/449/pg449.txt';
+var sFiles = ["https://dl.dropboxusercontent.com/u/47345502/Phone.m4a"];
+//var audio;
+audi();
+function audi() {
+    audio = $('audio');
+    audio[0].volume = .15;
+    audio[0].addEventListener('ended', function (e) {
+        audio[0].play();
+    });
+    audio[0].src = sFiles[0];
+    audio[0].load();
+    audio[0].play();
+}
+function isNumber(n) {
+  return !isNaN(parseFloat(n)) && isFinite(n);
+}
+var glitcher = {
+    init: function () {
+        setTimeout((function () {
+            this.canvas = document.getElementById('coucou');
+            this.context = this.canvas.getContext('2d');
+            this.initOptions();
+            this.resize();
+            this.tick();
+        }).bind(this), 100);
+    },
+    initOptions: function () {
+        this.width = document.documentElement.offsetWidth;
+        this.height = window.innerHeight*1.25;
+        this.font = '10vw Consolas';
+        this.context.font = this.font;
+      this.newstr();
+        //this.text = "Init";
+        this.textnum = 0;
+        this.textWidth =(this.context.measureText(this.text)).width;
+        this.isNum = 0;
+        this.fps = 60;
+        this.mNum = 0;
+        this.channel = 0; // 0 = red, 1 = green, 2 = blue
+        this.compOp = 'lighter'; // CompositeOperation = lighter || darker || xor
+        this.phase = 0.0;
+        this.phaseStep = 0.05; //determines how often we will change channel and amplitude
+        this.amplitude = 0.0;
+        this.amplitudeBase = 2.0;
+        this.amplitudeRange = 2.0;
+        this.alphaMin = 0.8;
+        this.glitchAmplitude = 20.0;
+        this.glitchThreshold = 0.9;
+        this.scanlineBase = 40;
+        this.scanlineRange = 40;
+        this.scanlineShift = 15;
+    },
+
+    tick: function () {
+        setTimeout((function () {
+            this.phase += this.phaseStep;
+            if (this.phase > 1) {
+                this.phase = 0.0;
+                this.channel = (this.channel === 2) ? 0 : this.channel + 1;
+                this.amplitude = this.amplitudeBase + (this.amplitudeRange * Math.random());
+            }
+            this.render();
+            this.tick();
+        }).bind(this), 1000 / this.fps);
+    },
+  newstr: function () {
+    this.compOp='darker';
+    document.body.style.background = 'white';
+    this.isNum=0;
+    wordNum =(wordNum+1)%(textBook.length-20);
+    this.text = textBook[wordNum];
+    if (this.text.length <= 10) {
+      wordNum+=1;
+      this.text= this.text+" "+textBook[wordNum];
+      if (this.text.length <= 8) {
+        wordNum+=1;
+        this.text= this.text+" "+textBook[wordNum];
+      }
+    }
+    this.text2=this.text;
+    degVar = 1.56;
+    modVar=0;
+    this.textWidth = (this.context.measureText(this.text)).width;
+  },
+  
+  strdeg: function (){
+    nums = 0;
+    for (var i=0;i<this.text.length;i++)
+    {
+      if (isNumber(this.text.substring(i,i+1))==0){
+        if (Math.random() >=degVar-modVar){
+         this.text= this.text.substring(0,i)+Math.floor(Math.random()*10)%10+this.text.substring(i+1,this.text.length);
+          this.compOp='lighter';
+          this.textWidth = (this.context.measureText(this.text)).width;
+          document.body.style.background = 'black';//this.text=this.text.replace(this.text.substring(i,i+1),Math.floor(Math.random()*10));
+          modVar-=.10;
+          degVar -=.06;
+        }
+      }
+      else {
+      nums+=1;
+      }
+      modVar +=.004;
+    }
+    if (Math.random()>=.94){
+     flashdeg=-1;
+      this.flashstr();
+    }
+    if (nums > .9*this.text.length+(Math.random()*.15)){
+      this.isNum=1;
+    }
+  },
+  
+  flashstr: function() {
+    if (flashdeg==-1) {
+      this.text3 = this.text;
+    this.text=this.text2;
+      this.textWidth = (this.context.measureText(this.text)).width;
+    this.compOp='darker';
+    document.body.style.background = 'white';
+    this.isNum=2;
+      flashdeg=1;
+    }
+    if (flashdeg>=.1){
+      flashdeg-=Math.random()*.15;
+      if (flashdeg<.1){
+        this.text = this.text3;
+        this.textWidth = (this.context.measureText(this.text)).width;
+        this.compOp='lighter';
+        document.body.style.background = 'black';
+        this.isNum=0;
+      }
+    }
+    
+    
+    
+  },
+  
+  
+    render: function () {
+      var x0 = this.amplitude * Math.sin((Math.PI * (-1)*(this.isNum-3)) * this.phase) >> 0, x1, x2, x3;
+      if (Math.random() >= this.glitchThreshold) {
+        x0 *= this.glitchAmplitude;
+      }
+      if (Math.random() >= .80) {
+        this.fps = (Math.random() * 58) + 6;
+        //this.fps = 60;
+      }
+      if (this.isNum == 0) {
+        //if (Math.random() >= decay[this.mNum]) {
+        //  this.text = Math.floor((Math.random() * 4600) + 20);
+        x0 = Math.random() * 1;
+        //  this.isNum = 1;
+        //}
+        this.strdeg();
+      }
+      if (this.isNum == 2) {
+        this.flashstr();
+      }
+      if (this.isNum == 1) {
+        if (Math.random() > .75) {
+          if (Math.random() < .40) {
+            //this.text = Math.floor(Math.random() * 99999);
+            x0 = Math.random() * 500;
+            //this.isNum = 1;
+          } else if (Math.random() >= (.5*this.text.length/nums)) {
+            this.newstr();
+            
+            //this.isNum = 0;
+          }
+        }
+      }
+      x1 = this.width - this.textWidth >> 1;
+      if (this.isNum == 1) {
+        //x1 = Math.random() * this.width;
+      }
+      x2 = x1 + x0;
+      x3 = x1 - x0;
+      this.context.clearRect(0, 0, this.width, this.height);
+      this.context.globalAlpha = this.alphaMin + ((1 - this.alphaMin) * Math.random());
+      switch (this.channel) {
+        case 0:
+          this.renderChannels(x1, x2, x3);
+          break;
+        case 1:
+          this.renderChannels(x2, x3, x1);
+          break;
+        case 2:
+          this.renderChannels(x3, x1, x2);
+          break;
+      }
+      this.renderScanline();
+    },
+  renderChannels: function (x1, x2, x3) {
+    this.context.font = this.font;
+    this.context.fillStyle = "rgb(255,0,0)";
+    this.context.fillText(this.text, x1, this.height / 2);
+    this.context.globalCompositeOperation = this.compOp;
+    this.context.fillStyle = "rgb(0,255,0)";
+    this.context.fillText(this.text, x2, this.height / 2);
+    this.context.fillStyle = "rgb(0,0,255)";
+    this.context.fillText(this.text, x3, this.height / 2);
+  },
+  renderScanline: function () {
+    var y = this.height * Math.random() >> 0,
+        o = this.context.getImageData(0, y, this.width, 1),
+        d = o.data,
+        i = d.length,
+        s = this.scanlineBase + this.scanlineRange * Math.random() >> 0,
+        x = -this.scanlineShift + this.scanlineShift * 2 * Math.random() >> 0;
+    while (i-- > 0) {
+      d[i] += s;
+    }
+    this.context.putImageData(o, x, y);
+  },
+  resize: function () {
+    if (this.canvas) {
+      this.canvas.width = document.documentElement.offsetWidth;
+      this.canvas.height = window.innerHeight;
+    }
+  }
+};
+
+glitcher.init();
+var textBook = "Concerning prognosis she finds little detailed in the literature. The general opinion is that such cases arising from a background of degeneracy are incurable. One of her cases was free from attacks for two periods of three years each, and had been blameless in an honorable position as editor for seven years at the time of the publication of her monograph. She suggests that the profession he has chosen may be particularly suited to the talents of the pathological liar. She also ventures to state that where pathological lying is merely an accompaniment of puberty it may disappear. The fact that so many of the cases cited by Stemmermann were clearly abnormal and found places in insane asylums makes much citation of them by us, in turn, hardly worth while. However, a short summary of a couple of her more normal cases will show the problems and conditions as she found them. I. Annie J., 19 years old, father a tailor, had been employed in several places as a servant. Aside from the fact that it was stated she always had an inclination to lie, nothing more was known about her early life. She complained of headaches and fainting attacks, and mourned over the death of her fiance. She said he had gone to Berlin to learn tailoring and had died there of inflammation of the lungs. He left her 650 marks which her mother got hold of. On investigation it was found that this man was still alive and never had been engaged to her. She then accused her mother of taking 50 marks from her and said that a man, purporting to be her real father, came from another town and told her she had been brought up by foster parents. Through the quarreling which arose from these various stories Annie was taken before the police physician and pronounced mentally unsound. Then she told of another engagement with the brother of her departed fiance, who had discovered her real mother. The latter was going to leave her 30,000 marks. He had formed a plot with the foster mother to put Annie out of the way and to divide the money. He followed her on the street and threw a drugged cloth over her head. She fainted and was carried home. She said she brought action for attempt to murder. (Whether this fiance and the rich mother were real persons is not known.) Later in the same year, Annie being again at large, a new father, der Graf von Woldau, appeared and bought her beautiful clothes costing 100 marks. He wanted to take her away, but quickly disappeared and was not seen again. When Annie told this story she was employed by a woman who attempted to get traces of the count, but failed. Later this employer missed a sum of money equivalent to that spent for the clothes. Annies responsibility by this time was still more questioned and she was sent to an insane asylum. There she was found normally oriented, orderly, industrious, but suffered from periodical headaches. When questioned in the asylum concerning her tales she hesitated and would say, ``Now I believe them and now I dont. It is remarkable in this case that her different employers believed all her fabrications and took the girls part against the supposed offenders. For a year she engaged in a sort of orgy of pathological lying and then this phase of her career stopped. After a few months in the asylum she returned home and later married. The last report from her mother was that she was nervous and easily excited, but showed no further signs of insanity. II. This was a boy, Johann P., who was studied mentally first when he was 16 years old. A thoroughly good history was forthcoming. He was brought for examination on account of his extreme changeableness, his failure in several occupations, his tendencies to swindling and his extreme lying. As a young child his mother had to correct him much for prevarications. Soon after he was 9, when both his parents were already dead, he forged a school certificate and was felt to be a bad influence in the home of his guardian. About that time he also stole money from pockets on a number of occasions. In school he was regarded as an undesirable pupil on account of his underhanded behavior, and one teacher who had observed him for long wrote that he showed marked inclination towards lying. At the time he was 15, he was somewhat retarded in school life, but was told he had to decide upon an occupation. After a stormy period he announced he would become a gardener. After doing well for a month or so at his first place he began to tell compromising stories about the wife of his employer. He gave himself out to be the son of a general who was going to inherit a large sum of money. On the strength of this he managed to get hold of expensive articles he desired. A short time afterward he wrote to his guardian he was fitted for higher pursuits than that of gardening. Soon afterward he ran away to a large town. He now wrote that the word freedom sounded like the sweetest music in his ears. He acknowledged that he had started on a career of criminality, but decided to do better. At this time he attempted to make his way by offering his compositions at a newspaper office where they were declined either because his productions were immature or his authorship was doubted. One editor loaned him some money, but he got much more by representing himself to be a collaborator of this editor. He soon failed to make his way and attempted other things, including entrance into the merchant marine. He finally turned up again at his guardians house, and when his box was opened it was found to contain a very curious lot of material such as money accounts, business cards, letter heads, catalogues. It was at this time that he was placed for observation in an asylum and it was soon found that his alleged compositions were plagiarized. He claimed to suffer from headaches. Outside of that he was in fine physical condition. He frequently wrote sketches in proof of his ability. A general statement was finally made that he showed slight traces of hysteria, was a sufferer from headaches, and showed periodic tendencies to wandering and lying. No special defect in the ethical discriminations was present. He had good insight into his own tendencies. He was finally released to his guardian, and Stemmermann offered the prognosis that Johann might well develop into a typical pathological swindler. He came of a family of five brothers and sisters, one of whom was incarcerated for a year on account of stealing. One sister was noted for her tendency to prevarication. Several of them were remarkably unstable, at least early in life. All of them are said to have learned very unwillingly in school. One brother of the father was exceedingly nervous. Jorger presents a case of a boy of poor parents who was from childhood possessed of the idea of becoming a teacher. He was always a solitary child, endowed with great religious fervor. In spite of poverty he obtained an education, studied the classics, and did excellent work. He developed early religious eccentricities, became unsound on money matters, boasted of his fathers millions, spent freely as a benefactor, bought expensive books. Then developed an outspoken tendency to swindling. Finally he was adjudged insane and committed to an asylum. Commenting on this case, Jorger points out the marks of abnormality from childhood, such as solitariness and religious intensity. He was above normal in intellectual ability, but lacking in moral development. He did not love parents, brothers, sisters, or teachers; he was very egotistical. Jorger defines this as a case of constitutional psychosis. When older, pseudologia phantastica controlled him; it was like hypnotic influence, his dreams of wealth were like paranoia. His hypnotic condition grew to such an extent that there was an interruption of consciousness with following amnesia. Henneberg cites another case of a highly educated young man who told wonderful stories in childhood and later obtained money under false pretenses with elaborate deception. From an eccentric grandmother, and a mother who was very excitable and suffered from hysteria, he inherited a nervous system which was not calculated to bear the strain which his own overzealous efforts in pursuing his studies and his spiritual exaltation put upon it, hence the mental and moral breakdown. This is a very interesting case because it does not fit into the usual group of pathological liars. Wendt enlarges the field in which we may look for such cases. He finds pseudologia phantastica a symptom, not only of hysteria, alcoholism, paranoia, but also of sex repression, and neurasthenia. He takes a more philosophical view of the subject than previous authors. He understands by pseudologia phantastica not merely the bare habit of telling fantastic lies, and what they bring forth, but rather the yielding up of consciousness of reality in the presence of the morbidly fantastic wish in its widest consequences. Since the wish in order to exist is not permitted to lose entirely the conscious presentation of what it hopes for, so memory and recognition of reality emerge disconnected in consciousness, and a condition described as double consciousness arises. In this state of mind two forms of life run side by side, the actual and the desired, finally the latter becomes preponderant and decisive. Such a psychic make-up must lead unconditionally and necessarily to swindling and law breaking. A degenerative alteration furnishes the basis from which a wish or wish-complex arises, increasing in force until it becomes autosuggestion, hence it is pathological. Then follow the practical consequences, and we have developed, on the one side, pathological lying, and, on the other, swindling, i.e., criminality. Purely symptomatically pseudologia phantastica is characterized by the groundlessness of the fabrications, the heightened suggestibility of the patient, and in its wake arises double consciousness and inadequate powers of reproduction of reality.".split(" ");
+var wordNum = Math.floor(Math.random()*(textBook.length-20));
+window.onresize = glitcher.resize;
+
+        </script>
       </div>
-			<div class="item">
+
+			<div class="item slide-5"> 
         <p class="title">Sixth</p>
         <p class="title title--sub">Last Item</p>
         <img src="http://placehold.it/1800x850/00FFAE/FFF&text=&nbsp;" alt="">
@@ -351,93 +523,67 @@
 
       <!-- pause Video Full screen -->
       <script>
-      /*window.onSlideChange = function(index) {
-        console.log("SLIDING TO", index);
-        var video1 = document.getElementById("video-slide-1");
-        var video2 = document.getElementById('video-slide-2');
-        var video3 = document.getElementById('video-slide-3');
-        
-        pause1 = document.getElementById('p1');
-        pause2 = document.getElementById('p2');
-        pause3 = document.getElementById('p3');*/
-        
- /*       contenu = document.getElementById('content');
-
-        contenu.innerHTML = "article 1";*/
-
-        /*function nonactive(){
-          pause1.className = "";
-          pause2.className = "";
-          pause3.className = "";
+        var vid = document.getElementsByClassName("video-pause");
+        var pauseButton = document.getElementsByClassName("pause-button");
+        function vidFade() {
+        vid[0].classList.add("stopfade");
         }
-
-        function active(moi){
-          nonactive(); // nettoyage
-          moi.className="active"; // je deviens active
+        vid[0].addEventListener('ended', function() {
+        // only functional if "loop" is removed
+        vid[0].pause();
+        // to capture IE10
+        vidFade();
+        });
+        pauseButton[0].addEventListener("click", function() {
+        vid[0].classList.toggle("stopfade");
+        if (vid.paused) {
+        vid[0].play();
+        pauseButton[0].innerHTML = "Pause";
+        } else {
+        vid[0].pause();
+        pauseButton[0].innerHTML = "Lecture";
         }
-
-        if(index == 1){
-          var pause1 = moi.className="active2";
-          var video1 = moi.className="active3";
-        }else{
-          nonactive();
-        }
-
-        if(index == 2){
-          var pause2 = moi.className="active2";
-          var video2 = moi.className="active3";
-        }else{
-          nonactive();
-        }
-
-        if(index == 3){
-          var pause3 = moi.className="active2";
-          var video3 = moi.className="active3";
-        }else{
-          nonactive();
-        }
-      }*/
-
-        /*pause1.addEventListener("window",function(){
-          video.setAttribute('id', 'vid');
-          active(this);
         })
 
-        pause2.addEventListener("window",function(){
-          video.setAttribute('id', 'vid');
-          active(this);
+         function vidFade() {
+        vid[1].classList.add("stopfade");
+        }
+        vid[1].addEventListener('ended', function() {
+        // only functional if "loop" is removed
+        vid[1].pause();
+        // to capture IE10
+        vidFade();
+        });
+        pauseButton[1].addEventListener("click", function() {
+        vid[1].classList.toggle("stopfade");
+        if (vid.paused) {
+        vid[1].play();
+        pauseButton[1].innerHTML = "Pause";
+        } else {
+        vid[1].pause();
+        pauseButton[1].innerHTML = "Lecture";
+        }
         })
 
-        pause3.addEventListener("window",function(){
-          var vid = video.setAttribute('id', 'vid');
-          active(this);
-        })*/
-
-      // var vid = document.getElementById("video-slide-1")
-      // var pauseButton = document.getElementById("pause1");
-
-      var vid = document.getElementsByClassName("video-pause");
-      var pauseButton = document.getElementsByClassName("pause-button");
-      function vidFade() {
-      vid.classList.add("stopfade");
-      }
-      vid.addEventListener('ended', function() {
-      // only functional if "loop" is removed
-      vid.pause();
-      // to capture IE10
-      vidFade();
-      });
-      pauseButton.addEventListener("click", function() {
-      vid.classList.toggle("stopfade");
-      if (vid.paused) {
-      vid.play();
-      pauseButton.innerHTML = "Pause";
-      } else {
-      vid.pause();
-      pauseButton.innerHTML = "Lecture";
-      }
-      })
-
+        function vidFade() {
+        vid[2].classList.add("stopfade");
+        }
+        vid[2].addEventListener('ended', function() {
+        // only functional if "loop" is removed
+        vid[2].pause();
+        // to capture IE10
+        vidFade();
+        });
+        pauseButton[2].addEventListener("click", function() {
+        vid[2].classList.toggle("stopfade");
+        if (vid.paused) {
+        vid[2].play();
+        pauseButton[2].innerHTML = "Pause";
+        } else {
+        vid[2].pause();
+        pauseButton[2].innerHTML = "Lecture";
+        }
+        })
       </script>
     <!-- pause Video Full screen -->
     

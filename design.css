@@ -71,6 +71,7 @@ body, html {
   /*font-family: "europa-1","europa-2", sans-serif;*/
   overflow: hidden;
   margin:0;
+  /*width: 100%;*/
   background-color: black;
 }
 
