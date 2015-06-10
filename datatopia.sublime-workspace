@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"bg",
+				"background-color"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"do",
+				"document"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"windo",
+				"window"
+			],
+			[
 				"vode",
 				"videoSlide1"
 			],
@@ -75,8 +99,17 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 14124,
+				"buffer_size": 20942,
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "jquery.glitch.js",
+			"settings":
+			{
+				"buffer_size": 1674,
+				"line_ending": "Windows",
+				"name": "/*"
 			}
 		},
 		{
@@ -91,7 +124,7 @@
 			"file": "design.css",
 			"settings":
 			{
-				"buffer_size": 4678,
+				"buffer_size": 4932,
 				"line_ending": "Windows"
 			}
 		}
@@ -203,6 +236,23 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"100px",
+			";\n",
+			"div",
+			"canvas",
+			"div",
+			"canvas",
+			"figure",
+			"canvas",
+			"size",
+			"stage",
+			"0",
+			"1",
+			"0",
+			",",
+			"click",
+			"pause",
+			"2",
 			"changevid",
 			"bgvid",
 			"bgvi",
@@ -259,15 +309,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 14124,
+						"buffer_size": 20942,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								14083,
-								14083
+								6713,
+								6713
 							]
 						],
 						"settings":
@@ -277,14 +327,45 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 8838.0,
+						"translation.y": 2519.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
+					"file": "jquery.glitch.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1674,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								735,
+								735
+							]
+						],
+						"settings":
+						{
+							"auto_name": "/*",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 176.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
 					"file": "carousel/js/index.js",
 					"semi_transient": false,
 					"settings":
@@ -310,7 +391,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -320,20 +401,20 @@
 			"sheets":
 			[
 				{
-					"buffer": 2,
+					"buffer": 3,
 					"file": "design.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4678,
+						"buffer_size": 4932,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4670,
-								4672
+								3625,
+								3625
 							]
 						],
 						"settings":
@@ -343,10 +424,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 4884.0,
+						"translation.y": 3648.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -380,7 +461,7 @@
 		"cols":
 		[
 			0.0,
-			0.599506272346,
+			0.503173146181,
 			1.0
 		],
 		"rows":
@@ -440,7 +521,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},
