@@ -1,61 +1,26 @@
-var vid = document.getElementsByClassName("video-pause");
-var pauseButton = document.getElementsByClassName("pause-button");
-function vidFade() {
-  vid[0].classList.add("stopfade");
-}
-vid[0].addEventListener('ended', function() {
-  // only functional if "loop" is removed
-  vid[0].pause();
-  // to capture IE10
-  vidFade();
-});
-pauseButton[0].addEventListener("click", function() {
-  vid[0].classList.toggle("stopfade");
-  if (vid.paused) {
-    vid[0].play();
-    pauseButton[0].innerHTML = "Pause";
-  } else {
-    vid[0].pause();
-    pauseButton[0].innerHTML = "Lecture";
-  }
-})
+function addButtons(video, pauseButton) {
+  video.addEventListener('ended', function() {
+    // only functional if "loop" is removed
+    video.pause();
+    // to capture IE10
+    video.classList.add("stopfade");
+  });
 
-function vidFade() {
-  vid[1].classList.add("stopfade");
+  pauseButton.addEventListener("click", function() {
+    video.classList.toggle("stopfade");
+    if(video.paused) {
+      video.play();
+      pauseButton.innerHTML = "Pause";
+    }
+    else {
+      video.pause();
+      pauseButton.innerHTML = "Lecture";
+    }
+  });
 }
-vid[1].addEventListener('ended', function() {
-  // only functional if "loop" is removed
-  vid[1].pause();
-  // to capture IE10
-  vidFade();
-});
-pauseButton[1].addEventListener("click", function() {
-  vid[1].classList.toggle("stopfade");
-  if (vid.paused) {
-    vid[1].play();
-    pauseButton[1].innerHTML = "Pause";
-  } else {
-    vid[1].pause();
-    pauseButton[1].innerHTML = "Lecture";
-  }
-})
 
-function vidFade() {
-  vid[2].classList.add("stopfade");
+var videos = document.getElementsByClassName("video-pause");
+var pauseButtons = document.getElementsByClassName("pause-button");
+for(var i = 0; i < videos.length; i++) {
+  addButtons(videos[i], pauseButtons[i]);
 }
-vid[2].addEventListener('ended', function() {
-  // only functional if "loop" is removed
-  vid[2].pause();
-  // to capture IE10
-  vidFade();
-});
-pauseButton[2].addEventListener("click", function() {
-  vid[2].classList.toggle("stopfade");
-  if (vid.paused) {
-    vid[2].play();
-    pauseButton[2].innerHTML = "Pause";
-  } else {
-    vid[2].pause();
-    pauseButton[2].innerHTML = "Lecture";
-  }
-})
