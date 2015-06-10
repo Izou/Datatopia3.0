@@ -1,619 +1,103 @@
 <!DOCTYPE html>
 <html >
-  <head>
-    <meta charset="UTF-8">
+<head>
+  <meta charset="UTF-8">
 
 
-    <title>Datatopia 3.0</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+  <title>Datatopia 3.0</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
 
-      <link rel="stylesheet" type="text/css" href="design.css">
+  <link rel="stylesheet" type="text/css" href="design.css">
 
-      <script type="text/javascript" src="http://use.typekit.net/kei2cfp.js"></script>
-      <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-  
-        <script src="carousel/js/prefixfree.min.js"></script>
+  <script src="http://use.typekit.net/kei2cfp.js"></script>
+  <script type="text/javascript">try{ Typekit.load(); }catch(e){}</script>
 
-        <!-- Text Glitch -->
-        <script type='text/javascript' src='http://code.jquery.com/jquery-2.0.2.js'></script>
+  <script src="carousel/js/prefixfree.min.js"></script>
+</head>
 
-    
-  </head>
-
-  <body>
-
-    <div class="wrapper wrapper--demo">
-	<div class="carousel">
-		<div class="carousel__content">
-			
-      <div class="item slide-0">
-        <div class="wrapper">
+<body>
+  <div class="wrapper wrapper--demo">
+    <div class="carousel">
+      <div class="carousel__content">
+        <div class="item">
+          <div class="wrapper">
             <canvas id="stage"></canvas>
+          </div>
         </div>
-      </div>
 
-			<div class="item slide-1">
-        <button class="title pause-button" id="pause1">Pause</button>
-        <video id="video-slide-1" class="video-pause">
-  <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+        <div class="item">
+          <button class="title pause-button" id="pause1">Pause</button>
+          <video data-slide-id="1" class="video-pause">
+            <source src="son/video.mp4" type="video/mp4">
+          </video>
+        </div>
 
-        <source src="son/video.mp4" type="video/mp4">
-       </video>
-       
-        <!-- <video utoplay loop poster="../img/transition.jpg" src="../son/video.mp4" id="bgvideo" controls></video> -->
-        <!-- <img src="http://placehold.it/1800x850/EA4E23/FFF&text=&nbsp;" alt=""> -->
-      </div>
-
-			<div class="item slide-2">
-        <button class="title pause-button">Pause</button>
-        <video id="video-slide-2" class="video-pause">
-          <source src="video/explications.mp4" type="video/mp4">
-          <track label="Sub" kind="subtitles" srclang="fr" data-rendering="playr" src="video/explications2.vtt" id="Sub" default>
-       </video>
-      </div>
-
-			<div class="item slide-3">
-
-        <div id="content">
-          <ul id="ul">
-            <li><a id="a1" href="#" class="active">1</a></li>
-            <li><a id="a2" href="#">2</a></li>
-            <li><a id="a3" href="#">3</a></li>
-            <li><a id="a" href="#">4</a></li>
-            <li><a id="a" href="#">5</a></li>
-            <li><a id="a" href="#">6</a></li>
-            <li><a id="a" href="#">7</a></li>
-            <li><a id="a" href="#">8</a></li>
-            <li><a id="a" href="#">9</a></li>
-            <li><a id="a" href="#">10</a></li>
-            <li><a id="a" href="#">11</a></li>
-          </ul>
-          <video id="video-slide-3" class="video-pause" src="video/01.wikipedia.mp4"></video>
+        <div class="item">
           <button class="title pause-button">Pause</button>
+          <video data-slide-id="2" class="video-pause">
+            <source src="video/explications.mp4" type="video/mp4">
+            <track label="Sub" kind="subtitles" srclang="fr" data-rendering="playr" src="video/explications2.vtt" id="Sub" default>
+          </video>
         </div>
 
-       <script type="text/javascript">
-        ong1 = document.getElementById('a1');
-        ong2 = document.getElementById('a2');
-        ong3 = document.getElementById('a3');
-        var video = document.getElementById('video-slide-3');
-        var src = video.getAttribute('src');
+        <div class="item">
+          <div id="content">
+            <ul id="ul">
+              <li><a id="a1" href="#" class="active">1</a></li>
+              <li><a id="a2" href="#">2</a></li>
+              <li><a id="a3" href="#">3</a></li>
+              <li><a id="a" href="#">4</a></li>
+              <li><a id="a" href="#">5</a></li>
+              <li><a id="a" href="#">6</a></li>
+              <li><a id="a" href="#">7</a></li>
+              <li><a id="a" href="#">8</a></li>
+              <li><a id="a" href="#">9</a></li>
+              <li><a id="a" href="#">10</a></li>
+              <li><a id="a" href="#">11</a></li>
+            </ul>
+            <video data-slide-id="3" class="video-pause" src="video/01.wikipedia.mp4" id="video-tab"></video>
+            <button class="title pause-button">Pause</button>
+          </div>
+        </div>
 
-        
- /*       contenu = document.getElementById('content');
+        <div class="item">
+          <button class="title pause-button">Pause</button>
+          <video data-slide-id="4" class="video-pause">
+            <source src="video/explications.mp4" type="video/mp4">
+            <track label="Sub" kind="subtitles" srclang="fr" data-rendering="playr" src="video/explications2.vtt" id="Sub" default>
+          </video>
+        </div>
 
-        contenu.innerHTML = "article 1";*/
+        <div class="item">
+          <button class="title pause-button">Pause</button>
+          <video data-slide-id="5" class="video-pause">
+            <source src="video/video.mp4" type="video/mp4">
+            <track label="Sub" kind="subtitles" srclang="fr" data-rendering="playr" src="video/explications2.vtt" id="Sub" default>
+          </video>
+        </div>
 
-        function nonactive(){
-          ong1.className = "";
-          ong2.className = "";
-          ong3.className = "";
-        }
-
-        function active(moi){
-          nonactive(); // nettoyage
-          moi.className="active"; // je deviens active
-        }
-
-        ong1.addEventListener("click",function(){
-          video.setAttribute('src', 'video/01.wikipedia.mp4');
-          active(this);
-        })
-
-        ong2.addEventListener("click",function(){
-          video.setAttribute('src', 'video/explications.mp4');
-          active(this);
-        })
-
-        ong3.addEventListener("click",function(){
-          video.setAttribute('src', 'video/explications.mp4');
-          active(this);
-        })
-       </script>
-     
+        <div class="item">
+          <audio id="a1"  preload="auto" tabindex="0" controls="" style="visibility:hidden" type="audio/mpeg"></audio>
+          <canvas id="coucou"></canvas>
+        </div>
       </div>
 
-      <div class="item slide-4">
-        <audio id="a1"  preload="auto" tabindex="0" controls="" style="visibility:hidden" type="audio/mpeg"></audio>
-        <canvas id="coucou"></canvas>
-
-        <script type="text/javascript">
-          var degVar= .96;
-var nums = 0;
-
-//'http://www.gutenberg.org/cache/epub/449/pg449.txt';
-var sFiles = [/*"https://dl.dropboxusercontent.com/u/47345502/Phone.m4a"*/];
-//var audio;
-audi();
-function audi() {
-    audio = $('audio');
-    audio[0].volume = .15;
-    audio[0].addEventListener('ended', function (e) {
-        audio[0].play();
-    });
-    audio[0].src = sFiles[0];
-    audio[0].load();
-    audio[0].play();
-}
-function isNumber(n) {
-  return !isNaN(parseFloat(n)) && isFinite(n);
-}
-var glitcher = {
-    init: function () {
-        setTimeout((function () {
-            this.canvas = document.getElementById('coucou');
-            this.context = this.canvas.getContext('2d');
-            this.initOptions();
-            this.resize();
-            this.tick();
-        }).bind(this), 100);
-    },
-    initOptions: function () {
-        this.width = document.documentElement.offsetWidth;
-        this.height = window.innerHeight*1.25;
-        this.font = '10vw Consolas';
-        this.context.font = this.font;
-      this.newstr();
-        //this.text = "Init";
-        this.textnum = 0;
-        this.textWidth =(this.context.measureText(this.text)).width;
-        this.isNum = 0;
-        this.fps = 60;
-        this.mNum = 0;
-        this.channel = 0; // 0 = red, 1 = green, 2 = blue
-        this.compOp = 'lighter'; // CompositeOperation = lighter || darker || xor
-        this.phase = 0.0;
-        this.phaseStep = 0.05; //determines how often we will change channel and amplitude
-        this.amplitude = 0.0;
-        this.amplitudeBase = 2.0;
-        this.amplitudeRange = 2.0;
-        this.alphaMin = 0.8;
-        this.glitchAmplitude = 20.0;
-        this.glitchThreshold = 0.9;
-        this.scanlineBase = 40;
-        this.scanlineRange = 40;
-        this.scanlineShift = 15;
-    },
-
-    tick: function () {
-        setTimeout((function () {
-            this.phase += this.phaseStep;
-            if (this.phase > 1) {
-                this.phase = 0.0;
-                this.channel = (this.channel === 2) ? 0 : this.channel + 1;
-                this.amplitude = this.amplitudeBase + (this.amplitudeRange * Math.random());
-            }
-            this.render();
-            this.tick();
-        }).bind(this), 1000 / this.fps);
-    },
-  newstr: function () {
-    this.compOp='darker';
-    /*document.body.style.background = 'white';*/
-    this.isNum=0;
-    wordNum =(wordNum+1)%(textBook.length-20);
-    this.text = textBook[wordNum];
-    if (this.text.length <= 10) {
-      wordNum+=1;
-      this.text= this.text+" "+textBook[wordNum];
-      if (this.text.length <= 8) {
-        wordNum+=1;
-        this.text= this.text+" "+textBook[wordNum];
-      }
-    }
-    this.text2=this.text;
-    degVar = 1.56;
-    modVar=0;
-    this.textWidth = (this.context.measureText(this.text)).width;
-  },
-  
-  strdeg: function (){
-    nums = 0;
-    for (var i=0;i<this.text.length;i++)
-    {
-      if (isNumber(this.text.substring(i,i+1))==0){
-        if (Math.random() >=degVar-modVar){
-         this.text= this.text.substring(0,i)+Math.floor(Math.random()*10)%10+this.text.substring(i+1,this.text.length);
-          this.compOp='lighter';
-          this.textWidth = (this.context.measureText(this.text)).width;
-          /*document.body.style.background = 'black';*///this.text=this.text.replace(this.text.substring(i,i+1),Math.floor(Math.random()*10));
-          modVar-=.10;
-          degVar -=.06;
-        }
-      }
-      else {
-      nums+=1;
-      }
-      modVar +=.004;
-    }
-    if (Math.random()>=.94){
-     flashdeg=-1;
-      this.flashstr();
-    }
-    if (nums > .9*this.text.length+(Math.random()*.15)){
-      this.isNum=1;
-    }
-  },
-  
-  flashstr: function() {
-    if (flashdeg==-1) {
-      this.text3 = this.text;
-    this.text=this.text2;
-      this.textWidth = (this.context.measureText(this.text)).width;
-    this.compOp='darker';
-    /*document.body.style.background = 'white';*/
-    this.isNum=2;
-      flashdeg=1;
-    }
-    if (flashdeg>=.1){
-      flashdeg-=Math.random()*.15;
-      if (flashdeg<.1){
-        this.text = this.text3;
-        this.textWidth = (this.context.measureText(this.text)).width;
-        this.compOp='lighter';
-        /*document.body.style.background = 'black';*/
-        this.isNum=0;
-      }
-    }
-    
-    
-    
-  },
-  
-  
-    render: function () {
-      var x0 = this.amplitude * Math.sin((Math.PI * (-1)*(this.isNum-3)) * this.phase) >> 0, x1, x2, x3;
-      if (Math.random() >= this.glitchThreshold) {
-        x0 *= this.glitchAmplitude;
-      }
-      if (Math.random() >= .80) {
-        this.fps = (Math.random() * 58) + 6;
-        //this.fps = 60;
-      }
-      if (this.isNum == 0) {
-        //if (Math.random() >= decay[this.mNum]) {
-        //  this.text = Math.floor((Math.random() * 4600) + 20);
-        x0 = Math.random() * 1;
-        //  this.isNum = 1;
-        //}
-        this.strdeg();
-      }
-      if (this.isNum == 2) {
-        this.flashstr();
-      }
-      if (this.isNum == 1) {
-        if (Math.random() > .75) {
-          if (Math.random() < .40) {
-            //this.text = Math.floor(Math.random() * 99999);
-            x0 = Math.random() * 500;
-            //this.isNum = 1;
-          } else if (Math.random() >= (.5*this.text.length/nums)) {
-            this.newstr();
-            
-            //this.isNum = 0;
-          }
-        }
-      }
-      x1 = this.width - this.textWidth >> 1;
-      if (this.isNum == 1) {
-        //x1 = Math.random() * this.width;
-      }
-      x2 = x1 + x0;
-      x3 = x1 - x0;
-      this.context.clearRect(0, 0, this.width, this.height);
-      this.context.globalAlpha = this.alphaMin + ((1 - this.alphaMin) * Math.random());
-      switch (this.channel) {
-        case 0:
-          this.renderChannels(x1, x2, x3);
-          break;
-        case 1:
-          this.renderChannels(x2, x3, x1);
-          break;
-        case 2:
-          this.renderChannels(x3, x1, x2);
-          break;
-      }
-      this.renderScanline();
-    },
-  renderChannels: function (x1, x2, x3) {
-    this.context.font = this.font;
-    this.context.fillStyle = "rgb(255,0,0)";
-    this.context.fillText(this.text, x1, this.height / 2);
-    this.context.globalCompositeOperation = this.compOp;
-    this.context.fillStyle = "rgb(0,255,0)";
-    this.context.fillText(this.text, x2, this.height / 2);
-    this.context.fillStyle = "rgb(0,0,255)";
-    this.context.fillText(this.text, x3, this.height / 2);
-  },
-  renderScanline: function () {
-    var y = this.height * Math.random() >> 0,
-        o = this.context.getImageData(0, y, this.width, 1),
-        d = o.data,
-        i = d.length,
-        s = this.scanlineBase + this.scanlineRange * Math.random() >> 0,
-        x = -this.scanlineShift + this.scanlineShift * 2 * Math.random() >> 0;
-    while (i-- > 0) {
-      d[i] += s;
-    }
-    this.context.putImageData(o, x, y);
-  },
-  resize: function () {
-    if (this.canvas) {
-      this.canvas.width = document.documentElement.offsetWidth;
-      this.canvas.height = window.innerHeight;
-    }
-  }
-};
-
-glitcher.init();
-var textBook = "Datatopia 3.0 est un projet de recherche alternatif traitant du détournement des capacités créatives de l’erreur et de l’aléa, deux processus de création souvent mal considérés car maintes fois associés aux limites et à ses fatalités. Aussi, d’après l’Histoire et selon toutes conditions, nous restons toujours et invariablement liés aux limitations, qu’elles soient matérielles ou  humaines ; il est supposable que nous ne pouvons les éviter. Mais à défaut de les surpasser, et afin de revendiquer de nouvelles formes tangibles visuelles, formelles, architecturales ou même sociétales... nous devons réfléchir à comment détourner, réutiliser et combiner les contraintes de l’existant et à les montrer comme des forces créatrices plutôt que des restrictions. Par conséquent, apporter une dose de risque, d’accident et de gravité en essayant volontairement de garder cette disposition à l’inattendu à la surprise recherchant et réutilisant l’imprévu pour mener à bien des œuvres novatrices car inespérées. Datatopia 3.0 est ainsi le fruit d’un hasard actif il incarne la rencontre réfléchie de plusieurs séries causales indépendantes ayant le dessein de fabriquer de nouvelles relations logiques de données pour appréhender sans réserves les ressources créatives de l’existant.".split(" ");
-var wordNum = Math.floor(Math.random()*(textBook.length-20));
-window.onresize = glitcher.resize;
-
-        </script>
+      <div class="carousel__nav">
+        <a href="#" class="nav nav--left">Précédent</a>
+        <a href="#" class="nav nav--right">Suivant</a>
       </div>
 
-			<div class="item slide-5"> 
-        <p class="title">Sixth</p>
-        <p class="title title--sub">Last Item</p>
-        <img src="http://placehold.it/1800x850/00FFAE/FFF&text=&nbsp;" alt="">
-      </div>
-		</div>
-    
-    <div class="carousel__nav">
-      <a href="#" class="nav nav--left">Précédent</a>
-      <a href="#" class="nav nav--right">Suivant</a>
     </div>
-    
-	</div>
-</div>
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.9/jquery.transit.min.js'></script>
+  </div>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.9/jquery.transit.min.js'></script>
 
-        <script src="carousel/js/index.js"></script>
+  <script src="js/intro-glitcher.js"></script>
+  <script src="js/steps.js"></script>
+  <script src="carousel/js/index.js"></script>
 
-    <!-- Glitch -->
-      <script type="text/javascript">
-        (function() {
-          "use strict";
-          var textSize = 10;
-          var glitcher = {
-
-          init: function () {
-            setTimeout((function () {
-            this.canvas = document.getElementById('stage');
-            this.context = this.canvas.getContext('2d');
-
-            this.initOptions();
-            this.resize();
-            this.tick();
-            }).bind(this), 100);
-          },
-
-          initOptions: function () {
-            this.text = "Datatopia 3.0";
-
-            this.fps = 60;
-
-            this.channel = 0; // 0 = red, 1 = green, 2 = blue
-            this.compOp = 'lighter'; // CompositeOperation = lighter || darker || xor
-            this.phase = 0.0;
-            this.phaseStep = 0.05; //determines how often we will change channel and amplitude
-            this.amplitude = 0.0;
-            this.amplitudeBase = 2.0;
-            this.amplitudeRange = 2.0;
-            this.alphaMin = 0.8;
-
-            this.glitchAmplitude = 20.0;
-            this.glitchThreshold = 0.9;
-            this.scanlineBase = 40;
-            this.scanlineRange = 40;
-            this.scanlineShift = 15;
-          },
-
-          tick: function () {
-            setTimeout((function () {
-            this.phase += this.phaseStep;
-
-            if (this.phase > 1) {
-              this.phase = 0.0;
-              this.channel = (this.channel === 2) ? 0 : this.channel + 1;
-              this.amplitude = this.amplitudeBase + (this.amplitudeRange * Math.random());
-            }
-
-            this.render();
-            this.tick();
-
-            }).bind(this), 1000 / this.fps);
-          },
-
-          render: function () {
-            var x0 = this.amplitude * Math.sin((Math.PI * 2) * this.phase) >> 0,
-            x1, x2, x3;
-
-            if (Math.random() >= this.glitchThreshold) {
-            x0 *= this.glitchAmplitude;
-            }
-
-            x1 = this.width - this.textWidth >> 1;
-            x2 = x1 + x0;
-            x3 = x1 - x0;
-
-
-            this.context.clearRect(0, 0, this.width, this.height);
-            this.context.globalAlpha = this.alphaMin + ((1 - this.alphaMin) * Math.random());
-
-            switch (this.channel) {
-            case 0:
-              this.renderChannels(x1, x2, x3);
-              break;
-            case 1:
-              this.renderChannels(x2, x3, x1);
-              break;
-            case 2:
-              this.renderChannels(x3, x1, x2);
-              break;
-            }
-            this.renderScanline();
-            if (Math.floor(Math.random() * 2) > 1) {
-              this.renderScanline();
-              // renders a second scanline 50% of the time
-            }
-          },
-
-          renderChannels: function (x1, x2, x3) {
-            this.context.font = this.font;
-            this.context.fillStyle = "rgb(255,0,0)";
-            this.context.fillText(this.text, x1, this.height / 2);
-
-            this.context.globalCompositeOperation = this.compOp;
-
-            this.context.fillStyle = "rgb(0,255,0)";
-            this.context.fillText(this.text, x2, this.height / 2);
-            this.context.fillStyle = "rgb(0,0,255)";
-            this.context.fillText(this.text, x3, this.height / 2);
-          },
-
-          renderScanline: function () {
-            var y = this.height * Math.random() >> 0,
-            o = this.context.getImageData(0, y, this.width, 1),
-            d = o.data,
-            i = d.length,
-            s = this.scanlineBase + this.scanlineRange * Math.random() >> 0,
-            x = -this.scanlineShift + this.scanlineShift * 2 * Math.random() >> 0;
-
-            while (i-- > 0) {
-            d[i] += s;
-            }
-
-            this.context.putImageData(o, x, y);
-          },
-
-          resize: function () {
-            this.width = document.documentElement.offsetWidth;
-            //this.height = window.innerHeight;
-              this.height = document.documentElement.offsetHeight;
-            if (this.canvas) {
-            this.canvas.height = this.height;
-            //document.documentElement.offsetHeight;
-            this.canvas.width = this.width;
-            //document.documentElement.offsetWidth;
-            this.textSize = Math.floor(this.canvas.width / 14);
-            // RE-sets text size based on window size
-            if (this.textSize > this.height) {
-              this.textSize = Math.floor(this.canvas.height/1.5); }
-              // tries to make text fit if window is
-              // very wide, but not very tall
-            this.font = '900 ' + this.textSize + 'px "Avara"';
-            this.context.font = this.font;
-            this.textWidth = (this.context.measureText(this.text)).width;
-            }
-          }
-          };
-
-          document.onload = glitcher.init();
-          window.onresize = glitcher.resize();
-          glitcher.resize();
-          // return;
-         // executes anonymous function onload
-        })();
-      </script>
-      <!-- End Glitch -->
-
-      <!-- pause Video Full screen -->
-      <script>
-        var vid = document.getElementsByClassName("video-pause");
-        var pauseButton = document.getElementsByClassName("pause-button");
-        function vidFade() {
-        vid[0].classList.add("stopfade");
-        }
-        vid[0].addEventListener('ended', function() {
-        // only functional if "loop" is removed
-        vid[0].pause();
-        // to capture IE10
-        vidFade();
-        });
-        pauseButton[0].addEventListener("click", function() {
-        vid[0].classList.toggle("stopfade");
-        if (vid.paused) {
-        vid[0].play();
-        pauseButton[0].innerHTML = "Pause";
-        } else {
-        vid[0].pause();
-        pauseButton[0].innerHTML = "Lecture";
-        }
-        })
-
-         function vidFade() {
-        vid[1].classList.add("stopfade");
-        }
-        vid[1].addEventListener('ended', function() {
-        // only functional if "loop" is removed
-        vid[1].pause();
-        // to capture IE10
-        vidFade();
-        });
-        pauseButton[1].addEventListener("click", function() {
-        vid[1].classList.toggle("stopfade");
-        if (vid.paused) {
-        vid[1].play();
-        pauseButton[1].innerHTML = "Pause";
-        } else {
-        vid[1].pause();
-        pauseButton[1].innerHTML = "Lecture";
-        }
-        })
-
-        function vidFade() {
-        vid[2].classList.add("stopfade");
-        }
-        vid[2].addEventListener('ended', function() {
-        // only functional if "loop" is removed
-        vid[2].pause();
-        // to capture IE10
-        vidFade();
-        });
-        pauseButton[2].addEventListener("click", function() {
-        vid[2].classList.toggle("stopfade");
-        if (vid.paused) {
-        vid[2].play();
-        pauseButton[2].innerHTML = "Pause";
-        } else {
-        vid[2].pause();
-        pauseButton[2].innerHTML = "Lecture";
-        }
-        })
-      </script>
-    <!-- pause Video Full screen -->
-    
-    <script>
-      // Auto start videos
-      window.onSlideChange = function(index) {
-        console.log("SLIDING TO", index);
-        var videoSlide1 = document.getElementById("video-slide-1");
-        if (index == 1) {
-          videoSlide1.play();
-        }
-        else {
-          videoSlide1.pause();
-        }
-
-        var videoSlide2 = document.getElementById("video-slide-2");
-        if (index == 2) {
-          videoSlide2.play();
-        }
-        else {
-          videoSlide2.pause();
-        }
-
-        var videoSlide3 = document.getElementById("video-slide-3");
-        if (index == 3) {
-          videoSlide3.play();
-        }
-        else {
-          videoSlide3.pause();
-        }
-      }
-    </script>
-  </body>
+  <script src="js/text-glitcher.js"></script>
+  <script src="js/background-videos.js"></script>
+  <script src="js/autostart-videos.js"></script>
+</body>
 </html>
