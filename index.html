@@ -19,28 +19,28 @@
   <div class="wrapper wrapper--demo">
     <div class="carousel">
       <div class="carousel__content">
-        <div class="item slide-0">
+        <div class="item">
           <div class="wrapper">
             <canvas id="stage"></canvas>
           </div>
         </div>
 
-        <div class="item slide-1">
+        <div class="item">
           <button class="title pause-button" id="pause1">Pause</button>
-          <video id="video-slide-1" class="video-pause">
+          <video data-slide-id="1" class="video-pause">
             <source src="son/video.mp4" type="video/mp4">
           </video>
         </div>
 
-        <div class="item slide-2">
+        <div class="item">
           <button class="title pause-button">Pause</button>
-          <video id="video-slide-2" class="video-pause">
+          <video data-slide-id="2" class="video-pause">
             <source src="video/explications.mp4" type="video/mp4">
             <track label="Sub" kind="subtitles" srclang="fr" data-rendering="playr" src="video/explications2.vtt" id="Sub" default>
           </video>
         </div>
 
-        <div class="item slide-3">
+        <div class="item">
           <div id="content">
             <ul id="ul">
               <li><a id="a1" href="#" class="active">1</a></li>
@@ -55,20 +55,30 @@
               <li><a id="a" href="#">10</a></li>
               <li><a id="a" href="#">11</a></li>
             </ul>
-            <video id="video-slide-3" class="video-pause" src="video/01.wikipedia.mp4"></video>
+            <video data-slide-id="3" class="video-pause" src="video/01.wikipedia.mp4"></video>
             <button class="title pause-button">Pause</button>
           </div>
         </div>
 
-        <div class="item slide-4">
-          <audio id="a1"  preload="auto" tabindex="0" controls="" style="visibility:hidden" type="audio/mpeg"></audio>
-          <canvas id="coucou"></canvas>
+        <div class="item">
+          <button class="title pause-button">Pause</button>
+          <video data-slide-id="4" class="video-pause">
+            <source src="video/explications.mp4" type="video/mp4">
+            <track label="Sub" kind="subtitles" srclang="fr" data-rendering="playr" src="video/explications2.vtt" id="Sub" default>
+          </video>
         </div>
 
-        <div class="item slide-5">
-          <p class="title">Sixth</p>
-          <p class="title title--sub">Last Item</p>
-          <img src="http://placehold.it/1800x850/00FFAE/FFF&amp;text=&nbsp;" alt="">
+        <div class="item">
+          <button class="title pause-button">Pause</button>
+          <video data-slide-id="5" class="video-pause">
+            <source src="video/video.mp4" type="video/mp4">
+            <track label="Sub" kind="subtitles" srclang="fr" data-rendering="playr" src="video/explications2.vtt" id="Sub" default>
+          </video>
+        </div>
+
+        <div class="item">
+          <audio id="a1"  preload="auto" tabindex="0" controls="" style="visibility:hidden" type="audio/mpeg"></audio>
+          <canvas id="coucou"></canvas>
         </div>
       </div>
 
@@ -83,7 +93,7 @@
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.9/jquery.transit.min.js'></script>
 
   <script src="js/intro-glitcher.js"></script>
-  <script src="js/steps.js"></script>
+  <!-- <script src="js/steps.js"></script> -->
   <script src="carousel/js/index.js"></script>
 
   <script src="js/text-glitcher.js"></script>
