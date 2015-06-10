@@ -2,7 +2,7 @@ $(function() {
   ong1 = document.getElementById('a1');
   ong2 = document.getElementById('a2');
   ong3 = document.getElementById('a3');
-  var video = document.getElementById('video-slide-3');
+  var video = document.getElementById('video-tab');
   var src = video.getAttribute('src');
 
 
@@ -20,20 +20,21 @@ $(function() {
   function active(moi){
     nonactive(); // nettoyage
     moi.className = "active"; // je deviens active
+    video.play();
   }
 
   ong1.addEventListener("click", function() {
-    video.setAttribute('src', 'video/01.wikipedia.mp4');
+    video.setAttribute('src', '../video/01.wikipedia.mp4');
     active(this);
   });
 
   ong2.addEventListener("click", function() {
-    video.setAttribute('src', 'video/explications.mp4');
+    video.setAttribute('src', '../video/explications.mp4');
     active(this);
   });
 
   ong3.addEventListener("click", function() {
-    video.setAttribute('src', 'video/explications.mp4');
+    video.setAttribute('src', '../video/explications.mp4');
     active(this);
   });
 });
