@@ -13,4 +13,16 @@ window.onSlideChange = function(index) {
   if(video.length > 0) {
     video.get(0).play();
   }
+
+// Pause
+  var audios = $('audio');
+  for (var i = 0; i < audios.length; i++){
+    audios.get(i).pause();
+  }
+
+  // Find associated audio
+  var audio = $('audio[data-slide-id=' + index + ']');
+  if(audio.length > 0) {
+    audio.get(0).play();
+  }
 };

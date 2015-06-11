@@ -3,9 +3,9 @@ $(function() {
   var nums = 0;
 
   //'http://www.gutenberg.org/cache/epub/449/pg449.txt';
-  var sFiles = ["son/explications.mp3"];
+  /*var sFiles = ["son/explications.mp3"];*/
   //var audio;
-  audi();
+ /* audi();
   function audi() {
     audio = $('audio');
     audio[0].volume = .15;
@@ -15,7 +15,7 @@ $(function() {
     audio[0].src = sFiles[0];
     audio[0].load();
     audio[0].play();
-  }
+  }*/
   function isNumber(n) {
     return !isNaN(parseFloat(n)) && isFinite(n);
   }
@@ -32,7 +32,7 @@ $(function() {
     initOptions: function () {
       this.width = document.documentElement.offsetWidth;
       this.height = window.innerHeight*1;
-      this.font = '10vw Avara';
+      this.font = '8vw Avara';
       this.context.font = this.font;
       this.newstr();
           //this.text = "Init";
