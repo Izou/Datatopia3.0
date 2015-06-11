@@ -3,11 +3,11 @@ function addButtons(video, pauseButton) {
     // only functional if "loop" is removed
     video.pause();
     // to capture IE10
-    video.classList.add("stopfade");
+    /*video.classList.add("stopfade");*/
   });
 
   pauseButton.addEventListener("click", function() {
-    video.classList.toggle("stopfade");
+    /*video.classList.toggle("stopfade");*/
     if(video.paused) {
       video.play();
       pauseButton.innerHTML = "Pause";
@@ -30,11 +30,9 @@ function audioButtons(audio, pauseButtonAudio) {
     // only functional if "loop" is removed
     audio.pause();
     // to capture IE10
-    audio.classList.add("stopfade");
   });
 
   pauseButtonAudio.addEventListener("click", function() {
-    audio.classList.toggle("stopfade");
     if(audio.paused) {
       audio.play();
       pauseButtonAudio.innerHTML = "Pause";
