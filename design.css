@@ -51,13 +51,20 @@ table {
  /*Fonts*/
  @font-face {
 font-family: 'Avara';
-src: url('quadranta.eot');
-src: url('quadranta.otf') format('truetype'),
-     url('quadranta.woff') format('woff'),
-     url('quadranta.eot?#iefix') format('embedded-opentype'),
-     url('quadranta.svg#QuadrantaBold') format('svg');
+src: url('font/avara-webfont.eot');
+src: url('font/avara-webfont.otf') format('truetype'),
+     url('font/avara-webfont.woff') format('woff'),
+     url('font/avara-webfont.eot?#iefix') format('embedded-opentype'),
+     url('font/avara-webfont.svg#QuadrantaBold') format('svg');
 font-weight: normal;
 font-style: normal;
+}
+
+@font-face {
+font-family: 'Avenir LT Std 85 Heavy';
+font-style: normal;
+font-weight: normal;
+src: local('Avenir LT Std 85 Heavy'), url('font/AvenirLTStd-Heavy.woff') format('woff');
 }
  /*End Fonts*/
 
@@ -68,7 +75,7 @@ font-style: normal;
 }
 
 body, html {
-  /*font-family: "europa-1","europa-2", sans-serif;*/
+  font-family: "Avenir LT Std 85 Heavy","europa-1", sans-serif;
   overflow: hidden;
   margin:0;
   /*width: 100%;*/

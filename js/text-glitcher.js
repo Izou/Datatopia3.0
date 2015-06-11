@@ -3,7 +3,7 @@ $(function() {
   var nums = 0;
 
   //'http://www.gutenberg.org/cache/epub/449/pg449.txt';
-  var sFiles = [/*"https://dl.dropboxusercontent.com/u/47345502/Phone.m4a"*/];
+  var sFiles = ["son/explications.mp3"];
   //var audio;
   audi();
   function audi() {
@@ -31,8 +31,8 @@ $(function() {
     },
     initOptions: function () {
       this.width = document.documentElement.offsetWidth;
-      this.height = window.innerHeight*1.25;
-      this.font = '10vw Consolas';
+      this.height = window.innerHeight*1;
+      this.font = '10vw Avara';
       this.context.font = this.font;
       this.newstr();
           //this.text = "Init";
@@ -69,7 +69,7 @@ $(function() {
           }).bind(this), 1000 / this.fps);
         },
         newstr: function () {
-          this.compOp='darker';
+          this.compOp='darken';
           /*document.body.style.background = 'white';*/
           this.isNum=0;
           wordNum =(wordNum+1)%(textBook.length-20);
@@ -121,7 +121,7 @@ $(function() {
       this.text3 = this.text;
       this.text=this.text2;
       this.textWidth = (this.context.measureText(this.text)).width;
-      this.compOp='darker';
+      this.compOp='darken';
       /*document.body.style.background = 'white';*/
       this.isNum=2;
       flashdeg=1;
