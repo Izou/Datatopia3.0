@@ -295,4 +295,14 @@ button:hover {
     animation: buttonpause 10s linear 1s 1;
 }
 
-/*End BG Video
+/*End BG Video*/
+
+
+@media viewport and (orientation:landscape) {
+  body {
+    background-color: #309ac0;
+  }
+/*  .demo-wrappper .portrait {
+    display: none;
+  }*/
+}
