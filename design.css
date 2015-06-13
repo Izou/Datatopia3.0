@@ -153,10 +153,12 @@ body, html {
 .carousel .carousel__nav .nav {
   position: absolute;
   top: 0;
-  color: #000;
-  background: #FFF;
+  color: #FFF;
+/*  background: #FFF;*/
+  border: white 1px solid;
   padding: 8px 12px;
   font-weight: bold;
+  font-family: "Avara", "europa-1";
   text-decoration: none;
   font-size: .8rem;
   transition: padding .25s ease;
@@ -188,9 +190,17 @@ body, html {
  height: 50em;
 }*/
 
+#video-tab{
+  border : white 1px solid;
+}
+
 canvas#coucou{
   margin-left: 1%;
   width: 95%;
+}
+
+#content{
+  height: 30em;
 }
 
 
@@ -252,7 +262,7 @@ video {
   min-width: 100%;
   min-height: 100%;
   width: 100%;
-  height: 100%;
+  height: 60em;
   z-index: -100;
 }
 
@@ -270,8 +280,6 @@ button{
   transition: .3s background;
   background: rgba(0,0,0,0.5);
   opacity: 0;
-  animation: buttonpause 10s linear 1s 1;
-
 }
 
 button:hover {
@@ -281,6 +289,10 @@ button:hover {
 
 .stopfade {
    opacity: .5;
+}
+
+.buttonanim{
+    animation: buttonpause 10s linear 1s 1;
 }
 
 /*End BG Video
