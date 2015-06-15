@@ -133,9 +133,14 @@ body, html {
   color: #FFF;
 }
 .carousel .carousel__content .item .title--sub {
-  margin-top: 20px;
   font-size: 1.2em;
-  opacity: .5;
+  opacity: 1;
+  color: white;
+  display: block;
+  width: 50%;
+  height: auto;
+  text-align: center;
+  margin: 0 auto;
 }
 .carousel .carousel__content .item img {
   width: 100%;
@@ -273,6 +278,27 @@ video {
 @keyframes buttonpause {
     from {opacity : 1;}
     to {opacity : 0;}
+}
+
+button{
+  border: white 0.2px solid;
+  height: 100px;
+  width: 100px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  font-family: 'Avara', 'Arial';
+  font-size: 1.2em;
+  display: block;
+  margin: 0 auto;
+  margin-top:20%;
+  color: #FFF;
+/*  background: #FFF;*/
+  padding: 8px 12px;
+  font-weight: bold;
+  font-family: "Avara", "europa-1";
+  font-size: .8rem;
+  transition: padding .25s ease;
 }
 
 button.pause-button,
