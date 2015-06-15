@@ -184,6 +184,10 @@ body, html {
   margin: 0 auto;
 }
 
+p{
+  color: red;
+}
+
 /*video{
  width: 60%;
  margin: 0 auto;
@@ -271,7 +275,7 @@ video {
     to {opacity : 0;}
 }
 
-button{
+button.pause-button{
   z-index: 2;
   width: 80%;
   border: none;
@@ -282,7 +286,7 @@ button{
   opacity: 0;
 }
 
-button:hover {
+button.pause-button:hover {
   background: rgba(0,0,0,0.5);
   opacity: 1;
 }
