@@ -61,32 +61,32 @@ $(function() {
   });
 
     ong5.addEventListener("click", function() {
-    video.setAttribute('src', './video/explications.mp4');
+    video.setAttribute('src', './video/05.codetexte.mp4');
     active(this);
   });
 
     ong6.addEventListener("click", function() {
-    video.setAttribute('src', './video/explications.mp4');
+    video.setAttribute('src', './video/06.des.mp4');
     active(this);
   });
 
     ong7.addEventListener("click", function() {
-    video.setAttribute('src', './video/01.wikipedia_2.mp4');
+    video.setAttribute('src', './video/07.glitch.mp4');
     active(this);
   });
 
     ong8.addEventListener("click", function() {
-    video.setAttribute('src', './video/explications.mp4');
+    video.setAttribute('src', './video/08.3D.mp4');
     active(this);
   });
 
     ong9.addEventListener("click", function() {
-    video.setAttribute('src', './video/explications.mp4');
+    video.setAttribute('src', './video/09.impression.mp4');
     active(this);
   });
 
     ong10.addEventListener("click", function() {
-    video.setAttribute('src', './video/explications.mp4');
+    video.setAttribute('src', './video/10.mpeg.mp4');
     active(this);
   });
 
