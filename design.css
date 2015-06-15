@@ -303,6 +303,53 @@ button.pause-button-audio:hover{
 
 /*End BG Video*/
 
+/*Button G*/
+.glitch{
+  display:inline-block;
+  position:relative;
+  margin:0 auto;
+}
+@keyframes noise-anim{
+  $steps:200;
+  @for $i from 0 through $steps{
+    #{percentage($i*(1/$steps))}{
+      clip:rect(random(60)+px,9999px,random(60)+px,0);
+    }
+  }
+}
+.glitch:hover:after{
+  content:attr(data-text);
+  position:absolute;
+  left:4px;
+  top:0;
+  color:black;
+  background:white;
+  overflow:hidden;
+  clip:rect(24px,999px,25px,0); 
+  animation:noise-anim 2s infinite linear alternate-reverse;
+}
+
+@keyframes noise-anim-2{
+  $steps:200;
+  @for $i from 0 through $steps{
+    #{percentage($i*(1/$steps))}{
+      clip:rect(random(60)+px,9999px,random(60)+px,0);
+    }
+  }
+}
+.glitch:hover:before{
+  content:attr(data-text);
+  position:absolute;
+  left:-4px; 
+  top:0;
+  color:black;
+  background:white;
+  overflow:hidden;
+  clip:rect(0,999px,49px,0); 
+  animation:noise-anim-2 4s infinite linear alternate-reverse;
+}
+/*End Button G*/
+
 /* #### Mobile Phones Portrait #### */
 @media screen and (max-device-width: 480px) and (orientation: portrait){
   /* some CSS here */
