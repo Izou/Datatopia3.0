@@ -13,7 +13,8 @@ $(function() {
   ong11 = document.getElementById('a11');
   var video = document.getElementById('video-tab');
   var src = video.getAttribute('src');
-
+  var sub = document.getElementById('sub');
+  var srcSub = sub.getAttribute('src');
 
   /*
   contenu = document.getElementById('content');
@@ -41,12 +42,16 @@ $(function() {
   }
 
   ong1.addEventListener("click", function() {
-    video.setAttribute('src', './video/01.wikipedia_2.mp4');
+    video.setAttribute('src', './video/01.wikipedia.mp4');
+    sub.setAttribute('src',"");
+    sub.setAttribute('src','./video/01.wikipedia.vtt');
     active(this);
   });
 
   ong2.addEventListener("click", function() {
     video.setAttribute('src', './video/02.thomasheine.mp4');
+    sub.setAttribute('src',"");
+    sub.setAttribute('src','./video/02.thomasheine.vtt');
     active(this);
   });
 
