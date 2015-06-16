@@ -514,8 +514,8 @@ button.pause-button-audio:hover{
 
   #video-tab{
   border : white 1px solid;
-  width: 60%;
-  height:auto;
+  width: 40%;
+  height:40%;
   min-width: 100%;
   }
 }
