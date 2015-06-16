@@ -204,8 +204,12 @@ vertical-align: center;
 }
 
 canvas#coucou{
-  margin-left: 1%;
+/*  margin-left: 1%;*/
   width: 95%;
+  height: 100%;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
 }
 
 /*Étapes*/
@@ -239,7 +243,7 @@ canvas#coucou{
 }
 
 #ul li a:hover{
-  width: 65px;
+  width: 3em;
 }
 #ul li:first-child a{
   margin-left: 0;
@@ -247,7 +251,6 @@ canvas#coucou{
 #ul .active{
   color : black;
   background-color: white;
-  width: 65px;
 }
 
 #content{
@@ -263,14 +266,23 @@ canvas#coucou{
 /*Fin étapes*/
 
 /*BG Video*/
-video {
-  min-width: 80%;
-/*  min-height: 60%;*/
-  width: 90%;
+
+#container{
+  line-height: 768px;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
   height: auto;
+}
+
+video {
+  min-width: 100%;
+/*  min-height: 60%;*/
+  width: 100%;
+  height: 100%;
   z-index: -100;
   margin: 0 auto;
-  display: block;
+  vertical-align: middle;
 }
 
 @keyframes buttonpause {
@@ -427,6 +439,7 @@ button.pause-button-audio:hover{
 
   .carousel .carousel__nav .nav{
     bottom: 65px;
+    position: absolute;
   }
 
   canvas#stage{
@@ -436,6 +449,10 @@ button.pause-button-audio:hover{
 
   .wrapper {
     bottom: 90px;
+  }
+
+  #container{
+    line-height: 300px;
   }
 
   video{
