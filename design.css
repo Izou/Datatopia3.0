@@ -384,9 +384,10 @@ button.pause-button-audio:hover{
   display: none;
 }
 
+
 /* #### Mobile Phones Portrait #### */
-@media screen and (max-device-width: 480px) and (orientation: portrait){
-  /* some CSS here */
+@media screen and (max-device-width: 600px) and (orientation: portrait){
+  /* Display none portrait mode */
 .wrapper--demo {
     display:none;
   }
@@ -405,24 +406,32 @@ button.pause-button-audio:hover{
 
   #warning-message h1{
     font-family: 'Avara', 'AvenirLTStd-Heavy', 'Arial';
-    font-size: 2em;
-    text-align: center;
+    font-size: 1.8em;
   }
 }
+/* #### END Mobile Phones Portrait #### */
+
 
 /* #### Mobile Phones Landscape #### */
-@media screen and (max-device-width: 640px) and (orientation: landscape){
-  /* some CSS here */
+@media screen and (max-device-width: 767px) and (orientation: landscape){
+  /* Display in Landsxape mode */
+   #warning-message {
+    display:none;
+  }
+
+  /*Starting real Css*/
+
   body{
     background-color: red;
   }
 
-  #warning-message {
-    display:none;
-  }
-
   .carousel .carousel__nav .nav{
     bottom: 65px;
+  }
+
+  canvas#stage{
+    display: inline-block;
+    vertical-align: center;
   }
 
   .wrapper {
@@ -442,15 +451,22 @@ button.pause-button-audio:hover{
 }
 
 /* #### iPhone 4+ Portrait or Landscape #### */
-@media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2){
+/*@media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2){
   /* some CSS here */
-}
+}*/
 
 /* #### Tablets Portrait or Landscape #### */
-@media screen and (min-device-width: 768px) and (max-device-width: 1024px){
+@media screen and (min-device-width: 640px) and (max-device-width: 1024px and (orientation:portrait){
   /* some CSS here */
   body{
     background-color: green;
+  }
+}
+
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px and (orientation:landscape){
+  /* some CSS here */
+  body{
+    background-color: silver;
   }
 }
 
