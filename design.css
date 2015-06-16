@@ -201,6 +201,7 @@ vertical-align: center;
   width: 100%;
   height:40em;
   min-width: 100%;
+  vertical-align: middle;
 }
 
 canvas#coucou{
@@ -212,8 +213,6 @@ canvas#coucou{
 
 /*Étapes*/
 #ul{
-  /*position: absolute;*/
-  top : 20%;
   background-color: black;
   margin: 0;
   padding: 0;
@@ -222,6 +221,7 @@ canvas#coucou{
 #ul li{
   list-style: none;
   display: inline-block;
+  height: 2em;
 }
 
 #ul li a{
@@ -252,14 +252,14 @@ canvas#coucou{
 }
 
 #content{
-  float: left;
   width: 100%;
   height: auto;
   border : white 1px dashed;
-  padding: 10px;
   margin: 0 auto;
   color: white;
-  margin-top: 3em;
+  line-height: 200px;
+  display: inline-block;
+  text-align: center;
 }
 /*Fin étapes*/
 
