@@ -257,7 +257,7 @@ canvas#coucou{
   border : white 1px dashed;
   margin: 0 auto;
   color: white;
-  line-height: 50px;
+  line-height: 200px;
   display: inline-block;
   text-align: center;
 }
@@ -465,8 +465,8 @@ button.pause-button-audio:hover{
   }
 
   #ul{
-    /*position: absolute;*/
-  /*  top : 20%;*/
+    height: 2em;
+    width: 100%;
     background-color: black;
     margin: 0;
     padding: 0;
@@ -481,17 +481,17 @@ button.pause-button-audio:hover{
     text-align: center;
   /*  width: 20em;
     height: 2em;*/
-    line-height: 10px;
+/*    line-height: 10px;*/
   /*  padding: 1.5em;*/
     padding-bottom: 0;
-    border-radius: 1px 1px 0 0;
+    border-radius: 10px 10px 0 0;
     border: white 1px solid;
     border-bottom: none;
 
   }
 
   #ul li a:hover{
-    width: 0.5em;
+    width: 3em;
   }
   #ul li:first-child a{
     margin-left: 0;
@@ -507,16 +507,20 @@ button.pause-button-audio:hover{
     border : white 1px dashed;
     margin: 0 auto;
     color: white;
-    line-height: 10px;
-    padding: 5em;
+    line-height: 200px;
   }
 
   #video-tab{
   border : white 1px solid;
   width: 40%;
-  height:auto;
-  min-width: 40%;
+  height:40%;
+  min-width: 100%;
   }
+}
+
+/* #### Mobile Phones Portrait or Landscape #### */
+@media screen and (max-device-width: 640px){
+  /* some CSS here */
 }
 
 /* #### iPhone 4+ Portrait or Landscape #### */
