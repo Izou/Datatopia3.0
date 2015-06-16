@@ -517,7 +517,7 @@ button.pause-button-audio:hover{
 
   #content{
     width: 100%;
-    height: auto;
+    height: 640px;
     border : white 1px dashed;
     margin: 0 auto;
     color: white;
@@ -528,7 +528,7 @@ button.pause-button-audio:hover{
   border : white 1px solid;
   width: 40%;
   height:40%;
-  min-width: 100%;
+  min-width: 40%;
   }
 
   button{
