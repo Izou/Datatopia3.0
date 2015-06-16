@@ -380,11 +380,29 @@ button.pause-button-audio:hover{
 }
 /*End Button G*/
 
+#warning-message {
+  display: none;
+}
+
 /* #### Mobile Phones Portrait #### */
 @media screen and (max-device-width: 480px) and (orientation: portrait){
   /* some CSS here */
   body{
     background-color: blue;
+  }
+
+.wrapper--demo {
+    display:none;
+  }
+
+  #warning-message {
+    display:block;
+    font-family: 'AvenirLTStd-Heavy', 'Arial';
+    color: #FFF;
+    font-size: 1.2em;
+    text-align: center;
+    margin: 7em 0 0 0;
+
   }
 }
 
@@ -393,6 +411,10 @@ button.pause-button-audio:hover{
   /* some CSS here */
   body{
     background-color: red;
+  }
+
+  #warning-message {
+    display:none;
   }
 
   .carousel .carousel__nav .nav{
