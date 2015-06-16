@@ -484,14 +484,14 @@ button.pause-button-audio:hover{
     line-height: 10px;
   /*  padding: 1.5em;*/
     padding-bottom: 0;
-    border-radius: 10px 10px 0 0;
+    border-radius: 1px 1px 0 0;
     border: white 1px solid;
     border-bottom: none;
 
   }
 
   #ul li a:hover{
-    width: 3em;
+    width: 0.5em;
   }
   #ul li:first-child a{
     margin-left: 0;
@@ -508,19 +508,15 @@ button.pause-button-audio:hover{
     margin: 0 auto;
     color: white;
     line-height: 10px;
+    padding: 5em;
   }
 
   #video-tab{
   border : white 1px solid;
   width: 40%;
-  height:40%;
+  height:auto;
   min-width: 40%;
   }
-}
-
-/* #### Mobile Phones Portrait or Landscape #### */
-@media screen and (max-device-width: 640px){
-  /* some CSS here */
 }
 
 /* #### iPhone 4+ Portrait or Landscape #### */
