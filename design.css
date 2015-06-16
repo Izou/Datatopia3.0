@@ -206,9 +206,7 @@ vertical-align: center;
 canvas#coucou{
 /*  margin-left: 1%;*/
   width: 95%;
-  height: 100%;
-  display: inline-block;
-  text-align: center;
+  height: auto;
   vertical-align: middle;
 }
 
@@ -276,9 +274,9 @@ canvas#coucou{
 }
 
 video {
-  min-width: 100%;
+  min-width: 95%;
 /*  min-height: 60%;*/
-  width: 100%;
+  width: 95%;
   height: 100%;
   z-index: -100;
   margin: 0 auto;
@@ -438,7 +436,7 @@ button.pause-button-audio:hover{
   }
 
   .carousel .carousel__nav .nav{
-    bottom: 65px;
+    bottom: 85px;
     position: absolute;
   }
 
@@ -447,18 +445,23 @@ button.pause-button-audio:hover{
     vertical-align: center;
   }
 
+  canvas#coucou{
+
+  }
+
   .wrapper {
-    bottom: 90px;
+    bottom: 95px;
   }
 
   #container{
-    line-height: 300px;
+/*    line-height: 400px;*/
   }
 
   video{
     width: 100%;
     min-width: 100%;
     height:80%;
+    margin-bottom: 2em;
   }
 }
 
