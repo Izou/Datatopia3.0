@@ -157,9 +157,10 @@ body, html {
 }
 .carousel .carousel__nav .nav {
   position: absolute;
-  top: 0;
   color: #FFF;
 /*  background: #FFF;*/
+display: inline-block;
+vertical-align: center;
   border: white 1px solid;
   padding: 8px 12px;
   font-weight: bold;
@@ -254,7 +255,7 @@ canvas#coucou{
   width: 100%;
   height: auto;
   border : white 1px dashed;
-  padding: 20px;
+  padding: 10px;
   margin: 0 auto;
   color: white;
   margin-top: 3em;
@@ -412,6 +413,12 @@ button.pause-button-audio:hover{
     background-color: green;
   }
 }
+
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px){
+/*    .carousel .carousel__nav .nav{
+    bottom: 150px;
+  }*/
+  }
 
 /* #### Desktops #### */
 @media screen and (min-width: 1024px){

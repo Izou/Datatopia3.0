@@ -57,46 +57,70 @@ $(function() {
 
   ong3.addEventListener("click", function() {
     video.setAttribute('src', './video/explications.mp4');
+    sub.setAttribute('src',"");
+    sub.setAttribute('src','./video/02.thomasheine.vtt');
     active(this);
   });
 
     ong4.addEventListener("click", function() {
     video.setAttribute('src', './video/04.simplicissimus.mp4');
+    sub.setAttribute('src',"");
+    sub.setAttribute('src','./video/02.thomasheine.vtt');
     active(this);
   });
 
     ong5.addEventListener("click", function() {
     video.setAttribute('src', './video/05.codetexte.mp4');
+    sub.setAttribute('src',"");
+    sub.setAttribute('src','./video/02.thomasheine.vtt');
     active(this);
   });
 
     ong6.addEventListener("click", function() {
     video.setAttribute('src', './video/06.des.mp4');
+    sub.setAttribute('src',"");
+    sub.setAttribute('src','./video/02.thomasheine.vtt');
     active(this);
   });
 
     ong7.addEventListener("click", function() {
     video.setAttribute('src', './video/07.glitch.mp4');
+    sub.setAttribute('src',"");
+    sub.setAttribute('src','./video/02.thomasheine.vtt');
     active(this);
   });
 
     ong8.addEventListener("click", function() {
     video.setAttribute('src', './video/08.3D.mp4');
+    sub.setAttribute('src',"");
+    sub.setAttribute('src','./video/02.thomasheine.vtt');
     active(this);
   });
 
     ong9.addEventListener("click", function() {
     video.setAttribute('src', './video/09.impression.mp4');
+    sub.setAttribute('src',"");
+    sub.setAttribute('src','./video/02.thomasheine.vtt');
     active(this);
   });
 
     ong10.addEventListener("click", function() {
     video.setAttribute('src', './video/10.mpeg.mp4');
+    sub.setAttribute('src',"");
+    sub.setAttribute('src','./video/02.thomasheine.vtt');
     active(this);
   });
 
     ong11.addEventListener("click", function() {
-    video.setAttribute('src', './video/01.wikipedia_2.mp4');
+    video.setAttribute('src', './video/01.wikipedia.mp4');
+    sub.setAttribute('src',"");
+    sub.setAttribute('src','./video/02.thomasheine.vtt');
     active(this);
   });
+
+    function autoplay(suite){
+      ong1.addEventListener("ended", function(){
+        
+      })
+    }
 });

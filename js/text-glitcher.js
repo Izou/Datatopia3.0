@@ -72,7 +72,7 @@ $(function() {
           this.compOp='darken';
           /*document.body.style.background = 'white';*/
           this.isNum=0;
-          wordNum =(wordNum+1)%(textBook.length-20);
+          wordNum =(wordNum+1)%(textBook.length-15);
           this.text = textBook[wordNum];
           if (this.text.length <= 10) {
             wordNum+=1;
