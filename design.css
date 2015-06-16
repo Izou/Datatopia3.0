@@ -479,7 +479,7 @@ button.pause-button-audio:hover{
   }
 
   #ul{
-    height: 2em;
+    height: 10px;
     width: 100%;
     background-color: black;
     margin: 0;
@@ -493,19 +493,19 @@ button.pause-button-audio:hover{
 
   #ul li a{
     text-align: center;
-  /*  width: 20em;
-    height: 2em;*/
+    width: 10px;
+    height: 10px;
 /*    line-height: 10px;*/
-  /*  padding: 1.5em;*/
+    padding: 0.1em;
     padding-bottom: 0;
-    border-radius: 10px 10px 0 0;
+    border-radius: 5px 5px 0 0;
     border: white 1px solid;
     border-bottom: none;
 
   }
 
   #ul li a:hover{
-    width: 3em;
+/*    width: 3em;*/
   }
   #ul li:first-child a{
     margin-left: 0;
@@ -521,9 +521,9 @@ button.pause-button-audio:hover{
     border : white 1px dashed;
     margin: 0 auto;
     color: white;
-    line-height: 200px;
+/*    line-height: 100px;*/
   }
-
+0
   #video-tab{
   border : white 1px solid;
   width: 40%;
