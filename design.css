@@ -453,19 +453,6 @@ button.pause-button-audio:hover{
     color: #FFF;
   }
 
-  button{
-    border: white 0.2px solid;
-    height: 2rem;
-    width: 100%;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    border-radius: 50px;
-    display: block;
-    margin: 0 auto;
-/*    margin-top:20%;*/
-/*    padding: 8px 12px;*/
-    transition: padding .25s ease;
-  }
 
   canvas#stage{
     display: inline-block;
@@ -543,6 +530,27 @@ button.pause-button-audio:hover{
   height:40%;
   min-width: 100%;
   }
+
+  button{
+    border: white 0.2px solid;
+    height: 50px;
+    width: 50px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    font-family: 'Avara', 'Arial';
+    font-size: 0.5rem;
+    display: block;
+    margin: 0 auto;
+    margin-top:20%;
+    color: #FFF;
+  /*  background: #FFF;*/
+    padding: 8px 12px;
+    font-weight: bold;
+    font-family: "Avara", "europa-1";
+    font-size: .8rem;
+    transition: padding .25s ease;
+    }
 }
 
 /* #### Mobile Phones Portrait or Landscape #### */
