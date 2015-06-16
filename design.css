@@ -502,14 +502,12 @@ button.pause-button-audio:hover{
   }
 
   #content{
-    float: left;
     width: 100%;
     height: auto;
     border : white 1px dashed;
-  /*  padding: 10px;*/
     margin: 0 auto;
     color: white;
-  /*  margin-top: 3em;*/
+    line-height: 10px;
   }
 
   #video-tab{
