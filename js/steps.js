@@ -13,8 +13,6 @@ $(function() {
   ong11 = document.getElementById('a11');
   var video = document.getElementById('video-tab');
   var src = video.getAttribute('src');
-  var sub = document.getElementById('sub');
-  var srcSub = sub.getAttribute('src');
 
   /*
   contenu = document.getElementById('content');
@@ -43,78 +41,56 @@ $(function() {
 
   ong1.addEventListener("click", function() {
     video.setAttribute('src', './video/01.wikipedia.mp4');
-    sub.setAttribute('src',"");
-    sub.setAttribute('src','./video/01.wikipedia.vtt');
     active(this);
   });
 
   ong2.addEventListener("click", function() {
     video.setAttribute('src', './video/02.thomasheine.mp4');
-    sub.setAttribute('src',"");
-    sub.setAttribute('src','./video/02.thomasheine.vtt');
     active(this);
   });
 
   ong3.addEventListener("click", function() {
     video.setAttribute('src', './video/explications.mp4');
-    sub.setAttribute('src',"");
-    sub.setAttribute('src','./video/02.thomasheine.vtt');
     active(this);
   });
 
     ong4.addEventListener("click", function() {
     video.setAttribute('src', './video/04.simplicissimus.mp4');
-    sub.setAttribute('src',"");
-    sub.setAttribute('src','./video/02.thomasheine.vtt');
     active(this);
   });
 
     ong5.addEventListener("click", function() {
     video.setAttribute('src', './video/05.codetexte.mp4');
-    sub.setAttribute('src',"");
-    sub.setAttribute('src','./video/02.thomasheine.vtt');
     active(this);
   });
 
     ong6.addEventListener("click", function() {
     video.setAttribute('src', './video/06.des.mp4');
-    sub.setAttribute('src',"");
-    sub.setAttribute('src','./video/02.thomasheine.vtt');
     active(this);
   });
 
     ong7.addEventListener("click", function() {
     video.setAttribute('src', './video/07.glitch.mp4');
-    sub.setAttribute('src',"");
-    sub.setAttribute('src','./video/02.thomasheine.vtt');
     active(this);
   });
 
     ong8.addEventListener("click", function() {
     video.setAttribute('src', './video/08.3D.mp4');
-    sub.setAttribute('src',"");
-    sub.setAttribute('src','./video/02.thomasheine.vtt');
     active(this);
   });
 
     ong9.addEventListener("click", function() {
     video.setAttribute('src', './video/09.impression.mp4');
-    sub.setAttribute('src',"");
-    sub.setAttribute('src','./video/02.thomasheine.vtt');
     active(this);
   });
 
     ong10.addEventListener("click", function() {
     video.setAttribute('src', './video/10.mpeg.mp4');
-    sub.setAttribute('src',"");
-    sub.setAttribute('src','./video/02.thomasheine.vtt');
     active(this);
   });
 
     ong11.addEventListener("click", function() {
     video.setAttribute('src', './video/01.wikipedia.mp4');
-    sub.setAttribute('src',"");
-    sub.setAttribute('src','./video/02.thomasheine.vtt');
     active(this);
   });
 

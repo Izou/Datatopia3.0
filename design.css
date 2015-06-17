@@ -197,7 +197,6 @@ vertical-align: center;
 }*/
 
 #video-tab{
-  border : white 1px solid;
   width: 100%;
   height:40em;
   min-width: 100%;
@@ -254,7 +253,6 @@ canvas#coucou{
 #content{
   width: 100%;
   height: auto;
-  border : white 1px dashed;
   margin: 0 auto;
   color: white;
   line-height: 200px;

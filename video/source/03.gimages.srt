@@ -1,0 +1,40 @@
+﻿1
+00:00:00,118 --> 00:00:02,807
+Une recherche via Google
+Images a permis de récupérer
+
+2
+00:00:02,832 --> 00:00:05,519
+la première image proposée
+en lien avec son patronyme.
+
+3
+00:00:06,662 --> 00:00:11,244
+Google Images est un service proposé depuis
+2001 par le moteur de recherche Google
+
+4
+00:00:11,269 --> 00:00:15,630
+pour permettre de trouver sur le web des
+images en rapport avec un sujet donné.
+
+5
+00:00:16,200 --> 00:00:19,520
+La pertinence d’une image
+vis-à-vis des mots-clés saisis
+
+6
+00:00:19,545 --> 00:00:22,747
+par l’utilisateur est évaluée
+sur la base de paramètres
+
+7
+00:00:22,785 --> 00:00:26,562
+tels que le nom du fichier ou le texte
+encadrant l’image dans la page d’origine.
+
+8
+00:00:27,087 --> 00:00:29,623
+Ceci est la définition
+donnée par Wikipédia.
+

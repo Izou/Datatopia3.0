@@ -1,0 +1,49 @@
+﻿1
+00:00:02,000 --> 00:00:04,793
+Pour faire jouer l’aléatoire,
+deux dés ont été lancés pour
+
+2
+00:00:04,818 --> 00:00:07,002
+obtenir un résultat de dix.
+
+3
+00:00:07,526 --> 00:00:10,026
+Un dé est un objet,
+généralement de petite taille
+
+4
+00:00:10,127 --> 00:00:12,538
+et de forme cubique,
+qui permet de tirer aléatoirement
+
+5
+00:00:12,563 --> 00:00:15,303
+un nombre ou un symbole parmi
+plusieurs possibilités.
+
+6
+00:00:15,827 --> 00:00:18,828
+Ceci est la définition donnée
+par Wikipedia.
+
+7
+00:00:19,829 --> 00:00:24,035
+Le code textuel ouvert dans le logiciel
+de traitement de texte a été modifié.
+
+8
+00:00:24,560 --> 00:00:26,618
+Dix fois de suite, une
+ligne de texte au hasard
+
+9
+00:00:26,622 --> 00:00:28,834
+a été choisi pour être remplacée
+par la phrase :
+
+10
+00:00:28,878 --> 00:00:32,466
+"Datatopia 3.0 - Hello World" avant
+d’enregistrer les modifications.
+

@@ -1,0 +1,69 @@
+﻿1
+00:00:02,600 --> 00:00:04,821
+Par la suite, l’ouverture
+du fichier image récupérée
+
+2
+00:00:05,350 --> 00:00:07,641
+sur le web dans un logiciel
+de traitement de texte
+
+3
+00:00:07,662 --> 00:00:10,274
+a donné un résultat inattendu.
+En effet, il est apparu
+
+4
+00:00:10,300 --> 00:00:12,575
+un code correspondant au
+codage textuel de l'image.
+
+5
+00:00:13,699 --> 00:00:17,236
+Le code source est un texte qui
+représente les instructions
+
+6
+00:00:17,300 --> 00:00:20,409
+qui doivent être exécutées par
+un microprocesseur.
+
+7
+00:00:21,045 --> 00:00:23,171
+ Le code source se matérialise souvent
+
+8
+00:00:23,177 --> 00:00:25,200
+sous la forme d’un ensemble de
+fichiers textes.
+
+9
+00:00:26,350 --> 00:00:28,956
+ Le code source
+est généralement écrit dans un
+
+10
+00:00:29,006 --> 00:00:32,065
+langage de programmation permettant
+ainsi une meilleure compréhension
+
+11
+00:00:32,080 --> 00:00:35,287
+par des humains. Une fois le
+code source écrit, il permet
+
+12
+00:00:35,392 --> 00:00:39,046
+de générer une représentation binaire
+d’une séquence d’instructions
+
+13
+00:00:39,061 --> 00:00:42,280
+– code binaire – exécutables
+par un microprocesseur.
+
+14
+00:00:43,604 --> 00:00:45,604
+Ceci est la définition donnée
+par Wikipedia.
+

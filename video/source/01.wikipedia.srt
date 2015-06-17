@@ -1,0 +1,16 @@
+﻿1
+00:00:00,044 --> 00:00:05,900
+Le processus de Datatopia 3.0 a débuté dès l'ouverture de l'encyclopédie en ligne Wikipedia.
+
+2
+00:00:06,300 --> 00:00:11,807
+Wikipédia est une encyclopédie multilingue coopérative, universelle et librement diffusable.
+
+3
+00:00:11,900 --> 00:00:16,800
+Elle est lancée officiellement par Jimmy Wales et Larry Sanger le 15 janvier 2001.
+
+4
+00:00:16,805 --> 00:00:18,555
+Ceci est la définition donnée par Wikipédia.
+
