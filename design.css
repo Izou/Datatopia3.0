@@ -123,12 +123,11 @@ body, html {
   position: absolute;
   top: 20%;
   left: 0;
-  margin: -33px 0 0 0;
+  margin: -33px 0 0 -15px;
   padding: 0;
   font-size: 2em;
   width: 100%;
   text-align: center;
-/*  letter-spacing: .3em;*/
   color: #FFF;
 }
 .carousel .carousel__content .item .title--sub {
@@ -305,19 +304,23 @@ button{
   font-weight: bold;
   font-family: "Avara", "europa-1";
   font-size: 1.2rem;
-  transition: padding .25s ease;
+/*  transition: padding .25s ease;*/
 }
 
 button.pause-button,
 button.pause-button-audio{
   z-index: 2;
   width: 50%;
-  height: 1.1em;
+  height: 3em;
   border: none;
   border-radius: 3px;
   cursor: pointer;
   transition: .3s background;
   background: rgba(0,0,0,0.5);
+  opacity: 0.5;
+}
+
+button.pause-button:first-child{
   opacity: 0;
 }
 

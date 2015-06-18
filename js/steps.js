@@ -50,7 +50,7 @@ $(function() {
   });
 
   ong3.addEventListener("click", function() {
-    video.setAttribute('src', './video/explications.mp4');
+    video.setAttribute('src', './video/03.gimages.mp4');
     active(this);
   });
 
@@ -90,7 +90,7 @@ $(function() {
   });
 
     ong11.addEventListener("click", function() {
-    video.setAttribute('src', './video/01.wikipedia.mp4');
+    video.setAttribute('src', './video/11.final.mp4');
     active(this);
   });
 
