@@ -22,7 +22,7 @@ $(function() {
   var glitcher = {
     init: function () {
       setTimeout((function () {
-        this.canvas = document.getElementById('coucou');
+        this.canvas = document.getElementById('explication');
         this.context = this.canvas.getContext('2d');
         this.initOptions();
         this.resize();
@@ -32,7 +32,7 @@ $(function() {
     initOptions: function () {
       this.width = document.documentElement.offsetWidth;
       this.height = window.innerHeight*1;
-      this.font = '8vw Avara';
+      this.font = '5em Avara';
       this.context.font = this.font;
       this.newstr();
           //this.text = "Init";

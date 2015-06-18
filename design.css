@@ -125,22 +125,23 @@ body, html {
   left: 0;
   margin: -33px 0 0 0;
   padding: 0;
-  font-size: 3rem;
+  font-size: 2em;
   width: 100%;
   text-align: center;
-  letter-spacing: .3rem;
+/*  letter-spacing: .3em;*/
   color: #FFF;
 }
 .carousel .carousel__content .item .title--sub {
   font-size: 1em;
   color: white;
   display: block;
-  width: 50%;
+  width: 60%;
   height: auto;
   text-align: center;
   margin: 0 auto;
   font-family: 'AvenirLTStd-Heavy','Arial';
-  line-height: 1.3em;
+  line-height: 1.8em;
+  padding-top: 1em;
 }
 .carousel .carousel__content .item img {
   width: 100%;
@@ -197,13 +198,13 @@ vertical-align: center;
 }*/
 
 #video-tab{
-  width: 100%;
+  width: 90%;
   height:40em;
-  min-width: 100%;
+  min-width: 90%;
   vertical-align: middle;
 }
 
-canvas#coucou{
+canvas#explication{
 /*  margin-left: 1%;*/
   width: 95%;
   height: auto;
@@ -220,21 +221,21 @@ canvas#coucou{
 #ul li{
   list-style: none;
   display: inline-block;
-  height: 2em;
+  height: 1.2em;
 }
 
 #ul li a{
   color: #fff;
   font-family: 'Avara', 'Arial';
   text-align: center;
-  width: 20em;
+  width: 25em;
   height: 2em;
   line-height: 30px;
   text-decoration: none;
-  padding: 1.5em;
+  padding: 1em;
   padding-bottom: 0;
-  border-radius: 60px 60px 0 0;
-  border: white 5px solid;
+/*  border-radius: 80px 80px 0 0;*/
+  border: white 2px solid;
   border-bottom: none;
 
 }
@@ -255,7 +256,7 @@ canvas#coucou{
   height: auto;
   margin: 0 auto;
   color: white;
-  line-height: 200px;
+  line-height: 100px;
   display: inline-block;
   text-align: center;
 }
@@ -297,20 +298,21 @@ button{
   font-size: 1.2em;
   display: block;
   margin: 0 auto;
-  margin-top:20%;
-  color: #FFF;
+  margin-top:10%;
+  color: #000;
 /*  background: #FFF;*/
   padding: 8px 12px;
   font-weight: bold;
   font-family: "Avara", "europa-1";
-  font-size: .8rem;
+  font-size: 1.2rem;
   transition: padding .25s ease;
 }
 
 button.pause-button,
 button.pause-button-audio{
   z-index: 2;
-  width: 80%;
+  width: 50%;
+  height: 1.1em;
   border: none;
   border-radius: 3px;
   cursor: pointer;
@@ -324,6 +326,10 @@ button.pause-button-audio:hover{
   background: rgba(0,0,0,0.5);
   opacity: 1;
 }
+
+/*Glich Button*/
+
+/*Glitch Button*/
 
 .stopfade {
    opacity: .5;
@@ -427,6 +433,10 @@ button.pause-button-audio:hover{
     display:none;
   }
 
+  .hidding {
+    display:none;
+  }
+
   /*Starting real Css*/
 
   body{
@@ -476,7 +486,7 @@ button.pause-button-audio:hover{
     margin-top: 1em;
   }
 
-  #ul{
+ /* #ul{
     height: 10px;
     width: 100%;
     background-color: black;
@@ -494,24 +504,24 @@ button.pause-button-audio:hover{
     width: 10px;
     height: 10px;
 /*    line-height: 10px;*/
-    padding: 0.1em;
+/*    padding: 0.1em;
     padding-bottom: 0;
     border-radius: 5px 5px 0 0;
     border: white 1px solid;
-    border-bottom: none;
+    border-bottom: none;*/
 
-  }
+  /*}
 
-  #ul li a:hover{
+  #ul li a:hover{*/
 /*    width: 3em;*/
-  }
+  /*}
   #ul li:first-child a{
     margin-left: 0;
   }
   #ul .active{
     color : black;
     background-color: white;
-  }
+  }*/
 
   #content{
     width: 100%;
@@ -521,13 +531,13 @@ button.pause-button-audio:hover{
     color: white;
 /*    line-height: 100px;*/
   }
-0
-  #video-tab{
+
+  /*#video-tab{
   border : white 1px solid;
   width: 40%;
   height:40%;
   min-width: 40%;
-  }
+  }*/
 
   button{
     border: white 0.2px solid;
