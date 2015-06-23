@@ -1,3 +1,6 @@
+
+
+
 $(function() {
   
   ong1 = document.getElementById('a1');
@@ -13,11 +16,6 @@ $(function() {
   ong11 = document.getElementById('a11');
   var video = document.getElementById('video-tab');
   var src = video.getAttribute('src');
-
-  /*
-  contenu = document.getElementById('content');
-
-  contenu.innerHTML = "article 1";*/
 
   function nonactive(){
     ong1.className = "";
@@ -93,10 +91,4 @@ $(function() {
     video.setAttribute('src', './video/11.final.mp4');
     active(this);
   });
-
-    function autoplay(suite){
-      ong1.addEventListener("ended", function(){
-        
-      })
-    }
 });
