@@ -263,7 +263,7 @@ canvas#explication{
 
 /*BG Video*/
 
-#container{
+.container{
   line-height: 600px;
   display: inline-block;
   text-align: center;
@@ -432,17 +432,40 @@ button.pause-button-audio:hover{
 /* #### Mobile Phones Landscape #### */
 @media screen and (max-device-width: 767px) and (orientation: landscape){
   /* Display in Landsxape mode */
-   #warning-message {
+
+  .wrapper--demo {
+    display:none;
+  }
+
+  #warning-message {
+    display:block;
+    color: #FFF;
+    text-align: center;
+    margin: 0 auto;
+    padding: 4em;
+    height: 100%;
+    width: 100%;
+    font-family: 'AvenirLTStd-Heavy', 'Arial';
+    font-size: 1.2em;
+  }
+
+  #warning-message h1{
+    font-family: 'Avara', 'AvenirLTStd-Heavy', 'Arial';
+    font-size: 1.8em;
+  }
+}
+
+/*   #warning-message {
     display:none;
   }
 
   .hidding {
     display:none;
-  }
+  }*/
 
   /*Starting real Css*/
 
-  body{
+/*  body{
     background-color: red;
   }
 
@@ -453,9 +476,7 @@ button.pause-button-audio:hover{
 
   .carousel .carousel__content .item .title{
     position: absolute;
-/*    top: 20%;*/
     left: 0;
-/*    margin: -33px 0 0 0;*/
     padding: 0;
     font-size: 0.2rem;
     width: 100%;
@@ -488,7 +509,7 @@ button.pause-button-audio:hover{
     height:80%;
     margin-top: 1em;
   }
-
+*/
  /* #ul{
     height: 10px;
     width: 100%;
@@ -526,14 +547,14 @@ button.pause-button-audio:hover{
     background-color: white;
   }*/
 
-  #content{
+/*  #content{
     width: 100%;
     height: 640px;
     border : white 1px dashed;
     margin: 0 auto;
     color: white;
-/*    line-height: 100px;*/
-  }
+    line-height: 100px;
+  }*/
 
   /*#video-tab{
   border : white 1px solid;
@@ -542,7 +563,7 @@ button.pause-button-audio:hover{
   min-width: 40%;
   }*/
 
-  button{
+/*  button{
     border: white 0.2px solid;
     height: 50px;
     width: 50px;
@@ -556,23 +577,18 @@ button.pause-button-audio:hover{
     margin-top:20%;
     color: #FFF;
   /*  background: #FFF;*/
-    padding: 8px 12px;
+   /* padding: 8px 12px;
     font-weight: bold;
     font-family: "Avara", "europa-1";
     font-size: .8rem;
     transition: padding .25s ease;
-    }
+    }*/
 }
 
 /* #### Mobile Phones Portrait or Landscape #### */
 @media screen and (max-device-width: 640px){
   /* some CSS here */
 }
-
-/* #### iPhone 4+ Portrait or Landscape #### */
-/*@media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2){
-  /* some CSS here */
-}*/
 
 /* #### Tablets Portrait or Landscape #### */
 @media screen and (min-device-width: 640px) and (max-device-width: 1024px and (orientation:portrait){

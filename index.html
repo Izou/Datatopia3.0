@@ -11,7 +11,6 @@
 
   <script src="http://use.typekit.net/kei2cfp.js"></script>
   <script type="text/javascript">try{ Typekit.load(); }catch(e){}</script>
-
   <script src="carousel/js/prefixfree.min.js"></script>
 </head>
 
@@ -19,7 +18,7 @@
 
   <div id="warning-message">
       <h1>Datatopia 3.0</h1>
-      Oops ! Le site n'est visible qu'en mode paysage, tournez votre téléphone.
+      Désolé, le site n'est visible que sur Écran ou Tablette.
   </div>
 
   <div class="wrapper wrapper--demo">
@@ -31,7 +30,7 @@
 
         <div class="item">
           <button class="title pause-button buttonanim">Pause</button>
-          <div id="container">
+          <div class="container">
           <video data-slide-id="1" class="video-pause">
             <source src="video/video.mp4" type="video/mp4">
           </video>
@@ -41,19 +40,10 @@
         <div class="item">
           <audio src="son/explications.mp3" class="audio-pause" data-slide-id="2" preload="auto" tabindex="0" style="visibility:hidden" type="audio/mpeg"></audio>
           <button class="title pause-button-audio">Pause</button>
-          <div id="container">
+          <div class="container">
           <canvas id="explication"></canvas>
           </div>
         </div>
-
-<!-- Version 2 de la slide 2
-        <div class="item">
-          <button class="title pause-button">Pause</button>
-          <video data-slide-id="2" class="video-pause">
-            <source src="video/explications.mp4" type="video/mp4">
-            <track label="Sub" kind="subtitles" srclang="fr" data-rendering="playr" src="video/explications2.vtt" id="Sub" default>
-          </video>
-        </div>-->
 
         <div class="item">
           <div id="content" class="hidding">
@@ -76,14 +66,6 @@
             </video>
           </div>
         </div>
-
-        <!-- <div class="item">
-          <button class="title pause-button">Pause</button>
-          <video data-slide-id="4" class="video-pause">
-            <source src="video/explications.mp4" type="video/mp4">
-            <track label="Sub" kind="subtitles" srclang="fr" data-rendering="playr" src="video/explications.vtt" id="Sub" default>
-          </video>
-        </div> -->
 
         <div class="item">
           <button id="contact">Glitch Me</button>
@@ -113,12 +95,10 @@
   </div>
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.9/jquery.transit.min.js'></script>
-  <script src="imgglitch.js"></script>
 
   <script src="js/intro-glitcher.js"></script>
   <script src="js/steps.js"></script>
   <script src="carousel/js/index.js"></script>
-
   <script src="js/text-glitcher.js"></script>
   <script src="js/background-videos.js"></script>
   <script src="js/autostart-videos.js"></script>

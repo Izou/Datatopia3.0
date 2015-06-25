@@ -1,6 +1,3 @@
-
-
-
 $(function() {
   
   ong1 = document.getElementById('a1');
