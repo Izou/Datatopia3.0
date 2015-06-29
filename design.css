@@ -405,6 +405,11 @@ button.pause-button-audio:hover{
 /* #### Mobile Phones Portrait #### */
 @media screen and (max-device-width: 600px) and (orientation: portrait){
   /* Display none portrait mode */
+body, html{
+overflow: scroll;
+-webkit-overflow: scroll;
+}
+
 .wrapper--demo {
     display:none;
   }
@@ -419,14 +424,17 @@ button.pause-button-audio:hover{
     width: 100%;
     font-family: 'AvenirLTStd-Heavy', 'Arial';
     font-size: 1.2em;
-    overflow-y: scroll;
-    -webkit-overflow-y : scroll;
   }
 
   #warning-message h1{
     font-family: 'Avara', 'AvenirLTStd-Heavy', 'Arial';
     font-size: 1.8em;
-/*    display: inline-block;*/
+  }
+
+  #warning-message a{
+    list-style: none;
+    text-decoration: none;
+    color: #fff;
   }
 
   #warning-message p{
