@@ -405,7 +405,7 @@ button.pause-button-audio:hover{
 /* #### Mobile Phones Portrait #### */
 @media screen and (max-device-width: 600px) and (orientation: portrait){
   /* Display none portrait mode */
-body, html{
+/*body, html{
 overflow: scroll;
 -webkit-overflow: scroll;
 }
@@ -440,7 +440,7 @@ overflow: scroll;
   #warning-message p{
   font-family: 'AvenirLTStd-Heavy', 'Arial';
   font-size: 0.8em;
-  }
+  }*/
 }
 /* #### END Mobile Phones Portrait #### */
 
