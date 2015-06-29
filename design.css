@@ -419,6 +419,8 @@ button.pause-button-audio:hover{
     width: 100%;
     font-family: 'AvenirLTStd-Heavy', 'Arial';
     font-size: 1.2em;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
   }
 
   #warning-message h1{
