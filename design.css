@@ -424,6 +424,12 @@ button.pause-button-audio:hover{
   #warning-message h1{
     font-family: 'Avara', 'AvenirLTStd-Heavy', 'Arial';
     font-size: 1.8em;
+/*    display: inline-block;*/
+  }
+
+  #warning-message p{
+  font-family: 'AvenirLTStd-Heavy', 'Arial';
+  font-size: 0.8em;
   }
 }
 /* #### END Mobile Phones Portrait #### */

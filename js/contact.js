@@ -1,6 +1,6 @@
-$("p").hide();
+$("#hiding-p").hide();
 $(document).ready(function(){
   $("#contact").click(function(){
-      $("p").toggle();
+      $("#hiding-p").toggle();
   });
 });

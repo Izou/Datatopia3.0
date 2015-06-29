@@ -17,8 +17,54 @@
 <body>
 
   <div id="warning-message">
+      <header>
       <h1>Datatopia 3.0</h1>
-      Désolé, le site n'est visible que sur Écran ou Tablette.
+        <nav>
+          <ul>
+            <li><a href="#video-mobile">Vidéo</a></li>
+            <li><a href="#explain">Explications</a></li>
+            <li><a href="#steps">Étapes</a></li>
+            <li><a href="#contactez-nous">Qui sommes nous ?</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <div>
+        <video id="video-mobile">
+              <source src="video/video.mp4" type="video/mp4"  tracks controls title="Vidéo présentant le projet Datatopia 3.0">
+        </video>
+      </div>
+
+      <div id="explain">
+        <p>
+          Datatopia 3.0 est un projet de recherche alternatif traitant du détournement des capacités créatives de l’erreur et de l’aléa, deux processus de création souvent mal considérés car maintes fois associés aux limites et à ses fatalités.
+        </p>
+        <p>  
+          Aussi, d’après l’Histoire et selon toutes conditions, nous restons toujours et invariablement liés aux limitations, qu’elles soient matérielles ou  humaines ; il est supposable que nous ne pouvons les éviter.
+        </p>
+        <p>
+          Mais à défaut de les surpasser, et afin de revendiquer de nouvelles formes tangibles (visuelles, formelles, architecturales ou même sociétales...), nous devons réfléchir à comment détourner, réutiliser et combiner les contraintes de l’existant et à les montrer comme des forces créatrices plutôt que des restrictions. Par conséquent, apporter une dose de risque, d’accident et de gravité en essayant volontairement de garder cette disposition à l’inattendu – à la surprise – recherchant et réutilisant l’imprévu pour mener à bien des œuvres novatrices car « inespérées.»
+        </p>
+        <p>
+          Datatopia 3.0 est ainsi le fruit d’un hasard actif ; il incarne la rencontre réfléchie de plusieurs séries causales indépendantes ayant le dessein de fabriquer de nouvelles relations logiques de données pour appréhender sans réserves les ressources créatives de l’existant.
+        </p>
+      </div>
+
+      <div id="contactez-nous">
+        <p id="hide">
+              Ce projet vous est présenté par Château Fort Fort. </br>
+              13 rue Pierre Blanc </br>
+              69001 Lyon · France </br>
+              + 33 (0) 4 78 27 97 29 </br>
+              contact@chateaufortfort.fr </br>
+            </p>
+            <p id="hide">
+              Château Fort Fort est un studio de design basé à Lyon et fondé
+              par Anabelle Delaunay et Sébastien Noguera, deux graphistes indépendants diplômés d'études supérieures d'arts appliqués.Le studio collabore avec divers clients du secteur public, culturel et commercial et développe des solutions innovantes pour l'impression, le design interactif et environnemental, ainsi que la gestion de marque.Il investit différents supports d'expression du design graphique tels
+              que l'édition (livre, brochure, catalogue, plaquette, carterie, affiche, magazine, etc.), les médias numériques (site web, vidéo, etc.) ou encore la typographie.
+            </p>
+      </div>
+
   </div>
 
   <div class="wrapper wrapper--demo">
@@ -32,7 +78,7 @@
           <button class="title pause-button buttonanim">Pause</button>
           <div class="container">
           <video data-slide-id="1" class="video-pause">
-            <source src="video/video.mp4" type="video/mp4">
+            <source src="video/video.mp4" type="video/mp4" title="Vidéo présentant le projet Datatopia 3.0">
           </video>
           </div>
         </div>
@@ -48,35 +94,33 @@
         <div class="item">
           <div id="content" class="hidding">
             <ul id="ul">
-              <li><a id="a1" href="#" class="active">1</a></li>
-              <li><a id="a2" href="#">2</a></li>
-              <li><a id="a3" href="#">3</a></li>
-              <li><a id="a4" href="#">4</a></li>
-              <li><a id="a5" href="#">5</a></li>
-              <li><a id="a6" href="#">6</a></li>
-              <li><a id="a7" href="#">7</a></li>
-              <li><a id="a8" href="#">8</a></li>
-              <li><a id="a9" href="#">9</a></li>
-              <li><a id="a10" href="#">10</a></li>
-              <li><a id="a11" href="#">11</a></li>
+              <li><a id="a1" href="#" class="active" title="Première étape">1</a></li>
+              <li><a id="a2" href="#" title="Deuxième étape">2</a></li>
+              <li><a id="a3" href="#" title="Troisième étape">3</a></li>
+              <li><a id="a4" href="#" title="Quatrième étape">4</a></li>
+              <li><a id="a5" href="#" title="Cinquième étape">5</a></li>
+              <li><a id="a6" href="#" title="Sixième étape">6</a></li>
+              <li><a id="a7" href="#" title="Septième étape">7</a></li>
+              <li><a id="a8" href="#" title="Huitième étape">8</a></li>
+              <li><a id="a9" href="#" title="Neuvième étape">9</a></li>
+              <li><a id="a10" href="#" title="Dixième étape">10</a></li>
+              <li><a id="a11" href="#" title="Onzième étape">11</a></li>
             </ul>
             
             <button class="title pause-button">Pause</button>
-            <video data-slide-id="3" class="video-pause" src="video/01.wikipedia.mp4" id="video-tab">
+            <video data-slide-id="3" class="video-pause" src="video/01.wikipedia.mp4" id="video-tab" title="Chaque vidéo présente une étape du processus de création Datatopia 3.0">
             </video>
           </div>
         </div>
 
         <div class="item">
           <button id="contact">Glitch Me</button>
-            <p class="title--sub">
+            <p id="hiding-p" class="title--sub">
               Ce projet vous est présenté par Château Fort Fort. </br>
               13 rue Pierre Blanc </br>
               69001 Lyon · France </br>
               + 33 (0) 4 78 27 97 29 </br>
               contact@chateaufortfort.fr </br>
-            </p>
-            <p class="title--sub">
               Château Fort Fort est un studio de design basé à Lyon et fondé
               par Anabelle Delaunay et Sébastien Noguera, deux graphistes indépendants diplômés d'études supérieures d'arts appliqués.Le studio collabore avec divers clients du secteur public, culturel et commercial et développe des solutions innovantes pour l'impression, le design interactif et environnemental, ainsi que la gestion de marque.Il investit différents supports d'expression du design graphique tels
               que l'édition (livre, brochure, catalogue, plaquette, carterie, affiche, magazine, etc.), les médias numériques (site web, vidéo, etc.) ou encore la typographie.
