@@ -89,7 +89,6 @@ body, html {
   position: absolute;
   top: 0;
   color: #000;
-  background: #FFF;
   padding: 8px 12px;
   font-weight: bold;
   text-decoration: none;
@@ -100,9 +99,9 @@ body, html {
   padding: 8px 20px;
 }
 .carousel .carousel__nav .nav--left {
-  border-radius: 0px 3px 3px 0px;
+  /*border-radius: 0px 3px 3px 0px;*/
 }
 .carousel .carousel__nav .nav--right {
   right: 0;
-  border-radius: 3px 0px 0px 3px;
+  /*border-radius: 3px 0px 0px 3px;*/
 }

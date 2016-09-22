@@ -73,338 +73,267 @@ src: local('Avenir LT Std 85 Heavy'), url('font/avenir/AvenirLTStd-Heavy.woff') 
   box-sizing: border-box;
 }
 
-body, html {
-  font-family: "Avenir LT Std 85 Heavy","europa-1", sans-serif;
-  overflow: hidden;
-  margin:0;
-  /*width: 100%;*/
-  background-color: black;
-}
-
-/**
- * Use this wrapper only for demo purposes
- * So you can show the items outside the wrapper
- */
-.wrapper--demo {
-  overflow: visible;
-}
-.wrapper--demo:after, .wrapper--demo:before {
-  content: "";
-  position: absolute;
-  width: 800px;
-  height: 100%;
-  top: 0;
-  left: 100%;
-  background: rgba(255, 255, 255, 0.8);
-  z-index: 2;
-}
-.wrapper--demo:before {
-  left: -800px;
-}
-
-.carousel {
-  width: 100%;
-  position: relative;
-}
-.carousel .carousel__content {
-  width: auto;
-  position: relative;
-  overflow: hidden;
-  -webkit-backface-visibility: hidden;
-  -webkit-transition: translate3d(0, 0, 0);
-}
-.carousel .carousel__content .item {
-  display: block;
-  float: left;
-  width: 100%;
-  position: relative;
-}
-.carousel .carousel__content .item .title{
-  position: absolute;
-  top: 20%;
-  left: 0;
-  margin: -33px 0 0 -15px;
-  padding: 0;
-  font-size: 2em;
-  width: 100%;
-  text-align: center;
-  color: #FFF;
-}
-.carousel .carousel__content .item .title--sub {
-  font-size: 1em;
-  color: white;
-  display: block;
-  width: 60%;
-  height: auto;
-  text-align: center;
-  margin: 0 auto;
-  font-family: 'AvenirLTStd-Heavy','Arial';
-  line-height: 1.8em;
-  padding-top: 1em;
-}
-.carousel .carousel__content .item img {
-  width: 100%;
-  max-width: 100%;
-  display: block;
-}
-.carousel .carousel__nav {
-  position: absolute;
-  width: 100%;
-  top: 50%;
-  margin-top: -17px;
-  left: 0;
-  z-index: 1;
-}
-.carousel .carousel__nav .nav {
-  position: absolute;
-  color: #FFF;
-/*  background: #FFF;*/
-display: inline-block;
-vertical-align: center;
-  border: white 1px solid;
-  padding: 8px 12px;
-  font-weight: bold;
-  font-family: "Avara", "europa-1";
-  text-decoration: none;
-  font-size: .8rem;
-  transition: padding .25s ease;
-}
-.carousel .carousel__nav .nav:hover {
-  padding: 8px 20px;
-}
-.carousel .carousel__nav .nav--left {
-  border-radius: 0px 3px 3px 0px;
-}
-.carousel .carousel__nav .nav--right {
-  right: 0;
-  border-radius: 3px 0px 0px 3px;
-}
-
-/*End Carousel*/
-
-#stage {
-  max-width: 100%;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-  margin: 0 auto;
-}
-
-/*video{
- width: 60%;
- margin: 0 auto;
- height: 50em;
-}*/
-
-#video-tab{
-  width: 90%;
-  height:40em;
-  min-width: 90%;
-  vertical-align: middle;
-}
-
-canvas#explication{
-/*  margin-left: 1%;*/
-  width: 95%;
-  height: auto;
-  vertical-align: middle;
-}
-
-/*Étapes*/
-#ul{
-  background-color: black;
-  margin: 0;
-  padding: 0;
-}
-
-#ul li{
-  list-style: none;
-  display: inline-block;
-  height: 1.2em;
-}
-
-#ul li a{
-  color: #fff;
-  font-family: 'Avara', 'Arial';
-  text-align: center;
-  width: 25em;
-  height: 2em;
-  line-height: 30px;
-  text-decoration: none;
-  padding: 1em;
-  padding-bottom: 0;
-/*  border-radius: 80px 80px 0 0;*/
-  border: white 2px solid;
-  border-bottom: none;
-
-}
-
-#ul li a:hover{
-  width: 3em;
-}
-#ul li:first-child a{
-  margin-left: 0;
-}
-#ul .active{
-  color : black;
-  background-color: white;
-}
-
-#content{
-  width: 100%;
-  height: auto;
-  margin: 0 auto;
-  color: white;
-  line-height: 100px;
-  display: inline-block;
-  text-align: center;
-}
-/*Fin étapes*/
-
-/*BG Video*/
-
-.container{
-  line-height: 600px;
-  display: inline-block;
-  text-align: center;
-  width: 100%;
-  height: auto;
-}
-
-video {
-  min-width: 95%;
-/*  min-height: 60%;*/
-  width: 95%;
-  height: 100%;
-  z-index: -100;
-  margin: 0 auto;
-  vertical-align: middle;
-}
-
-@keyframes buttonpause {
-    from {opacity : 1;}
-    to {opacity : 0;}
-}
-
-button{
-  border: white 0.2px solid;
-  height: 100px;
-  width: 100px;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  border-radius: 50px;
-  font-family: 'Avara', 'Arial';
-  font-size: 1.2em;
-  display: block;
-  margin: 0 auto;
-  margin-top:10%;
-  color: #000;
-/*  background: #FFF;*/
-  padding: 8px 12px;
-  font-weight: bold;
-  font-family: "Avara", "europa-1";
-  font-size: 1.2rem;
-/*  transition: padding .25s ease;*/
-}
-
-button.pause-button,
-button.pause-button-audio{
-  z-index: 2;
-  width: 50%;
-  height: 3em;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-  transition: .3s background;
-  background: rgba(0,0,0,0.5);
-  opacity: 0.5;
-}
-
-button.pause-button:first-child{
-  opacity: 0;
-}
-
-button.pause-button:hover,
-button.pause-button-audio:hover{
-  background: rgba(0,0,0,0.5);
-  opacity: 1;
-}
-
-/*Glich Button*/
-
-/*Glitch Button*/
-
-.stopfade {
-   opacity: .5;
-}
-
-.buttonanim{
-    animation: buttonpause 10s linear 1s 1;
-}
-
-#track{
-  color: red;
-  height: 10em;
-  font-family: 'Avara';
-}
-
-/*End BG Video*/
-
-/*Button G*/
-.glitch{
-  display:inline-block;
-  position:relative;
-  margin:0 auto;
-}
-@keyframes noise-anim{
-  $steps:200;
-  @for $i from 0 through $steps{
-    #{percentage($i*(1/$steps))}{
-      clip:rect(random(60)+px,9999px,random(60)+px,0);
-    }
-  }
-}
-.glitch:hover:after{
-  content:attr(data-text);
-  position:absolute;
-  left:4px;
-  top:0;
-  color:black;
-  background:white;
-  overflow:hidden;
-  clip:rect(24px,999px,25px,0); 
-  animation:noise-anim 2s infinite linear alternate-reverse;
-}
-
-@keyframes noise-anim-2{
-  $steps:200;
-  @for $i from 0 through $steps{
-    #{percentage($i*(1/$steps))}{
-      clip:rect(random(60)+px,9999px,random(60)+px,0);
-    }
-  }
-}
-.glitch:hover:before{
-  content:attr(data-text);
-  position:absolute;
-  left:-4px; 
-  top:0;
-  color:black;
-  background:white;
-  overflow:hidden;
-  clip:rect(0,999px,49px,0); 
-  animation:noise-anim-2 4s infinite linear alternate-reverse;
-}
-/*End Button G*/
-
-#warning-message {
-  display: none;
-}
-
-#hiding-p {
+/* #### Desktops #### */
+@media screen and (max-width: 1100px){
+    .wrapper--demo {
     display:none;
   }
 
+  body{
+    background-color: black;
+  }
+
+  #warning-message {
+    display: block;
+    color: #FFF;
+    text-align: center;
+    font-family: 'AvenirLTStd-Heavy', 'Arial';
+    font-size: 1.2em;
+  }
+
+  #warning-message h1{
+    font-family: 'Avara', 'AvenirLTStd-Heavy', 'Arial';
+    font-size: 1.8em;
+    margin: 20% 0 0 0;
+  }
+
+  #warning-message p{
+  font-family: 'AvenirLTStd-Heavy', 'Arial';
+  font-size: 0.8em;
+  line-height: 1.5em;
+  margin:2% 20% 0 20%;
+  }
+}
+
+@media screen and (min-width:1101px){
+  body, html {
+    font-family: "Avenir LT Std 85 Heavy","europa-1", sans-serif;
+    overflow: hidden;
+    margin:0;
+    /*width: 100%;*/
+    background-color: black;
+  }
+
+  /**
+   * Use this wrapper only for demo purposes
+   * So you can show the items outside the wrapper
+   */
+/*  .wrapper--demo {
+    overflow: visible;
+  }
+  .wrapper--demo:after, .wrapper--demo:before {
+    content: "";
+    position: absolute;
+    width: 800px;
+    height: 100%;
+    top: 0;
+    left: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 2;
+  }
+  .wrapper--demo:before {
+    left: -800px;
+  }*/
+
+  .carousel {
+    width: 100%;
+    position: relative;
+  }
+  .carousel .carousel__content {
+    width: auto;
+    position: relative;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: translate3d(0, 0, 0);
+  }
+  .carousel .carousel__content .item {
+    display: table-cell; /* comportement visuel de cellule */
+    vertical-align: middle;
+    float: left;
+    width: 100%;
+    position: relative;
+  }
+
+  .carousel .carousel__content .item img {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+  }
+  .carousel .carousel__nav {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .carousel .carousel__nav .nav {
+    font-family: 'Avara', 'Arial';
+    z-index: 2;
+    font-size: 1.2rem;
+    margin:0;
+    padding: 0.5em;
+    height: 40px;
+    width: auto;
+    cursor: pointer;
+    background-color:#fff;
+    color:black;
+    align-items: flex-start;
+    -webkit-writing-mode:horizontal-tb;
+    position: absolute;
+  }
+  .carousel .carousel__nav .nav--right {
+    right: 0;
+  }
+
+  /*End Carousel*/
+
+  #stage {
+    max-width: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    height: auto;
+  }
+
+  /*video{
+   width: 60%;
+   margin: 0 auto;
+   height: 50em;
+  }*/
+
+  #video-tab{
+    width: auto;
+    height:auto;
+    min-width: 90%;
+  }
+
+  canvas#explication{
+    width: 95%;
+    height: auto;
+    vertical-align: middle;
+  }
+
+  /*Étapes*/
+  #ul{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    top:4em;
+  }
+
+  #ul li{
+    list-style: none;
+    display: inline-block;
+  }
+
+  #ul li a{
+    color: #fff;
+    font-family: 'Avara', 'Arial';
+    text-align: center;
+    font-size: 1.5em;
+    text-decoration: none;
+    padding: 1em;
+    width: auto;
+    height: auto;
+    padding-bottom: 0;
+  }
+
+  #content{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    color: white;
+/*    line-height: 100px;*/
+    display: inline-block;
+    text-align: center;
+  }
+  /*Fin étapes*/
+
+  /*BG Video*/
+
+  .container{
+    line-height: 600px;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    height: auto;
+  }
+
+  video {
+    min-width: 100%;
+  /*  min-height: 60%;*/
+    width: 100%;
+    height: 100%;
+    z-index: -100;
+    margin: 0 auto;
+    vertical-align: middle;
+  }
+
+  @keyframes buttonpause {
+      from {opacity : 1;}
+      to {opacity : 0;}
+  }
+
+  button#contact{
+    border: white 0.2px solid;
+    height: 100px;
+    width: 100px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    display: block;
+    position: fixed;
+    color: #000;
+    padding: 8px 12px;
+    font-weight: bold;
+    font-family: "Avara", "europa-1";
+    font-size: 1.2rem;
+    top:50%;
+    left
+  }
+
+  button.pause-button,
+  button.pause-button-audio{
+    z-index: 2;
+    border: none;
+    border-radius: 0;
+    margin:0;
+    padding: 0.5em;
+    height: 40px;
+    width: auto;
+    cursor: pointer;
+    background-color:#fff;
+    color:black;
+    position: absolute;
+    display: block;
+    font-family: "Avara", "europa-1";
+    font-size: 1.2rem;
+  }
+
+  .stopfade {
+     opacity: .5;
+  }
+
+  #track{
+    color: red;
+    height: 10em;
+    font-family: 'Avara';
+  }
+
+  #warning-message {
+    display: none;
+  }
+
+#content: {
+  position: relative;
+}
+
+.footer{
+  float: right;
+  padding-right: 25%;
+}
 
 /* #### Mobile Phones Portrait #### */
 @media screen and (max-device-width: 600px) and (orientation: portrait){
@@ -419,13 +348,9 @@ overflow: scroll;
   }
 
   #warning-message {
-    display:block;
+    display: block;
     color: #FFF;
     text-align: center;
-    margin: 0 auto;
-    padding: 4em;
-    height: 100%;
-    width: 100%;
     font-family: 'AvenirLTStd-Heavy', 'Arial';
     font-size: 1.2em;
   }
@@ -433,17 +358,14 @@ overflow: scroll;
   #warning-message h1{
     font-family: 'Avara', 'AvenirLTStd-Heavy', 'Arial';
     font-size: 1.8em;
-  }
-
-  #warning-message a{
-    list-style: none;
-    text-decoration: none;
-    color: #fff;
+    margin: 68% 0 0 0;
   }
 
   #warning-message p{
   font-family: 'AvenirLTStd-Heavy', 'Arial';
   font-size: 0.8em;
+  line-height: 1.5em;
+  margin:2% 20% 0 20%;
   }
 }
 /* #### END Mobile Phones Portrait #### */
@@ -458,13 +380,9 @@ overflow: scroll;
   }
 
   #warning-message {
-    display:block;
+    display: block;
     color: #FFF;
     text-align: center;
-    margin: 0 auto;
-    padding: 4em;
-    height: 100%;
-    width: 100%;
     font-family: 'AvenirLTStd-Heavy', 'Arial';
     font-size: 1.2em;
   }
@@ -472,6 +390,14 @@ overflow: scroll;
   #warning-message h1{
     font-family: 'Avara', 'AvenirLTStd-Heavy', 'Arial';
     font-size: 1.8em;
+    margin: 20% 0 0 0;
+  }
+
+  #warning-message p{
+  font-family: 'AvenirLTStd-Heavy', 'Arial';
+  font-size: 0.8em;
+  line-height: 1.5em;
+  margin:2% 20% 0 20%;
   }
 }
 
@@ -484,16 +410,10 @@ overflow: scroll;
 /* #### Tablets Portrait or Landscape #### */
 @media screen and (min-device-width: 640px) and (max-device-width: 1024px and (orientation:portrait){
   /* some CSS here */
-  body{
-    background-color: green;
-  }
 }
 
 @media screen and (min-device-width: 768px) and (max-device-width: 1024px and (orientation:landscape){
   /* some CSS here */
-  body{
-    background-color: silver;
-  }
 }
 
 @media screen and (min-device-width: 768px) and (max-device-width: 1024px){
@@ -501,8 +421,3 @@ overflow: scroll;
     bottom: 150px;
   }
   }*/
-
-/* #### Desktops #### */
-@media screen and (min-width: 1024px){
-  /* some CSS here */
-}

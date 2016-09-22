@@ -8,9 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
   <link rel="icon" href="favicon.ico" />
   <link rel="stylesheet" type="text/css" href="design.css">
-
-  <script src="http://use.typekit.net/kei2cfp.js"></script>
-  <script type="text/javascript">try{ Typekit.load(); }catch(e){}</script>
+  <link rel="stylesheet" type="text/css" href="glitch.css">
   <script src="carousel/js/prefixfree.min.js"></script>
 </head>
 
@@ -19,20 +17,19 @@
   <div id="warning-message">
       <h1>Datatopia 3.0</h1>
       <p>
-        Désolé, le site Datatopia 3.0 n'est visible que sur Écran ou Tablette
-      </p>
-        
+        Connectez-vous sur Tablette ou sur Écran pour profiter de l'expérience Datatopia 3.0.
+      </p>  
   </div>
 
-  <div class="wrapper wrapper--demo">
+  <div id="content">
     <div class="carousel">
       <div class="carousel__content">
         <div class="item" id="start">
-            <canvas id="stage"></canvas>
+            <canvas class="stage" id="stage"></canvas>
         </div>
 
         <div class="item">
-          <button class="title pause-button buttonanim">Pause</button>
+          <button class="pause-button">Pause</button>
           <div class="container">
           <video data-slide-id="1" class="video-pause">
             <source src="video/video.mp4" type="video/mp4" title="Vidéo présentant le projet Datatopia 3.0">
@@ -43,7 +40,7 @@
         <div class="item">
           <audio src="son/explications.mp3" class="audio-pause" data-slide-id="2" preload="auto" tabindex="0" style="visibility:hidden" type="audio/mpeg">
           </audio>
-          <button class="title pause-button-audio">Pause</button>
+          <button class="pause-button-audio">Pause</button>
           <div class="container">
           <canvas id="explication"></canvas>
           </div>
@@ -65,32 +62,28 @@
               <li><a id="a11" href="#" title="Onzième étape">11</a></li>
             </ul>
             
-            <button class="title pause-button">Pause</button>
+            <button class="pause-button">Pause</button>
             <video data-slide-id="3" class="video-pause" src="video/01.wikipedia.mp4" id="video-tab" title="Chaque vidéo présente une étape du processus de création Datatopia 3.0">
             </video>
           </div>
         </div>
 
         <div class="item">
-          <button id="contact">Glitch Me</button>
-            <p id="hiding-p" class="title--sub">
-              Ce projet vous est présenté par Château Fort Fort. <br>
-              13 rue Pierre Blanc <br>
-              69001 Lyon · France <br>
-              + 33 (0) 4 78 27 97 29 <br>
-              contact@chateaufortfort.fr <br>
-              Château Fort Fort est un studio de design basé à Lyon et fondé
-              par Anabelle Delaunay et Sébastien Noguera, deux graphistes indépendants diplômés d'études supérieures d'arts appliqués.Le studio collabore avec divers clients du secteur public, culturel et commercial et développe des solutions innovantes pour l'impression, le design interactif et environnemental, ainsi que la gestion de marque.Il investit différents supports d'expression du design graphique tels
-              que l'édition (livre, brochure, catalogue, plaquette, carterie, affiche, magazine, etc.), les médias numériques (site web, vidéo, etc.) ou encore la typographie.
-            </p>
-
+          <div class="text-glitch">
+            <p data-text="Datatopia 3.0, développé par le studio Château Fort Fort est un projet de recherche basé sur l'erreur et l'aléa.">Datatopia 3.0, développé par le studio Château Fort Fort est un projet de recherche basé sur l'erreur et l'aléa.</p>
+            <p data-text="Cette idée, déclenchée par une image trouvée par un concours de circonstance sur le web, a entraîné son créateur par le biais d'un hasard actif, à réaliser trois formes de créations distinctes et pourtant liées: une mélodie lanciante, un dédale 3D et un objet tangible.">Cette idée, déclenchée par une image trouvée par un concours de circonstance sur le web, a entraîné son créateur par le biais d'un hasard actif, à réaliser trois formes de créations distinctes et pourtant liées: une mélodie lanciante, un dédale 3D et un objet tangible.</p>
+            <p data-text="Ces étapes de création ont ainsi donné vie à une quatrième forme de production : une véritable visite guidée numérique d'un processus d'élaboration aléatoire.">Ces étapes de création ont ainsi donné vie à une quatrième forme de production : une véritable visite guidée numérique d'un processus d'élaboration aléatoire.</p>
+          </div>
+          <div class="footer">
+            <a href="http://www.chateaufortfort.fr/datatopia.html" target="_blank">Château Fort Fort</a>
+            <a href="http://www.letoutouchic.com/chateau_fort_fort.html" target="_blank">L'exposition</a>
+          </div>
         </div>
 
       </div>
 
       <div class="carousel__nav">
-        <a href="#" class="nav nav--left glitch">Précédent</a>
-        <a href="#" class="nav nav--right glitch">Suivant</a>
+        <a href="#" class="nav nav--right">Suivant</a>
       </div>
 
     </div>
@@ -105,7 +98,14 @@
   <script src="js/text-glitcher.js"></script>
   <script src="js/background-videos.js"></script>
   <script src="js/autostart-videos.js"></script>
-  <script src="js/contact.js"></script>
+  <!-- <script src="js/fin.js"></script> -->
 
+  <script type="text/javascript">
+    $(document).ready(function(){
+    $('#warning-message').height($(window).height());
+    $('#content').height($(window).height());
+    $('#fin').height($(window).height());
+    });
+  </script>
 </body>
 </html>
