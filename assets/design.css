@@ -51,10 +51,10 @@ table {
  /*Fonts*/
  @font-face {
 font-family: 'Avara';
-src: url('font/avara/avara-webfont.eot');
-src: url('font/avara/avara-webfont.woff') format('woff'),
-     url('font/avara/avara-webfont.eot?#iefix') format('embedded-opentype'),
-     url('font/avara/avara-webfont.svg#QuadrantaBold') format('svg');
+src: url('../font/avara/avara-webfont.eot');
+src: url('../font/avara/avara-webfont.woff') format('woff'),
+     url('../font/avara/avara-webfont.eot?#iefix') format('embedded-opentype'),
+     url('../font/avara/avara-webfont.svg#QuadrantaBold') format('svg');
 font-weight: normal;
 font-style: normal;
 }
@@ -63,7 +63,7 @@ font-style: normal;
 font-family: 'Avenir LT Std 85 Heavy';
 font-style: normal;
 font-weight: normal;
-src: local('Avenir LT Std 85 Heavy'), url('font/avenir/AvenirLTStd-Heavy.woff') format('woff');
+src: local('Avenir LT Std 85 Heavy'), url('../font/avenir/AvenirLTStd-Heavy.woff') format('woff');
 }
  /*End Fonts*/
 
@@ -73,9 +73,9 @@ src: local('Avenir LT Std 85 Heavy'), url('font/avenir/AvenirLTStd-Heavy.woff') 
   box-sizing: border-box;
 }
 
-/* #### Desktops #### */
+/* #### Little Screens #### */
 @media screen and (max-width: 1100px){
-    .wrapper--demo {
+    .wrapper {
     display:none;
   }
 
@@ -105,42 +105,28 @@ src: local('Avenir LT Std 85 Heavy'), url('font/avenir/AvenirLTStd-Heavy.woff') 
   }
 }
 
+/*Desktops*/
 @media screen and (min-width:1101px){
   body, html {
     font-family: "Avenir LT Std 85 Heavy","europa-1", sans-serif;
     overflow: hidden;
     margin:0;
-    /*width: 100%;*/
     background-color: black;
   }
 
-  /**
-   * Use this wrapper only for demo purposes
-   * So you can show the items outside the wrapper
-   */
-/*  .wrapper--demo {
-    overflow: visible;
+  /*Little screens hide*/
+  #warning-message {
+    display: none;
   }
-  .wrapper--demo:after, .wrapper--demo:before {
-    content: "";
-    position: absolute;
-    width: 800px;
-    height: 100%;
-    top: 0;
-    left: 100%;
-    background: rgba(255, 255, 255, 0.8);
-    z-index: 2;
-  }
-  .wrapper--demo:before {
-    left: -800px;
-  }*/
 
+  /** Start Carousel */
   .carousel {
     width: 100%;
     position: relative;
   }
   .carousel .carousel__content {
     width: auto;
+    height: 100%;
     position: relative;
     overflow: hidden;
     -webkit-backface-visibility: hidden;
@@ -151,6 +137,7 @@ src: local('Avenir LT Std 85 Heavy'), url('font/avenir/AvenirLTStd-Heavy.woff') 
     vertical-align: middle;
     float: left;
     width: 100%;
+    height: 100%;
     position: relative;
   }
 
@@ -184,9 +171,9 @@ src: local('Avenir LT Std 85 Heavy'), url('font/avenir/AvenirLTStd-Heavy.woff') 
   .carousel .carousel__nav .nav--right {
     right: 0;
   }
-
   /*End Carousel*/
 
+/*First item Title*/
   #stage {
     max-width: 100%;
     width: 100%;
@@ -195,29 +182,71 @@ src: local('Avenir LT Std 85 Heavy'), url('font/avenir/AvenirLTStd-Heavy.woff') 
     height: auto;
   }
 
-  /*video{
-   width: 60%;
-   margin: 0 auto;
-   height: 50em;
-  }*/
-
-  #video-tab{
-    width: auto;
-    height:auto;
-    min-width: 90%;
+/*Seconde item video*/
+  .container{
+    line-height: 600px;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    height: auto;
   }
 
+  video {
+    min-width: 100%;
+    width: 100%;
+    height: 100%;
+    z-index: -100;
+    margin: 0 auto;
+    vertical-align: middle;
+  }
+
+/*Pause button*/
+  button.pause-button,
+  button.pause-button-audio{
+    z-index: 2;
+    border:none;
+    top:0;
+    margin:0;
+    padding: 0.5em;
+    height: 40px;
+    width: auto;
+    cursor: pointer;
+    background-color:#fff;
+    color:black;
+    position: absolute;
+    display: block;
+    font-family: "Avara", "europa-1";
+    font-size: 1.2rem;
+  }
+
+/*Third item, Explain*/
   canvas#explication{
     width: 95%;
     height: auto;
     vertical-align: middle;
   }
 
-  /*Étapes*/
+/*Fourth Item Steps*/
+   #content{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    color: white;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+  }
+  
+  #video-tab{
+    width: auto;
+    height:auto;
+    min-width: 90%;
+  }
+
   #ul{
     margin: 0;
     padding: 0;
-    position: absolute;
+    position: relative;
     z-index: 10;
     right: 0;
     top:4em;
@@ -237,115 +266,50 @@ src: local('Avenir LT Std 85 Heavy'), url('font/avenir/AvenirLTStd-Heavy.woff') 
     padding: 1em;
     width: auto;
     height: auto;
-    padding-bottom: 0;
+    padding-bottom: 0.5em;
   }
 
-  #content{
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-    color: white;
-/*    line-height: 100px;*/
-    display: inline-block;
-    text-align: center;
-  }
-  /*Fin étapes*/
-
-  /*BG Video*/
-
-  .container{
-    line-height: 600px;
-    display: inline-block;
-    text-align: center;
-    width: 100%;
-    height: auto;
+    #ul li a:hover{
+    -webkit-animation: hover 0.5s;
+    animation: hover 0.5s;
+    webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
   }
 
-  video {
-    min-width: 100%;
-  /*  min-height: 60%;*/
-    width: 100%;
-    height: 100%;
-    z-index: -100;
-    margin: 0 auto;
-    vertical-align: middle;
+  #ul li a:active,#ul li a:focus,.active{
+    color:#000 !important; 
+    background-image: url(steps.png);
+    background-repeat: none;
   }
 
-  @keyframes buttonpause {
-      from {opacity : 1;}
-      to {opacity : 0;}
+  @-webkit-keyframes hover {
+    from {background-image: none;}
+    to {background-image:url(steps.png);}
   }
 
-  button#contact{
-    border: white 0.2px solid;
-    height: 100px;
-    width: 100px;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    border-radius: 50px;
-    display: block;
-    position: fixed;
-    color: #000;
-    padding: 8px 12px;
-    font-weight: bold;
-    font-family: "Avara", "europa-1";
-    font-size: 1.2rem;
-    top:50%;
-    left
+  @keyframes hover {
+    from {background-image: none;}
+    to {background-image:url(steps.png);}
   }
 
-  button.pause-button,
-  button.pause-button-audio{
-    z-index: 2;
-    border: none;
-    border-radius: 0;
-    margin:0;
-    padding: 0.5em;
-    height: 40px;
-    width: auto;
-    cursor: pointer;
-    background-color:#fff;
-    color:black;
-    position: absolute;
-    display: block;
-    font-family: "Avara", "europa-1";
-    font-size: 1.2rem;
-  }
-
-  .stopfade {
-     opacity: .5;
-  }
-
-  #track{
-    color: red;
-    height: 10em;
-    font-family: 'Avara';
-  }
-
-  #warning-message {
-    display: none;
-  }
-
-#content: {
-  position: relative;
-}
-
+/*5 item End*/
 .footer{
   float: right;
-  padding-right: 25%;
+  padding-right: 15%;
+  bottom: 0;
 }
 
 /* #### Mobile Phones Portrait #### */
 @media screen and (max-device-width: 600px) and (orientation: portrait){
   /* Display none portrait mode */
-body, html{
-overflow: scroll;
--webkit-overflow: scroll;
-}
-
-.wrapper--demo {
-    display:none;
+  body, html{
+    overflow: scroll;
+    -webkit-overflow: scroll;
   }
+
+  .wrapper {
+    display:none;
+    }
 
   #warning-message {
     display: block;
@@ -375,7 +339,7 @@ overflow: scroll;
 @media screen and (max-device-width: 767px) and (orientation: landscape){
   /* Display in Landsxape mode */
 
-  .wrapper--demo {
+  .wrapper {
     display:none;
   }
 
